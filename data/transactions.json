@@ -1,0 +1,20 @@
+{
+  "CL-2024-0042": [
+    { "id": "T1", "date": "2026-06-05", "libelle": "Virement reçu — Salaire OCP", "montant": 18000 },
+    { "id": "T2", "date": "2026-06-04", "libelle": "Paiement carte — Marjane", "montant": -842.30 },
+    { "id": "T3", "date": "2026-06-03", "libelle": "Retrait GAB — Maarif", "montant": -2000 },
+    { "id": "T4", "date": "2026-06-01", "libelle": "Virement émis — Loyer", "montant": -6500 }
+  ],
+  "CL-2024-0043": [
+    { "id": "T1", "date": "2026-06-04", "libelle": "Versement espèces — Caisse magasin", "montant": 5200 },
+    { "id": "T2", "date": "2026-06-03", "libelle": "Paiement carte — Grossiste Derb Omar", "montant": -3150.00 },
+    { "id": "T3", "date": "2026-06-02", "libelle": "Prélèvement — Échéance crédit auto", "montant": -2400 },
+    { "id": "T4", "date": "2026-05-31", "libelle": "Frais — Incident de paiement", "montant": -150 }
+  ],
+  "CL-2024-0044": [
+    { "id": "T1", "date": "2026-06-05", "libelle": "Virement reçu — Salaire CHU Ibn Sina", "montant": 25000 },
+    { "id": "T2", "date": "2026-06-04", "libelle": "Virement émis — Épargne mensuelle", "montant": -8000 },
+    { "id": "T3", "date": "2026-06-02", "libelle": "Paiement carte — Acima", "montant": -1245.60 },
+    { "id": "T4", "date": "2026-05-30", "libelle": "Virement émis — Frais de scolarité", "montant": -12000 }
+  ]
+}

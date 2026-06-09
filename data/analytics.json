@@ -1,0 +1,36 @@
+{
+  "kpis": {
+    "totalDecisions": 1284,
+    "tauxApprobation": 0.71,
+    "montantOctroye": 48200000,
+    "delaiMoyenSec": 3.4,
+    "scoreMoyen": 68
+  },
+  "parMois": [
+    { "mois": "Jan", "approuve": 132, "refuse": 72 },
+    { "mois": "Fév", "approuve": 142, "refuse": 68 },
+    { "mois": "Mar", "approuve": 150, "refuse": 64 },
+    { "mois": "Avr", "approuve": 158, "refuse": 60 },
+    { "mois": "Mai", "approuve": 162, "refuse": 56 },
+    { "mois": "Juin", "approuve": 168, "refuse": 52 }
+  ],
+  "parType": [
+    { "type": "Crédit immobilier", "count": 412, "montant": 31200000 },
+    { "type": "Crédit consommation", "count": 386, "montant": 9800000 },
+    { "type": "Virement", "count": 486, "montant": 7200000 }
+  ],
+  "scoreDistribution": [
+    { "bucket": "0–20", "count": 38 },
+    { "bucket": "20–40", "count": 96 },
+    { "bucket": "40–60", "count": 241 },
+    { "bucket": "60–80", "count": 532 },
+    { "bucket": "80–100", "count": 377 }
+  ],
+  "motifsRefus": [
+    { "motif": "Taux d'endettement > 40 %", "count": 161 },
+    { "motif": "Fichage Bank Al-Maghrib", "count": 88 },
+    { "motif": "Ancienneté insuffisante", "count": 58 },
+    { "motif": "Incidents de paiement", "count": 41 },
+    { "motif": "Pièces incomplètes", "count": 24 }
+  ]
+}

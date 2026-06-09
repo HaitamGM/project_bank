@@ -1,0 +1,61 @@
+{
+  "D-001": {
+    "decisionId": "D-001",
+    "clientId": "CL-2024-0042",
+    "intent": "Crédit immobilier",
+    "montant": 600000,
+    "statut": "approuve",
+    "score": 78,
+    "seuil": 60,
+    "scoreBase": 50,
+    "confiance": 0.93,
+    "resume": "Décision favorable portée par un taux d'endettement maîtrisé (28 %) et un revenu stable, légèrement pénalisée par le montant élevé et le LTV de 80 %.",
+    "features": [
+      { "label": "Taux d'endettement 28 %", "valeur": "28 %", "impact": 11, "direction": "positif" },
+      { "label": "Revenu mensuel", "valeur": "18 000 DH", "impact": 7, "direction": "positif" },
+      { "label": "Historique BAM sain", "valeur": "0 incident", "impact": 6, "direction": "positif" },
+      { "label": "Durée 20 ans", "valeur": "240 mois", "impact": 5, "direction": "positif" },
+      { "label": "Ancienneté CDI", "valeur": "36 mois", "impact": 4, "direction": "positif" },
+      { "label": "Montant élevé", "valeur": "600 000 DH", "impact": -2, "direction": "negatif" },
+      { "label": "Quotité de financement (LTV)", "valeur": "80 %", "impact": -3, "direction": "negatif" }
+    ],
+    "counterfactuals": [
+      { "condition": "Si le taux d'endettement dépassait 40 %", "scoreSimule": 52, "resultat": "refuse" },
+      { "condition": "Si la cliente était fichée Bank Al-Maghrib", "scoreSimule": 43, "resultat": "refuse" },
+      { "condition": "Avec un apport de 30 % (LTV 70 %)", "scoreSimule": 84, "resultat": "approuve" },
+      { "condition": "Si l'ancienneté était inférieure à 12 mois", "scoreSimule": 72, "resultat": "approuve" }
+    ],
+    "sources": [
+      { "docId": "DOC-1", "titre": "Politique crédit immobilier 2026", "extrait": "Le taux d'endettement maximal autorisé est de 40 % des revenus nets mensuels.", "pertinence": 0.96 },
+      { "docId": "DOC-1", "titre": "Politique crédit immobilier 2026", "extrait": "La quotité de financement (LTV) ne peut excéder 80 % pour une résidence principale.", "pertinence": 0.83 },
+      { "docId": "DOC-2", "titre": "Règlement Bank Al-Maghrib — Circulaire 1/G/2020", "extrait": "Consultation obligatoire du fichier central des incidents de remboursement.", "pertinence": 0.88 }
+    ]
+  },
+  "D-003": {
+    "decisionId": "D-003",
+    "clientId": "CL-2024-0042",
+    "intent": "Crédit consommation",
+    "montant": 200000,
+    "statut": "refuse",
+    "score": 40,
+    "seuil": 60,
+    "scoreBase": 50,
+    "confiance": 0.91,
+    "resume": "Refus porté par un taux d'endettement de 52 %, très au-dessus du plafond réglementaire de 40 %, que le revenu et l'historique sain ne suffisent pas à compenser.",
+    "features": [
+      { "label": "Taux d'endettement 52 %", "valeur": "52 %", "impact": -27, "direction": "negatif" },
+      { "label": "Revenu mensuel", "valeur": "18 000 DH", "impact": 7, "direction": "positif" },
+      { "label": "Historique BAM sain", "valeur": "0 incident", "impact": 6, "direction": "positif" },
+      { "label": "Ancienneté CDI", "valeur": "36 mois", "impact": 4, "direction": "positif" }
+    ],
+    "counterfactuals": [
+      { "condition": "Avec une durée de 60 mois (mensualité réduite)", "scoreSimule": 82, "resultat": "approuve" },
+      { "condition": "Si le montant était de 100 000 DH", "scoreSimule": 79, "resultat": "approuve" },
+      { "condition": "Si le revenu tombait à 14 000 DH", "scoreSimule": 19, "resultat": "refuse" }
+    ],
+    "sources": [
+      { "docId": "DOC-1", "titre": "Politique crédit immobilier 2026", "extrait": "Le taux d'endettement maximal autorisé est de 40 % des revenus nets mensuels.", "pertinence": 0.97 },
+      { "docId": "DOC-4", "titre": "Conditions générales crédit consommation", "extrait": "Le taux d'endettement global ne peut dépasser 40 % des revenus nets mensuels.", "pertinence": 0.9 }
+    ]
+  }
+}

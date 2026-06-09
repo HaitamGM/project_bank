@@ -1,0 +1,10 @@
+[
+  { "id": "transcription", "nom": "Transcription vocale", "tech": "Gemini Live · STT", "role": "Convertit la parole en texte", "dureeMs": 480, "statut": "ok" },
+  { "id": "nlu", "nom": "Compréhension (NLU)", "tech": "Gemini · classification", "role": "Détecte l'intention de la demande", "dureeMs": 220, "statut": "ok" },
+  { "id": "extraction", "nom": "Extraction d'entités", "tech": "Gemini · function calling", "role": "Isole montant, durée et objet", "dureeMs": 180, "statut": "ok" },
+  { "id": "kyc", "nom": "Vérification KYC", "tech": "Service interne", "role": "Contrôle identité et conformité client", "dureeMs": 310, "statut": "ok" },
+  { "id": "rag", "nom": "Recherche RAG", "tech": "Vector store · embeddings", "role": "Récupère les règles et politiques applicables", "dureeMs": 540, "statut": "ok" },
+  { "id": "risque", "nom": "Scoring de risque", "tech": "Modèle de décision", "role": "Calcule le score d'octroi", "dureeMs": 260, "statut": "ok" },
+  { "id": "decision", "nom": "Décision", "tech": "Règles · seuil", "role": "Agrège le score et applique le seuil", "dureeMs": 130, "statut": "ok" },
+  { "id": "explication", "nom": "Explication (XAI)", "tech": "Gemini · génération", "role": "Rédige le justificatif lisible", "dureeMs": 350, "statut": "ok" }
+]

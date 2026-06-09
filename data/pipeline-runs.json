@@ -1,0 +1,18 @@
+{
+  "D-001": {
+    "decisionId": "D-001",
+    "clientId": "CL-2024-0042",
+    "totalMs": 2470,
+    "events": [
+      { "t": 0, "from": "client", "to": "transcription", "label": "Flux audio", "detail": "« Je voudrais un crédit immobilier de 600 000 DH… »" },
+      { "t": 480, "from": "transcription", "to": "nlu", "label": "Texte transcrit", "detail": "Confiance STT 0,97" },
+      { "t": 700, "from": "nlu", "to": "extraction", "label": "Intention : Crédit", "detail": "Confiance 0,98" },
+      { "t": 880, "from": "extraction", "to": "kyc", "label": "Entités", "detail": "montant=600 000 · durée=240 · objet=immobilier" },
+      { "t": 1190, "from": "kyc", "to": "rag", "label": "Client vérifié", "detail": "CIN BK123456 · segment Premium" },
+      { "t": 1730, "from": "rag", "to": "risque", "label": "3 règles trouvées", "detail": "endettement 40 % · LTV 80 % · fichage BAM" },
+      { "t": 1990, "from": "risque", "to": "decision", "label": "Score 78/100", "detail": "endettement 28 % sous le seuil" },
+      { "t": 2120, "from": "decision", "to": "explication", "label": "Approuvé", "detail": "78 ≥ seuil 60" },
+      { "t": 2470, "from": "explication", "to": "client", "label": "Justificatif", "detail": "Explication en langage naturel rendue" }
+    ]
+  }
+}

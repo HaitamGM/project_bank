@@ -1,0 +1,106 @@
+[
+  {
+    "id": "CL-2024-0042",
+    "personnel": {
+      "prenom": "Yasmina",
+      "nom": "El Idrissi",
+      "cin": "BK123456",
+      "dateNaissance": "1996-03-15",
+      "telephone": "+212 661 23 45 67",
+      "email": "y.elidrissi@email.ma",
+      "ville": "Casablanca",
+      "situationFamiliale": "Célibataire"
+    },
+    "professionnel": {
+      "profession": "Ingénieure informatique",
+      "employeur": "OCP SA",
+      "typeContrat": "CDI",
+      "ancienneteMois": 36,
+      "revenuMensuel": 18000,
+      "secteur": "Industrie"
+    },
+    "bancaire": {
+      "clientDepuis": "2018-09-10",
+      "segment": "Premium",
+      "scoreInterne": 78,
+      "comptes": [
+        { "rib": "230 815 1234567890123456 78", "type": "courant", "solde": 45230.50, "devise": "MAD" },
+        { "rib": "230 815 9876543210987654 32", "type": "epargne", "solde": 120000.00, "devise": "MAD" }
+      ]
+    },
+    "risque": {
+      "incidentsPaiement": 0,
+      "fichageBam": false,
+      "tauxEndettement": 0.08
+    }
+  },
+  {
+    "id": "CL-2024-0043",
+    "personnel": {
+      "prenom": "Karim",
+      "nom": "Benali",
+      "cin": "AB456789",
+      "dateNaissance": "1989-11-22",
+      "telephone": "+212 662 11 22 33",
+      "email": "k.benali@email.ma",
+      "ville": "Fès",
+      "situationFamiliale": "Marié"
+    },
+    "professionnel": {
+      "profession": "Commerçant",
+      "employeur": "Indépendant",
+      "typeContrat": "Indépendant",
+      "ancienneteMois": 14,
+      "revenuMensuel": 8500,
+      "secteur": "Commerce"
+    },
+    "bancaire": {
+      "clientDepuis": "2021-04-02",
+      "segment": "Standard",
+      "scoreInterne": 32,
+      "comptes": [
+        { "rib": "011 780 4455667788990011 21", "type": "courant", "solde": 3210.75, "devise": "MAD" }
+      ]
+    },
+    "risque": {
+      "incidentsPaiement": 2,
+      "fichageBam": true,
+      "tauxEndettement": 0.14
+    }
+  },
+  {
+    "id": "CL-2024-0044",
+    "personnel": {
+      "prenom": "Sara",
+      "nom": "Amrani",
+      "cin": "CD112233",
+      "dateNaissance": "1985-07-08",
+      "telephone": "+212 663 44 55 66",
+      "email": "s.amrani@email.ma",
+      "ville": "Rabat",
+      "situationFamiliale": "Mariée"
+    },
+    "professionnel": {
+      "profession": "Médecin",
+      "employeur": "CHU Ibn Sina",
+      "typeContrat": "CDI",
+      "ancienneteMois": 60,
+      "revenuMensuel": 25000,
+      "secteur": "Santé"
+    },
+    "bancaire": {
+      "clientDepuis": "2015-01-15",
+      "segment": "Patrimoine",
+      "scoreInterne": 87,
+      "comptes": [
+        { "rib": "007 640 2233445566778899 14", "type": "courant", "solde": 82150.40, "devise": "MAD" },
+        { "rib": "007 640 9988776655443322 09", "type": "epargne", "solde": 350000.00, "devise": "MAD" }
+      ]
+    },
+    "risque": {
+      "incidentsPaiement": 0,
+      "fichageBam": false,
+      "tauxEndettement": 0.12
+    }
+  }
+]

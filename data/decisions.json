@@ -1,0 +1,80 @@
+{
+  "CL-2024-0042": [
+    {
+      "id": "D-001",
+      "clientId": "CL-2024-0042",
+      "date": "2026-06-05 14:32",
+      "intent": "Crédit immobilier",
+      "type": "credit_immobilier",
+      "montant": 600000,
+      "dureeMois": 240,
+      "autresCharges": 1100,
+      "statut": "approuve",
+      "score": 78,
+      "explication": "Profil stable, taux d'endettement 28 % sous le seuil de 40 %."
+    },
+    {
+      "id": "D-002",
+      "clientId": "CL-2024-0042",
+      "date": "2026-06-03 10:15",
+      "intent": "Virement",
+      "type": "virement",
+      "montant": 5000,
+      "statut": "execute",
+      "explication": "Solde suffisant, bénéficiaire vérifié, virement exécuté."
+    },
+    {
+      "id": "D-003",
+      "clientId": "CL-2024-0042",
+      "date": "2026-05-28 16:45",
+      "intent": "Crédit consommation",
+      "type": "credit_consommation",
+      "montant": 200000,
+      "dureeMois": 24,
+      "autresCharges": 600,
+      "statut": "refuse",
+      "score": 40,
+      "explication": "Taux d'endettement dépassé (52 % > seuil 40 %)."
+    }
+  ],
+  "CL-2024-0043": [
+    {
+      "id": "D-101",
+      "clientId": "CL-2024-0043",
+      "date": "2026-06-02 09:20",
+      "intent": "Crédit consommation",
+      "type": "credit_consommation",
+      "montant": 100000,
+      "dureeMois": 36,
+      "autresCharges": 1200,
+      "statut": "refuse",
+      "score": 0,
+      "explication": "Refus : client fiché Bank Al-Maghrib et 2 incidents de paiement ; le crédit porterait le taux d'endettement à 49 %, au-dessus du plafond de 40 %."
+    }
+  ],
+  "CL-2024-0044": [
+    {
+      "id": "D-201",
+      "clientId": "CL-2024-0044",
+      "date": "2026-06-04 11:05",
+      "intent": "Crédit immobilier",
+      "type": "credit_immobilier",
+      "montant": 800000,
+      "dureeMois": 240,
+      "autresCharges": 1500,
+      "statut": "approuve",
+      "score": 87,
+      "explication": "Excellent profil : taux d'endettement 27 %, revenu élevé et ancienneté de 5 ans."
+    },
+    {
+      "id": "D-202",
+      "clientId": "CL-2024-0044",
+      "date": "2026-05-30 15:40",
+      "intent": "Virement",
+      "type": "virement",
+      "montant": 12000,
+      "statut": "execute",
+      "explication": "Solde suffisant, bénéficiaire enregistré, virement exécuté."
+    }
+  ]
+}

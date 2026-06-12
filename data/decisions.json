@@ -1,6 +1,17 @@
 {
   "CL-2024-0042": [
     {
+      "id": "D-105DFE",
+      "clientId": "CL-2024-0042",
+      "date": "2026-06-12 15:14",
+      "intent": "Virement (vocal)",
+      "type": "virement",
+      "montant": 5000.0,
+      "statut": "execute",
+      "explication": "Virement de 5000 DH vers Karim signé par OTP (vocal) et exécuté.",
+      "canal": "vocal"
+    },
+    {
       "id": "D-E92A14",
       "clientId": "CL-2024-0042",
       "date": "2026-06-12 14:52",

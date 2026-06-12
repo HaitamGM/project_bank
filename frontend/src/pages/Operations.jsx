@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useQueryClient } from '@tanstack/react-query'
 import {
   ArrowLeftRight, CreditCard, Check, X, Loader2, KeyRound, Send, Cpu, Sparkles, UserPlus,
@@ -103,7 +103,6 @@ function TransferPanel({ client }) {
   const benefs = client?.bancaire?.beneficiaires || []
   const [montant, setMontant] = useState(2000)
   const [beneficiaire, setBeneficiaire] = useState(benefs[0]?.nom || '')
-  const [customBenef, setCustomBenef] = useState('')
   const [compteSource, setCompteSource] = useState(comptes[0]?.rib || '')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
@@ -119,14 +118,27 @@ function TransferPanel({ client }) {
   const [addBenefError, setAddBenefError] = useState(null)
   const queryClient = useQueryClient()
 
-  const benefName = beneficiaire === '__autre__' ? customBenef : beneficiaire
+  // Sélection par défaut une fois les données du client chargées (chargement async).
+  useEffect(() => {
+    if (!beneficiaire && benefs.length > 0) setBeneficiaire(benefs[0].nom)
+  }, [benefs, beneficiaire])
+  useEffect(() => {
+    if (!compteSource && comptes.length > 0) setCompteSource(comptes[0].rib)
+  }, [comptes, compteSource])
+  // Règle métier : on ne vire qu'à un bénéficiaire enregistré. Si la liste est vide,
+  // on ouvre d'emblée le formulaire d'ajout.
+  useEffect(() => {
+    if (benefs.length === 0) setShowAddBenef(true)
+  }, [benefs.length])
 
   const saveBeneficiary = async () => {
     const nom = newBenef.nom.trim()
+    const rib = newBenef.rib.trim()
     if (nom.length < 2) { setAddBenefError('Le nom est requis (2 caractères minimum).'); return }
+    if (rib.length < 8) { setAddBenefError('Le RIB / IBAN est requis : un bénéficiaire doit être enregistré avant tout virement.'); return }
     setAddBenefError(null); setAddingBenef(true)
     try {
-      const added = await clientService.addBeneficiary({ nom, banque: newBenef.banque.trim(), rib: newBenef.rib.trim() })
+      const added = await clientService.addBeneficiary({ nom, banque: newBenef.banque.trim(), rib })
       await queryClient.invalidateQueries({ queryKey: ['client'] }) // rafraîchit la liste déroulante
       setBeneficiaire(added.nom) // sélectionne le bénéficiaire fraîchement ajouté
       setNewBenef({ nom: '', banque: '', rib: '' })
@@ -140,9 +152,10 @@ function TransferPanel({ client }) {
 
   const submit = async (e) => {
     e.preventDefault()
+    if (!beneficiaire) { setError('Sélectionnez un bénéficiaire enregistré (ou ajoutez-en un avec son RIB).'); return }
     setError(null); setResult(null); setConfirmed(null); setOtp(''); setLoading(true)
     try {
-      const r = await pipelineService.runTransfer({ montant: Number(montant), beneficiaire: benefName, compteSource })
+      const r = await pipelineService.runTransfer({ montant: Number(montant), beneficiaire, compteSource })
       setResult(r)
       if (r.devOtp) setOtp(r.devOtp)
     } catch (err) {
@@ -187,10 +200,15 @@ function TransferPanel({ client }) {
                 <UserPlus size={14} /> Ajouter un bénéficiaire
               </button>
             </div>
-            <select value={beneficiaire} onChange={(e) => setBeneficiaire(e.target.value)} className={inputCls}>
-              {benefs.map((b) => <option key={b.rib} value={b.nom}>{b.nom} · {b.banque}</option>)}
-              <option value="__autre__">Autre bénéficiaire…</option>
-            </select>
+            {benefs.length > 0 ? (
+              <select value={beneficiaire} onChange={(e) => setBeneficiaire(e.target.value)} className={inputCls}>
+                {benefs.map((b) => <option key={b.rib} value={b.nom}>{b.nom} · {b.banque}</option>)}
+              </select>
+            ) : (
+              <p className="text-sm text-slate-500 dark:text-slate-400 rounded-xl border border-dashed border-slate-300 dark:border-slate-700 px-4 py-3">
+                Aucun bénéficiaire enregistré. Ajoutez-en un (avec son RIB) pour pouvoir effectuer un virement.
+              </p>
+            )}
           </div>
 
           {/* Formulaire d'ajout d'un bénéficiaire persistant */}
@@ -214,13 +232,13 @@ function TransferPanel({ client }) {
                   type="text" value={newBenef.rib}
                   onChange={(e) => setNewBenef((s) => ({ ...s, rib: e.target.value }))}
                   onKeyDown={(e) => { if (e.key === 'Enter') { e.preventDefault(); saveBeneficiary() } }}
-                  placeholder="RIB / IBAN (optionnel)" className={inputCls}
+                  placeholder="RIB / IBAN *" className={inputCls}
                 />
               </div>
               {addBenefError && <p className="text-sm text-rose-600 dark:text-rose-400">{addBenefError}</p>}
               <div className="flex items-center gap-2">
                 <button
-                  type="button" onClick={saveBeneficiary} disabled={addingBenef || newBenef.nom.trim().length < 2}
+                  type="button" onClick={saveBeneficiary} disabled={addingBenef || newBenef.nom.trim().length < 2 || newBenef.rib.trim().length < 8}
                   className="flex-1 py-2 rounded-lg bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-700 transition flex items-center justify-center gap-2 disabled:opacity-60"
                 >
                   {addingBenef ? <Loader2 size={16} className="animate-spin" /> : <Check size={16} />} Enregistrer
@@ -235,9 +253,6 @@ function TransferPanel({ client }) {
             </div>
           )}
 
-          {beneficiaire === '__autre__' && (
-            <input type="text" value={customBenef} onChange={(e) => setCustomBenef(e.target.value)} placeholder="Nom du bénéficiaire" className={inputCls} />
-          )}
           <div>
             <label className="block text-sm font-medium text-slate-600 dark:text-slate-300 mb-1.5">Compte à débiter</label>
             <select value={compteSource} onChange={(e) => setCompteSource(e.target.value)} className={inputCls}>
@@ -246,7 +261,7 @@ function TransferPanel({ client }) {
           </div>
         </div>
         {error && !result && <p className="text-sm text-rose-600 dark:text-rose-400 mt-4">{error}</p>}
-        <button type="submit" disabled={loading || !benefName} className="w-full mt-5 py-3 rounded-xl bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition flex items-center justify-center gap-2 disabled:opacity-60">
+        <button type="submit" disabled={loading || !beneficiaire} className="w-full mt-5 py-3 rounded-xl bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition flex items-center justify-center gap-2 disabled:opacity-60">
           {loading ? <Loader2 size={18} className="animate-spin" /> : <Sparkles size={18} />}
           Vérifier le virement
         </button>

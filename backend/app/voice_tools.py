@@ -49,6 +49,8 @@ TOOL_DECLARATIONS = [
                     "properties": {
                         "montant": {"type": "NUMBER", "description": "Montant à virer en dirhams (MAD)."},
                         "beneficiaire": {"type": "STRING", "description": "Nom du bénéficiaire."},
+                        "rib": {"type": "STRING", "description": "RIB ou IBAN du bénéficiaire. OBLIGATOIRE si le bénéficiaire n'est pas déjà enregistré."},
+                        "banque": {"type": "STRING", "description": "Banque du bénéficiaire (utile si nouveau bénéficiaire)."},
                     },
                     "required": ["montant", "beneficiaire"],
                 },
@@ -84,7 +86,7 @@ def prompt_section() -> str:
 OUTILS (function calling) — RÈGLE ABSOLUE :
 - Tu disposes d'outils qui exécutent la VRAIE pipeline bancaire. Tu DOIS les appeler ; ne simule JAMAIS un résultat, n'invente JAMAIS un score, un solde, une mensualité ni une décision.
 - CRÉDIT : dès que tu connais le montant et la durée, dis une courte phrase ("Je lance la vérification…") puis appelle evaluer_credit. Ensuite, explique la décision UNIQUEMENT à partir du résultat renvoyé (decision, score, taux d'endettement, mensualité).
-- VIREMENT : dès que tu connais le montant et le bénéficiaire, appelle preparer_virement. Si le résultat demande un OTP (requiert_otp = true), demande au client de lire à voix haute le code à 6 chiffres affiché à l'écran, puis appelle confirmer_virement avec ce code.
+- VIREMENT : un virement n'est possible que vers un bénéficiaire ENREGISTRÉ. Dès que tu connais le montant et le bénéficiaire, appelle preparer_virement. Si l'outil répond « besoin_donnees_beneficiaire », c'est un nouveau bénéficiaire : demande au client son RIB (ou IBAN) et le nom de sa banque, puis rappelle preparer_virement avec montant, beneficiaire, rib et banque (le système l'enregistre automatiquement). Si le résultat demande un OTP (requiert_otp = true), demande au client de lire à voix haute le code à 6 chiffres affiché à l'écran, puis appelle confirmer_virement avec ce code.
 - SOLDE / COMPTES : appelle consulter_comptes.
 - Si un paramètre manque (montant, durée, bénéficiaire), demande-le au client AVANT d'appeler l'outil.
 """
@@ -164,8 +166,26 @@ async def _credit(args, client, client_id):
 async def _prepare_transfer(args, client, client_id, pending):
     montant = float(args.get("montant") or 0)
     benef = (args.get("beneficiaire") or "").strip()
+    rib = (args.get("rib") or "").strip()
+    banque = (args.get("banque") or "").strip()
     if montant <= 0 or not benef:
         return {"erreur": "Le montant et le nom du bénéficiaire sont requis."}, None
+
+    # RÈGLE MÉTIER : virement uniquement vers un bénéficiaire ENREGISTRÉ.
+    # Si nouveau : il faut le RIB → on l'enregistre automatiquement avant de continuer.
+    benefs = client.get("bancaire", {}).get("beneficiaires", [])
+    known = any((b.get("nom") or "").strip().lower() == benef.lower() for b in benefs)
+    if not known:
+        if not rib:
+            return {
+                "besoin_donnees_beneficiaire": True,
+                "message": (f"{benef} n'est pas un bénéficiaire enregistré. Demande au client son RIB "
+                            "(ou IBAN) et le nom de sa banque, puis rappelle preparer_virement avec "
+                            "montant, beneficiaire, rib et banque."),
+            }, None
+        data_store.add_beneficiary(client_id, {"nom": benef, "banque": banque, "rib": rib})
+        data_store.audit("beneficiary_auto_added", client_id=client_id, beneficiaire=benef, canal="vocal")
+        client = data_store.get_client_by_id(client_id) or client  # recharge avec le nouveau bénéficiaire
 
     result = await asyncio.to_thread(pipeline.run_transfer_pipeline, client, montant, benef, None)
     data_store.audit("voice_transfer", client_id=client_id, montant=montant,

@@ -28,6 +28,7 @@ class TransferRequest(BaseModel):
     beneficiaire: str = Field(min_length=2, max_length=80)
     compteSource: str | None = Field(default=None, max_length=64)
     ribBeneficiaire: str | None = Field(default=None, max_length=64)
+    banqueBeneficiaire: str | None = Field(default=None, max_length=60)
 
 
 class TransferConfirmRequest(BaseModel):

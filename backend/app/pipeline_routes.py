@@ -58,6 +58,27 @@ def pipeline_transfer(body: TransferRequest, request: Request, client_id: str = 
         raise HTTPException(status_code=status.HTTP_429_TOO_MANY_REQUESTS, detail="Trop de demandes. Patientez.")
     client = _require_client(client_id)
 
+    # RÈGLE MÉTIER : un virement n'est possible que vers un bénéficiaire ENREGISTRÉ.
+    # S'il ne l'est pas : si le RIB est fourni, on l'enregistre automatiquement ; sinon on refuse.
+    nom_l = body.beneficiaire.strip().lower()
+    benefs = client.get("bancaire", {}).get("beneficiaires", [])
+    known = any((b.get("nom") or "").strip().lower() == nom_l for b in benefs)
+    if not known:
+        if body.ribBeneficiaire:
+            data_store.add_beneficiary(client_id, {
+                "nom": body.beneficiaire.strip(),
+                "banque": (body.banqueBeneficiaire or "").strip(),
+                "rib": body.ribBeneficiaire.strip(),
+            })
+            data_store.audit("beneficiary_auto_added", client_id=client_id, ip=_ip(request),
+                             beneficiaire=body.beneficiaire)
+            client = _require_client(client_id)  # recharge avec le nouveau bénéficiaire
+        else:
+            raise HTTPException(
+                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+                detail="Bénéficiaire non enregistré. Renseignez son RIB et sa banque pour l'ajouter avant le virement.",
+            )
+
     result = pipeline.run_transfer_pipeline(client, body.montant, body.beneficiaire, body.compteSource)
     data_store.audit("pipeline_transfer", client_id=client_id, ip=_ip(request),
                      montant=body.montant, beneficiaire=body.beneficiaire, decision=result["decision"])

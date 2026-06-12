@@ -9,3 +9,8 @@
 body {
   font-family: var(--font-sans);
 }
+
+/* En arabe (RTL), on privilégie une police qui couvre les glyphes arabes. */
+[dir="rtl"] body {
+  font-family: "Noto Sans Arabic", "Plus Jakarta Sans", system-ui, sans-serif;
+}

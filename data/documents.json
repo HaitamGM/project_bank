@@ -1,58 +1,62 @@
 [
   {
-    "id": "DOC-1",
-    "titre": "Politique crédit immobilier 2026",
+    "id": "DOC-001",
+    "titre": "Politique de crédit immobilier 2026",
     "type": "Politique",
-    "chunks": 42,
-    "dateIndex": "2026-05-10",
-    "extraits": [
-      { "id": "DOC-1-c1", "texte": "Le taux d'endettement maximal autorisé est de 40 % des revenus nets mensuels." },
-      { "id": "DOC-1-c2", "texte": "La quotité de financement (LTV) ne peut excéder 80 % pour une résidence principale." },
-      { "id": "DOC-1-c3", "texte": "La durée maximale d'un crédit immobilier est de 300 mois (25 ans)." }
-    ]
+    "categorie": "Crédit",
+    "nombreFragments": 79,
+    "dateIndexation": "2026-05-30",
+    "statut": "Indexé",
+    "extrait": "Conditions d'octroi : apport minimum 20 %, durée max 25 ans, taux d'endettement plafonné à 40 %, LTV ≤ 80 %."
   },
   {
-    "id": "DOC-2",
-    "titre": "Règlement Bank Al-Maghrib — Circulaire 1/G/2020",
+    "id": "DOC-002",
+    "titre": "Circulaire Bank Al-Maghrib 1/G/2020",
     "type": "Réglementation",
-    "chunks": 78,
-    "dateIndex": "2026-05-10",
-    "extraits": [
-      { "id": "DOC-2-c1", "texte": "Consultation obligatoire du fichier central des incidents de remboursement." },
-      { "id": "DOC-2-c2", "texte": "Tout incident de paiement déclaré est conservé pendant une durée de cinq ans." }
-    ]
+    "categorie": "Conformité",
+    "nombreFragments": 29,
+    "dateIndexation": "2026-05-16",
+    "statut": "Indexé",
+    "extrait": "Cadre prudentiel des établissements de crédit : consultation du fichier central des incidents, lutte anti-blanchiment."
   },
   {
-    "id": "DOC-3",
-    "titre": "Plafonds et conditions de virement",
-    "type": "Procédure",
-    "chunks": 23,
-    "dateIndex": "2026-05-11",
-    "extraits": [
-      { "id": "DOC-3-c1", "texte": "Le plafond d'un virement instantané est de 50 000 MAD par opération." },
-      { "id": "DOC-3-c2", "texte": "Tout virement supérieur à 100 000 MAD requiert une validation renforcée." }
-    ]
-  },
-  {
-    "id": "DOC-4",
-    "titre": "Conditions générales crédit consommation",
+    "id": "DOC-003",
+    "titre": "Conditions générales du crédit à la consommation",
     "type": "Politique",
-    "chunks": 35,
-    "dateIndex": "2026-05-12",
-    "extraits": [
-      { "id": "DOC-4-c1", "texte": "La durée maximale d'un crédit à la consommation est de 84 mois." },
-      { "id": "DOC-4-c2", "texte": "Le taux d'endettement global ne peut dépasser 40 % des revenus nets mensuels." }
-    ]
+    "categorie": "Crédit",
+    "nombreFragments": 67,
+    "dateIndexation": "2026-05-25",
+    "statut": "Indexé",
+    "extrait": "Montants de 10 000 à 300 000 MAD, durée de 12 à 84 mois, taux selon le profil de risque."
   },
   {
-    "id": "DOC-5",
-    "titre": "Procédure anti-fraude virements",
+    "id": "DOC-004",
+    "titre": "Barème des crédits automobiles",
+    "type": "Politique",
+    "categorie": "Crédit",
+    "nombreFragments": 71,
+    "dateIndexation": "2026-05-21",
+    "statut": "Indexé",
+    "extrait": "Financement jusqu'à 80 % de la valeur du véhicule, durée maximale 60 mois."
+  },
+  {
+    "id": "DOC-005",
+    "titre": "Plafonds et conditions des virements",
+    "type": "Procédure",
+    "categorie": "Virement",
+    "nombreFragments": 49,
+    "dateIndexation": "2026-04-23",
+    "statut": "Indexé",
+    "extrait": "Plafonds journaliers selon segment, vérification du bénéficiaire, signature OTP au-delà des seuils."
+  },
+  {
+    "id": "DOC-006",
+    "titre": "Procédure de lutte anti-fraude",
     "type": "Sécurité",
-    "chunks": 19,
-    "dateIndex": "2026-05-12",
-    "extraits": [
-      { "id": "DOC-5-c1", "texte": "Un virement vers un bénéficiaire nouvellement ajouté est soumis à un délai de sécurité de 24 heures." },
-      { "id": "DOC-5-c2", "texte": "Toute opération atypique déclenche une vérification d'identité renforcée." }
-    ]
+    "categorie": "Virement",
+    "nombreFragments": 20,
+    "dateIndexation": "2026-05-09",
+    "statut": "Indexé",
+    "extrait": "Détection des anomalies, double validation au-delà de 50 000 MAD, alertes temps réel."
   }
 ]

@@ -6,6 +6,13 @@
 *.pem
 !**/.env.example
 
+# Comptes générés (hashes bcrypt) — NE JAMAIS committer
+data/users.json
+users.json
+
+# Fichiers workspace VS Code (référencent des chemins locaux, ex. keyboard-demo)
+*.code-workspace
+
 # ---------- Node / Frontend ----------
 node_modules/
 dist/

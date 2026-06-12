@@ -7,4 +7,12 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  server: {
+    proxy: {
+      // WebSocket Gemini Live -> backend FastAPI (port 8000)
+      '/ws': { target: 'ws://localhost:8000', ws: true },
+      // API REST (santé, clients, transactions) -> backend FastAPI
+      '/api': { target: 'http://localhost:8000', changeOrigin: true },
+    },
+  },
 })

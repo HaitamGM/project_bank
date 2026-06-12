@@ -1,558 +1,227 @@
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
 import {
-  Gauge,
-  ShieldCheck,
-  TrendingUp,
-  TrendingDown,
-  Scale,
-  Search,
-  Brain,
-  Sparkles,
-  FileText,
-  ArrowRight,
-  Check,
-  X,
-  AlertTriangle,
-  Layers,
-  Quote,
-  BadgeCheck,
+  Gauge, ShieldCheck, TrendingUp, TrendingDown, Scale, Search, Brain,
+  Sparkles, FileText, Check, X, Layers, Quote, BadgeCheck, ChevronDown,
 } from 'lucide-react'
-import { mockXai } from '../services/mockData'
-import { SEUIL_ACCEPTATION } from '../services/scoring'
+import { useDecisions, useExplainability } from '../hooks/useClient'
+import { fmt } from '../lib/format'
 
-const fmtMontant = (n) => n.toLocaleString('fr-MA') + ' DH'
-const fmtPct = (v) => Math.round(v * 100) + ' %'
+const card = 'bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm'
+const fmtMontant = (n) => fmt(n) + ' DH'
 
-// Conteneur pour orchestrer l'apparition en cascade des sections.
-const stagger = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.12, delayChildren: 0.05 } },
-}
-const fadeUp = {
-  hidden: { opacity: 0, y: 18 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] } },
-}
+const fadeUp = { hidden: { opacity: 0, y: 18 }, show: { opacity: 1, y: 0, transition: { duration: 0.45 } } }
+const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.08 } } }
 
-const card =
-  'bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm'
-
-/* ────────────────────────────────────────────────────────────
-   1. Jauge de score circulaire (anneau SVG animé)
-   ──────────────────────────────────────────────────────────── */
+/* Jauge de score circulaire animée */
 function ScoreGauge({ score, seuil, statut }) {
-  const size = 220
-  const stroke = 16
+  const size = 200, stroke = 15
   const r = (size - stroke) / 2
   const c = 2 * Math.PI * r
-  const pctScore = score / 100
-  const pctSeuil = seuil / 100
   const approuve = statut === 'approuve'
-
-  // Repère du seuil sur l'anneau (le cercle SVG démarre à 3h, on tourne de -90°).
-  const angleSeuil = pctSeuil * 360 - 90
+  const angleSeuil = (seuil / 100) * 360 - 90
   const rad = (angleSeuil * Math.PI) / 180
   const cx = size / 2 + r * Math.cos(rad)
   const cy = size / 2 + r * Math.sin(rad)
-
   return (
     <div className="relative" style={{ width: size, height: size }}>
       <svg width={size} height={size} className="-rotate-90">
-        {/* Piste */}
-        <circle
-          cx={size / 2}
-          cy={size / 2}
-          r={r}
-          fill="none"
-          strokeWidth={stroke}
-          className="stroke-slate-100 dark:stroke-slate-800"
-        />
-        {/* Progression animée 0 → score */}
+        <circle cx={size / 2} cy={size / 2} r={r} fill="none" strokeWidth={stroke} className="stroke-slate-100 dark:stroke-slate-800" />
         <motion.circle
-          cx={size / 2}
-          cy={size / 2}
-          r={r}
-          fill="none"
-          strokeWidth={stroke}
-          strokeLinecap="round"
+          cx={size / 2} cy={size / 2} r={r} fill="none" strokeWidth={stroke} strokeLinecap="round"
           className={approuve ? 'stroke-emerald-500' : 'stroke-rose-500'}
-          strokeDasharray={c}
-          initial={{ strokeDashoffset: c }}
-          animate={{ strokeDashoffset: c * (1 - pctScore) }}
-          transition={{ duration: 1.4, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          strokeDasharray={c} initial={{ strokeDashoffset: c }} animate={{ strokeDashoffset: c * (1 - score / 100) }}
+          transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         />
       </svg>
-
-      {/* Repère du seuil */}
-      <div
-        className="absolute w-3 h-3 -ml-1.5 -mt-1.5 rounded-full bg-slate-900 dark:bg-slate-100 ring-2 ring-white dark:ring-slate-900"
-        style={{ left: cx, top: cy }}
-        title={`Seuil d'acceptation : ${seuil}`}
-      />
-
-      {/* Verdict au centre */}
+      <div className="absolute w-3 h-3 -ml-1.5 -mt-1.5 rounded-full bg-slate-900 dark:bg-slate-100 ring-2 ring-white dark:ring-slate-900" style={{ left: cx, top: cy }} title={`Seuil ${seuil}`} />
       <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <motion.span
-          className="text-5xl font-bold tracking-tight tabular-nums"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-        >
-          {score}
-        </motion.span>
-        <span className="text-xs font-medium text-slate-400 dark:text-slate-500 mt-0.5">
-          / 100 · seuil {seuil}
-        </span>
-        <span
-          className={`mt-2 inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full ${
-            approuve
-              ? 'bg-emerald-50 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-400'
-              : 'bg-rose-50 text-rose-700 dark:bg-rose-500/10 dark:text-rose-400'
-          }`}
-        >
-          {approuve ? <Check size={13} /> : <X size={13} />}
-          {approuve ? 'Approuvé' : 'Refusé'}
+        <span className="text-5xl font-bold tracking-tight tabular-nums">{score}</span>
+        <span className="text-xs text-slate-400 mt-0.5">/ 100 · seuil {seuil}</span>
+        <span className={`mt-2 inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full ${approuve ? 'bg-emerald-50 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-400' : 'bg-rose-50 text-rose-700 dark:bg-rose-500/10 dark:text-rose-400'}`}>
+          {approuve ? <Check size={13} /> : <X size={13} />}{approuve ? 'Approuvé' : 'Refusé'}
         </span>
       </div>
     </div>
   )
 }
 
-/* ────────────────────────────────────────────────────────────
-   2. Graphe Waterfall (cascade) — pièce maîtresse
-   ──────────────────────────────────────────────────────────── */
-function Waterfall({ scoreBase, features, score, seuil }) {
-  // Échelle verticale : on borne l'axe à 0–100.
-  const H = 320 // hauteur de la zone de tracé
-  const max = 100
-  const toY = (v) => H - (v / max) * H // valeur → coordonnée y (haut = grand)
-  const barW = 46
-
-  // Construction des segments : base, puis cumul des impacts, puis total.
+/* Cascade (waterfall) des contributions : score de base → score final */
+function Waterfall({ contributions, score, seuil }) {
+  const H = 300, max = 100
+  const toY = (v) => H - (v / max) * H
   const steps = []
-  let running = scoreBase
-  steps.push({ type: 'base', label: 'Score de base', from: 0, to: scoreBase, impact: scoreBase })
-  features.forEach((f) => {
-    const from = running
-    running += f.impact
-    steps.push({ type: 'feature', label: f.label, valeur: f.valeur, from, to: running, impact: f.impact })
-  })
-  steps.push({ type: 'total', label: 'Score final', from: 0, to: score, impact: score })
-
+  let running = 0
+  const base = contributions.find((c) => c.kind === 'base')?.impact ?? 50
+  const feats = contributions.filter((c) => c.kind !== 'base')
+  running = base
+  steps.push({ type: 'base', label: 'Base', to: base, from: 0, impact: base })
+  feats.forEach((f) => { const from = running; running += f.impact; steps.push({ type: 'feature', label: f.label, from, to: running, impact: f.impact }) })
+  steps.push({ type: 'total', label: 'Final', from: 0, to: score, impact: score })
   const ticks = [0, 20, 40, 60, 80, 100]
-  const colWidth = `${100 / steps.length}%`
-
+  const colW = `${100 / steps.length}%`
   return (
-    <div className="relative">
-      {/* Axe gradué + grille */}
+    <div>
       <div className="relative" style={{ height: H }}>
         {ticks.map((t) => (
-          <div
-            key={t}
-            className="absolute left-0 right-0 flex items-center"
-            style={{ top: toY(t) }}
-          >
-            <span className="w-7 -mt-2 text-[10px] tabular-nums text-slate-400 dark:text-slate-500 text-right pr-1">
-              {t}
-            </span>
+          <div key={t} className="absolute left-0 right-0 flex items-center" style={{ top: toY(t) }}>
+            <span className="w-7 -mt-2 text-[10px] tabular-nums text-slate-400 text-end pe-1">{t}</span>
             <div className="flex-1 border-t border-dashed border-slate-100 dark:border-slate-800" />
           </div>
         ))}
-
-        {/* Ligne de seuil */}
-        <div
-          className="absolute left-7 right-0 flex items-center pointer-events-none"
-          style={{ top: toY(seuil) }}
-        >
-          <div className="flex-1 border-t-2 border-amber-400/70 dark:border-amber-400/60" />
-          <span className="ml-1 text-[10px] font-semibold text-amber-600 dark:text-amber-400 whitespace-nowrap bg-white/80 dark:bg-slate-900/80 px-1 rounded">
-            seuil {seuil}
-          </span>
+        <div className="absolute left-7 right-0 flex items-center pointer-events-none" style={{ top: toY(seuil) }}>
+          <div className="flex-1 border-t-2 border-amber-400/70" />
+          <span className="ms-1 text-[10px] font-semibold text-amber-600 dark:text-amber-400 bg-white/80 dark:bg-slate-900/80 px-1 rounded">seuil {seuil}</span>
         </div>
-
-        {/* Barres */}
         <div className="absolute inset-0 left-7 flex items-end">
           {steps.map((s, i) => {
             const top = toY(Math.max(s.from, s.to))
             const height = Math.abs(toY(s.from) - toY(s.to))
             const positive = s.impact >= 0
-            const isAnchor = s.type === 'base' || s.type === 'total'
-            const colorClass = isAnchor
-              ? s.type === 'total'
-                ? 'bg-emerald-600 dark:bg-emerald-500'
-                : 'bg-slate-300 dark:bg-slate-700'
-              : positive
-              ? 'bg-emerald-500'
-              : 'bg-rose-500'
-
+            const anchor = s.type === 'base' || s.type === 'total'
+            const color = anchor ? (s.type === 'total' ? 'bg-emerald-600 dark:bg-emerald-500' : 'bg-slate-300 dark:bg-slate-700') : positive ? 'bg-emerald-500' : 'bg-rose-500'
             return (
-              <div
-                key={i}
-                className="relative h-full flex flex-col justify-end items-center"
-                style={{ width: colWidth }}
-              >
-                {/* Valeur +/- au-dessus de la barre */}
-                <motion.span
-                  className={`absolute text-[11px] font-bold tabular-nums ${
-                    isAnchor
-                      ? 'text-slate-700 dark:text-slate-200'
-                      : positive
-                      ? 'text-emerald-600 dark:text-emerald-400'
-                      : 'text-rose-600 dark:text-rose-400'
-                  }`}
-                  style={{ top: top - 18 }}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.5 + i * 0.12 }}
-                >
-                  {isAnchor ? s.to : `${positive ? '+' : ''}${s.impact}`}
+              <div key={i} className="relative h-full flex flex-col justify-end items-center" style={{ width: colW }}>
+                <motion.span className={`absolute text-[11px] font-bold tabular-nums ${anchor ? 'text-slate-700 dark:text-slate-200' : positive ? 'text-emerald-600 dark:text-emerald-400' : 'text-rose-600 dark:text-rose-400'}`}
+                  style={{ top: top - 18 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 + i * 0.1 }}>
+                  {anchor ? s.to : `${positive ? '+' : ''}${s.impact}`}
                 </motion.span>
-
-                {/* Barre flottante */}
-                <motion.div
-                  className={`rounded-md ${colorClass} ${isAnchor ? '' : 'opacity-90'}`}
-                  style={{ width: barW, position: 'absolute', top }}
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: Math.max(height, isAnchor ? 4 : 3), opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 0.4 + i * 0.12, ease: [0.16, 1, 0.3, 1] }}
-                />
-
-                {/* Connecteur en pointillé vers la barre suivante */}
-                {i < steps.length - 1 && (
-                  <div
-                    className="absolute border-t border-dashed border-slate-300 dark:border-slate-600"
-                    style={{ top: toY(s.to), left: '50%', width: '100%' }}
-                  />
-                )}
+                <motion.div className={`rounded-md ${color}`} style={{ width: 40, position: 'absolute', top }}
+                  initial={{ height: 0 }} animate={{ height: Math.max(height, anchor ? 4 : 3) }} transition={{ duration: 0.5, delay: 0.25 + i * 0.1, ease: [0.16, 1, 0.3, 1] }} />
               </div>
             )
           })}
         </div>
       </div>
-
-      {/* Étiquettes sous l'axe */}
-      <div className="flex mt-3 pl-7">
-        {steps.map((s, i) => (
-          <div
-            key={i}
-            className="px-1 text-center text-[10px] leading-tight text-slate-500 dark:text-slate-400"
-            style={{ width: colWidth }}
-          >
-            {s.label}
-          </div>
-        ))}
+      <div className="flex mt-3 ps-7">
+        {steps.map((s, i) => <div key={i} className="px-1 text-center text-[10px] leading-tight text-slate-500 dark:text-slate-400" style={{ width: colW }}>{s.label}</div>)}
       </div>
     </div>
   )
 }
 
-/* ────────────────────────────────────────────────────────────
-   3. Contributions divergentes (barres horizontales)
-   ──────────────────────────────────────────────────────────── */
-function Contributions({ features }) {
-  const sorted = useMemo(
-    () => [...features].sort((a, b) => Math.abs(b.impact) - Math.abs(a.impact)),
-    [features]
-  )
-  const maxAbs = Math.max(...features.map((f) => Math.abs(f.impact)))
+export default function XAI() {
+  const clientId = localStorage.getItem('clientId') || 'CL-2024-0042'
+  const { data: decisions } = useDecisions(clientId)
+  const { data: xaiList } = useExplainability(clientId)
+  const [selId, setSelId] = useState(null)
 
-  return (
-    <div className="space-y-2.5">
-      {sorted.map((f, i) => {
-        const positive = f.direction === 'positif'
-        const width = (Math.abs(f.impact) / maxAbs) * 50 // % de la demi-largeur
+  // Joint décisions crédit ↔ explications, par decisionId.
+  const items = useMemo(() => {
+    if (!xaiList || !decisions) return []
+    const byId = Object.fromEntries(decisions.map((d) => [d.id, d]))
+    return xaiList
+      .map((x) => ({ ...x, decision: byId[x.decisionId] }))
+      .filter((x) => x.decision)
+      .sort((a, b) => (a.decision.date < b.decision.date ? 1 : -1))
+  }, [xaiList, decisions])
 
-        return (
-          <motion.div
-            key={f.label}
-            className="grid grid-cols-[1fr_auto] items-center gap-3"
-            initial={{ opacity: 0, x: positive ? 12 : -12 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: i * 0.06 }}
-          >
-            <div>
-              <div className="flex items-baseline justify-between gap-2 mb-1">
-                <span className="text-sm font-medium text-slate-700 dark:text-slate-200 truncate">
-                  {f.label}
-                </span>
-                <span className="text-xs text-slate-400 dark:text-slate-500 tabular-nums flex-shrink-0">
-                  {f.valeur}
-                </span>
-              </div>
-              {/* Axe divergent : centre = 0 */}
-              <div className="relative h-5 flex items-center">
-                <div className="absolute left-1/2 top-0 bottom-0 w-px bg-slate-200 dark:bg-slate-700" />
-                {/* Moitié gauche (négatif) */}
-                <div className="w-1/2 h-2.5 flex justify-end pr-0">
-                  {!positive && (
-                    <motion.div
-                      className="h-full rounded-l-md bg-rose-500"
-                      initial={{ width: 0 }}
-                      animate={{ width: `${width * 2}%` }}
-                      transition={{ duration: 0.6, delay: 0.1 + i * 0.06, ease: [0.16, 1, 0.3, 1] }}
-                    />
-                  )}
-                </div>
-                {/* Moitié droite (positif) */}
-                <div className="w-1/2 h-2.5 flex justify-start pl-0">
-                  {positive && (
-                    <motion.div
-                      className="h-full rounded-r-md bg-emerald-500"
-                      initial={{ width: 0 }}
-                      animate={{ width: `${width * 2}%` }}
-                      transition={{ duration: 0.6, delay: 0.1 + i * 0.06, ease: [0.16, 1, 0.3, 1] }}
-                    />
-                  )}
-                </div>
-              </div>
-            </div>
-            <span
-              className={`w-12 text-right text-sm font-bold tabular-nums flex items-center justify-end gap-0.5 ${
-                positive
-                  ? 'text-emerald-600 dark:text-emerald-400'
-                  : 'text-rose-600 dark:text-rose-400'
-              }`}
-            >
-              {positive ? <TrendingUp size={13} /> : <TrendingDown size={13} />}
-              {positive ? '+' : ''}
-              {f.impact}
-            </span>
-          </motion.div>
-        )
-      })}
+  const current = items.find((x) => x.decisionId === selId) || items[0]
+
+  if (!xaiList || !decisions) return <div className="p-8 text-slate-400">Chargement…</div>
+  if (!current) return (
+    <div className="p-8 max-w-3xl mx-auto">
+      <h1 className="text-2xl font-bold tracking-tight mb-2">Centre d'explicabilité (XAI)</h1>
+      <p className="text-slate-500 dark:text-slate-400">Aucune décision de crédit à expliquer pour ce client. Lancez une demande de crédit depuis l'Assistant ou les Opérations.</p>
     </div>
   )
-}
 
-/* ────────────────────────────────────────────────────────────
-   Page
-   ──────────────────────────────────────────────────────────── */
-export default function XAI() {
-  const x = mockXai
-  const seuil = x.seuil ?? SEUIL_ACCEPTATION
-  const approuve = x.statut === 'approuve'
-
-  // Décision actuelle, pour détecter les contrefactuels qui font basculer le verdict.
-  const verdictActuel = approuve ? 'approuve' : 'refuse'
+  const d = current.decision
+  const approuve = current.statut === 'approuve'
+  const feats = current.facteurs || []
 
   return (
-    <div className="p-8 max-w-6xl mx-auto">
-      {/* 1 — En-tête */}
-      <motion.div
-        className="mb-6"
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4 }}
-      >
-        <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 mb-1">
-          <Brain size={18} />
-          <span className="text-xs font-semibold uppercase tracking-wider">Explicabilité</span>
-        </div>
+    <div className="p-4 sm:p-8 max-w-6xl mx-auto">
+      <motion.div className="mb-5" initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
+        <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 mb-1"><Brain size={18} /><span className="text-xs font-semibold uppercase tracking-wider">Explicabilité</span></div>
         <h1 className="text-2xl font-bold tracking-tight">Centre d'explicabilité (XAI)</h1>
-        <p className="text-slate-500 dark:text-slate-400 mt-1">
-          Radiographie des décisions de l'IA
-        </p>
+        <p className="text-slate-500 dark:text-slate-400 mt-1">Radiographie des décisions de l'IA pour vos demandes de crédit</p>
       </motion.div>
 
-      {/* Bandeau récap de la décision */}
-      <motion.div
-        className={`${card} p-5 mb-6 flex flex-wrap items-center gap-x-8 gap-y-4`}
-        initial={{ opacity: 0, y: 14 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.45, delay: 0.05 }}
-      >
+      {/* Sélecteur de décision (interactif) */}
+      <div className="mb-6">
+        <label className="block text-xs font-medium text-slate-400 mb-1.5">Décision à analyser ({items.length} disponibles)</label>
+        <div className="relative max-w-xl">
+          <select value={current.decisionId} onChange={(e) => setSelId(e.target.value)}
+            className="w-full appearance-none ps-4 pe-10 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm font-medium focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 dark:focus:ring-emerald-500/20 outline-none">
+            {items.map((x) => (
+              <option key={x.decisionId} value={x.decisionId}>
+                {x.decision.date} · {x.decision.intent} {fmt(x.decision.montant)} DH · {x.statut === 'approuve' ? 'Approuvé' : 'Refusé'} ({x.scoreFinal}/100)
+              </option>
+            ))}
+          </select>
+          <ChevronDown size={18} className="absolute end-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" />
+        </div>
+      </div>
+
+      {/* Bandeau récap */}
+      <motion.div key={current.decisionId} className={`${card} p-5 mb-6 flex flex-wrap items-center gap-x-8 gap-y-4`} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
         <div className="flex items-center gap-3">
-          <div className="w-11 h-11 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
-            <Scale size={20} />
-          </div>
-          <div>
-            <p className="text-[11px] uppercase tracking-wider text-slate-400 dark:text-slate-500">
-              Décision {x.decisionId}
-            </p>
-            <p className="font-semibold">{x.intent}</p>
-          </div>
+          <div className="w-11 h-11 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center"><Scale size={20} /></div>
+          <div><p className="text-[11px] uppercase tracking-wider text-slate-400">Décision {current.decisionId}</p><p className="font-semibold">{d.intent}</p></div>
         </div>
-
-        <div>
-          <p className="text-[11px] uppercase tracking-wider text-slate-400 dark:text-slate-500">
-            Montant
-          </p>
-          <p className="font-semibold tabular-nums">{fmtMontant(x.montant)}</p>
-        </div>
-
-        <div>
-          <p className="text-[11px] uppercase tracking-wider text-slate-400 dark:text-slate-500">
-            Confiance du modèle
-          </p>
-          <p className="font-semibold tabular-nums">{fmtPct(x.confiance)}</p>
-        </div>
-
-        <div className="ml-auto">
-          <span
-            className={`inline-flex items-center gap-1.5 text-sm font-semibold px-3.5 py-1.5 rounded-full ${
-              approuve
-                ? 'bg-emerald-50 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-400'
-                : 'bg-rose-50 text-rose-700 dark:bg-rose-500/10 dark:text-rose-400'
-            }`}
-          >
-            {approuve ? <BadgeCheck size={16} /> : <X size={16} />}
-            {approuve ? 'Approuvé' : 'Refusé'}
+        <div><p className="text-[11px] uppercase tracking-wider text-slate-400">Montant</p><p className="font-semibold tabular-nums">{fmtMontant(d.montant)}</p></div>
+        {d.dureeMois && <div><p className="text-[11px] uppercase tracking-wider text-slate-400">Durée</p><p className="font-semibold tabular-nums">{d.dureeMois} mois</p></div>}
+        <div className="ms-auto">
+          <span className={`inline-flex items-center gap-1.5 text-sm font-semibold px-3.5 py-1.5 rounded-full ${approuve ? 'bg-emerald-50 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-400' : 'bg-rose-50 text-rose-700 dark:bg-rose-500/10 dark:text-rose-400'}`}>
+            {approuve ? <BadgeCheck size={16} /> : <X size={16} />}{approuve ? 'Approuvé' : 'Refusé'}
           </span>
         </div>
       </motion.div>
 
-      <motion.div variants={stagger} initial="hidden" animate="show" className="space-y-6">
-        {/* 2 — Jauge + confiance + résumé */}
+      <motion.div key={`body-${current.decisionId}`} variants={stagger} initial="hidden" animate="show" className="space-y-6">
+        {/* Score + marge */}
         <motion.section variants={fadeUp} className={`${card} p-6`}>
-          <h2 className="flex items-center gap-2 font-semibold mb-5">
-            <Gauge size={18} className="text-emerald-600 dark:text-emerald-400" />
-            Score d'octroi
-          </h2>
+          <h2 className="flex items-center gap-2 font-semibold mb-5"><Gauge size={18} className="text-emerald-600 dark:text-emerald-400" /> Score d'octroi</h2>
           <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="flex-shrink-0">
-              <ScoreGauge score={x.score} seuil={seuil} statut={x.statut} />
-            </div>
-            <div className="flex-1 w-full">
-              <div className="grid grid-cols-2 gap-4 mb-5">
-                <div className="rounded-xl border border-slate-200 dark:border-slate-800 p-4">
-                  <p className="text-xs text-slate-400 dark:text-slate-500 mb-1">Confiance</p>
-                  <p className="text-2xl font-bold tabular-nums text-emerald-600 dark:text-emerald-400">
-                    {fmtPct(x.confiance)}
-                  </p>
-                  <div className="mt-2 h-1.5 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden">
-                    <motion.div
-                      className="h-full bg-emerald-500 rounded-full"
-                      initial={{ width: 0 }}
-                      animate={{ width: `${x.confiance * 100}%` }}
-                      transition={{ duration: 1, delay: 0.6 }}
-                    />
-                  </div>
-                </div>
-                <div className="rounded-xl border border-slate-200 dark:border-slate-800 p-4">
-                  <p className="text-xs text-slate-400 dark:text-slate-500 mb-1">Marge / seuil</p>
-                  <p className="text-2xl font-bold tabular-nums text-slate-900 dark:text-slate-100">
-                    +{x.score - seuil}
-                  </p>
-                  <p className="text-xs text-slate-400 dark:text-slate-500 mt-2">
-                    {x.score} ≥ {seuil} requis
-                  </p>
-                </div>
+            <ScoreGauge score={current.scoreFinal} seuil={current.seuil} statut={current.statut} />
+            <div className="flex-1 w-full space-y-3">
+              <div className="rounded-xl border border-slate-200 dark:border-slate-800 p-4">
+                <p className="text-xs text-slate-400 mb-1">Marge par rapport au seuil</p>
+                <p className={`text-2xl font-bold tabular-nums ${current.scoreFinal >= current.seuil ? 'text-emerald-600 dark:text-emerald-400' : 'text-rose-600 dark:text-rose-400'}`}>
+                  {current.scoreFinal >= current.seuil ? '+' : ''}{current.scoreFinal - current.seuil}
+                </p>
+                <p className="text-xs text-slate-400 mt-1">{current.scoreFinal} {current.scoreFinal >= current.seuil ? '≥' : '<'} {current.seuil} requis</p>
               </div>
               <div className="rounded-xl bg-slate-50 dark:bg-slate-800/50 p-4 flex gap-3">
-                <Sparkles
-                  size={16}
-                  className="text-emerald-600 dark:text-emerald-400 flex-shrink-0 mt-0.5"
-                />
-                <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-300">
-                  {x.resume}
-                </p>
+                <Sparkles size={16} className="text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+                <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-300">{d.explication}</p>
               </div>
             </div>
           </div>
         </motion.section>
 
-        {/* 3 — Waterfall */}
+        {/* Waterfall */}
         <motion.section variants={fadeUp} className={`${card} p-6`}>
-          <div className="flex items-center justify-between mb-1">
-            <h2 className="flex items-center gap-2 font-semibold">
-              <Layers size={18} className="text-emerald-600 dark:text-emerald-400" />
-              Décomposition du score
-            </h2>
-            <div className="hidden sm:flex items-center gap-4 text-xs">
-              <span className="flex items-center gap-1.5 text-slate-500 dark:text-slate-400">
-                <span className="w-3 h-3 rounded bg-emerald-500" /> Contribue
-              </span>
-              <span className="flex items-center gap-1.5 text-slate-500 dark:text-slate-400">
-                <span className="w-3 h-3 rounded bg-rose-500" /> Pénalise
-              </span>
-            </div>
-          </div>
-          <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">
-            Du score de base ({x.scoreBase}) au score final ({x.score}), chaque facteur empile sa
-            contribution.
-          </p>
-          <Waterfall
-            scoreBase={x.scoreBase}
-            features={x.features}
-            score={x.score}
-            seuil={seuil}
-          />
+          <h2 className="flex items-center gap-2 font-semibold mb-1"><Layers size={18} className="text-emerald-600 dark:text-emerald-400" /> Décomposition du score</h2>
+          <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">Du score de base au score final, chaque facteur empile sa contribution.</p>
+          <Waterfall contributions={current.contributions} score={current.scoreFinal} seuil={current.seuil} />
         </motion.section>
 
-        {/* 4 — Contributions divergentes */}
+        {/* Poids des facteurs */}
         <motion.section variants={fadeUp} className={`${card} p-6`}>
-          <h2 className="flex items-center gap-2 font-semibold mb-1">
-            <TrendingUp size={18} className="text-emerald-600 dark:text-emerald-400" />
-            Poids des facteurs
-          </h2>
-          <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">
-            Facteurs triés par importance — à droite ceux qui aident, à gauche ceux qui pénalisent.
-          </p>
-          <Contributions features={x.features} />
-        </motion.section>
-
-        {/* 5 — Contrefactuels */}
-        <motion.section variants={fadeUp} className={`${card} p-6`}>
-          <h2 className="flex items-center gap-2 font-semibold mb-1">
-            <Search size={18} className="text-emerald-600 dark:text-emerald-400" />
-            Analyse contrefactuelle — « Et si… ? »
-          </h2>
-          <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">
-            Scénarios alternatifs et leur effet sur la décision. En surbrillance, ceux qui la font
-            basculer.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {x.counterfactuals.map((cf, i) => {
-              const bascule = cf.resultat !== verdictActuel
-              const cfApprouve = cf.resultat === 'approuve'
+          <h2 className="flex items-center gap-2 font-semibold mb-1"><TrendingUp size={18} className="text-emerald-600 dark:text-emerald-400" /> Poids des facteurs</h2>
+          <p className="text-sm text-slate-500 dark:text-slate-400 mb-5">Importance de chaque critère dans la décision et son sens (favorable / défavorable).</p>
+          <div className="space-y-3">
+            {[...feats].sort((a, b) => b.poids - a.poids).map((f, i) => {
+              const neg = (f.impact || '').toLowerCase().includes('né') || (f.impact || '').toLowerCase().includes('ne')
+              const neutre = (f.impact || '').toLowerCase().includes('neutre')
+              const colorBar = neutre ? 'bg-slate-400' : neg ? 'bg-rose-500' : 'bg-emerald-500'
+              const colorTxt = neutre ? 'text-slate-500' : neg ? 'text-rose-600 dark:text-rose-400' : 'text-emerald-600 dark:text-emerald-400'
               return (
-                <motion.div
-                  key={cf.condition}
-                  className={`rounded-xl border p-4 ${
-                    bascule
-                      ? cfApprouve
-                        ? 'border-emerald-300 dark:border-emerald-500/40 bg-emerald-50/50 dark:bg-emerald-500/5'
-                        : 'border-rose-300 dark:border-rose-500/40 bg-rose-50/50 dark:bg-rose-500/5'
-                      : 'border-slate-200 dark:border-slate-800'
-                  }`}
-                  initial={{ opacity: 0, scale: 0.96 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: i * 0.08 }}
-                >
-                  <div className="flex items-start justify-between gap-3 mb-3">
-                    <p className="text-sm font-medium text-slate-700 dark:text-slate-200 leading-snug">
-                      {cf.condition}
-                    </p>
-                    <span
-                      className={`flex-shrink-0 inline-flex items-center gap-1 text-[11px] font-semibold px-2 py-0.5 rounded-full ${
-                        cfApprouve
-                          ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-400'
-                          : 'bg-rose-100 text-rose-700 dark:bg-rose-500/15 dark:text-rose-400'
-                      }`}
-                    >
-                      {cfApprouve ? <Check size={11} /> : <X size={11} />}
-                      {cfApprouve ? 'Approuvé' : 'Refusé'}
-                    </span>
+                <motion.div key={f.nom} initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }}>
+                  <div className="flex items-baseline justify-between gap-2 mb-1">
+                    <span className="text-sm font-medium text-slate-700 dark:text-slate-200">{f.nom}</span>
+                    <span className="text-xs text-slate-400 tabular-nums">{f.valeur}{f.seuil ? ` · seuil ${f.seuil}` : ''}</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <div className="flex items-center gap-1.5 text-xs text-slate-400 dark:text-slate-500">
-                      <span className="tabular-nums">{x.score}</span>
-                      <ArrowRight size={13} />
-                      <span
-                        className={`text-base font-bold tabular-nums ${
-                          cfApprouve
-                            ? 'text-emerald-600 dark:text-emerald-400'
-                            : 'text-rose-600 dark:text-rose-400'
-                        }`}
-                      >
-                        {cf.scoreSimule}
-                      </span>
+                    <div className="flex-1 h-2.5 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden">
+                      <motion.div className={`h-full rounded-full ${colorBar}`} initial={{ width: 0 }} animate={{ width: `${f.poids * 100}%` }} transition={{ duration: 0.7, delay: 0.1 + i * 0.05, ease: 'easeOut' }} />
                     </div>
-                    {bascule && (
-                      <span className="ml-auto inline-flex items-center gap-1 text-[11px] font-semibold text-amber-600 dark:text-amber-400">
-                        <AlertTriangle size={12} /> Décision basculée
-                      </span>
-                    )}
+                    <span className={`w-24 text-end text-xs font-semibold flex items-center justify-end gap-1 ${colorTxt}`}>
+                      {neg ? <TrendingDown size={13} /> : neutre ? null : <TrendingUp size={13} />}
+                      {Math.round(f.poids * 100)} % · {neutre ? 'neutre' : neg ? 'défavorable' : 'favorable'}
+                    </span>
                   </div>
                 </motion.div>
               )
@@ -560,58 +229,56 @@ export default function XAI() {
           </div>
         </motion.section>
 
-        {/* 6 — Sources RAG */}
+        {/* Règles + contrefactuel */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <motion.section variants={fadeUp} className={`${card} p-6`}>
+            <h2 className="flex items-center gap-2 font-semibold mb-5"><ShieldCheck size={18} className="text-emerald-600 dark:text-emerald-400" /> Règles métier appliquées</h2>
+            <div className="space-y-2.5">
+              {(current.reglesActivees || []).map((r) => (
+                <div key={r.regle} className="flex items-center gap-3 rounded-xl border border-slate-200 dark:border-slate-800 p-3">
+                  <span className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 ${r.respectee ? 'bg-emerald-100 dark:bg-emerald-500/15 text-emerald-600 dark:text-emerald-400' : 'bg-rose-100 dark:bg-rose-500/15 text-rose-600 dark:text-rose-400'}`}>
+                    {r.respectee ? <Check size={15} /> : <X size={15} />}
+                  </span>
+                  <span className="text-sm font-medium">{r.regle}</span>
+                </div>
+              ))}
+            </div>
+          </motion.section>
+
+          <motion.section variants={fadeUp} className={`${card} p-6`}>
+            <h2 className="flex items-center gap-2 font-semibold mb-1"><Search size={18} className="text-emerald-600 dark:text-emerald-400" /> Analyse contrefactuelle</h2>
+            <p className="text-sm text-slate-500 dark:text-slate-400 mb-4">« Que faudrait-il pour changer la décision ? »</p>
+            {current.contrefactuel ? (
+              <div className="rounded-xl border border-amber-300 dark:border-amber-500/40 bg-amber-50/60 dark:bg-amber-500/5 p-4 flex gap-3">
+                <TrendingUp size={18} className="text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
+                <p className="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">{current.contrefactuel}</p>
+              </div>
+            ) : (
+              <div className="rounded-xl border border-emerald-300 dark:border-emerald-500/40 bg-emerald-50/60 dark:bg-emerald-500/5 p-4 flex gap-3">
+                <BadgeCheck size={18} className="text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+                <p className="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">Décision favorable : tous les critères réglementaires sont respectés.</p>
+              </div>
+            )}
+          </motion.section>
+        </div>
+
+        {/* Sources RAG */}
         <motion.section variants={fadeUp} className={`${card} p-6`}>
-          <h2 className="flex items-center gap-2 font-semibold mb-1">
-            <ShieldCheck size={18} className="text-emerald-600 dark:text-emerald-400" />
-            Sources consultées (RAG)
-          </h2>
-          <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">
-            Les preuves documentaires sur lesquelles l'IA fonde sa décision.
-          </p>
+          <h2 className="flex items-center gap-2 font-semibold mb-1"><FileText size={18} className="text-emerald-600 dark:text-emerald-400" /> Sources consultées (RAG)</h2>
+          <p className="text-sm text-slate-500 dark:text-slate-400 mb-5">Les documents réglementaires sur lesquels la décision s'appuie.</p>
           <div className="space-y-3">
-            {x.sources.map((s, i) => (
-              <motion.div
-                key={`${s.docId}-${i}`}
-                className="rounded-xl border border-slate-200 dark:border-slate-800 p-4"
-                initial={{ opacity: 0, x: -12 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.08 }}
-              >
+            {(current.sourcesRag || []).map((s, i) => (
+              <motion.div key={`${s.document}-${i}`} className="rounded-xl border border-slate-200 dark:border-slate-800 p-4" initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.06 }}>
                 <div className="flex items-start gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center flex-shrink-0">
-                    <FileText size={16} />
-                  </div>
+                  <div className="w-9 h-9 rounded-lg bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0"><Quote size={16} /></div>
                   <div className="flex-1 min-w-0">
-                    <div className="flex items-center justify-between gap-3 mb-1.5">
-                      <span className="text-sm font-semibold truncate">{s.titre}</span>
-                      <span className="flex-shrink-0 text-xs font-mono text-slate-400 dark:text-slate-500">
-                        {s.docId}
-                      </span>
-                    </div>
-                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed flex gap-1.5">
-                      <Quote
-                        size={14}
-                        className="text-slate-300 dark:text-slate-600 flex-shrink-0 mt-0.5"
-                      />
-                      <span className="italic">{s.extrait}</span>
-                    </p>
-                    {/* Barre de pertinence */}
-                    <div className="flex items-center gap-2 mt-3">
-                      <span className="text-[11px] text-slate-400 dark:text-slate-500 w-16 flex-shrink-0">
-                        Pertinence
-                      </span>
+                    <p className="text-sm font-semibold">{s.document}</p>
+                    <div className="flex items-center gap-2 mt-2">
+                      <span className="text-[11px] text-slate-400 w-16 shrink-0">Pertinence</span>
                       <div className="flex-1 h-1.5 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden">
-                        <motion.div
-                          className="h-full bg-emerald-500 rounded-full"
-                          initial={{ width: 0 }}
-                          animate={{ width: `${s.pertinence * 100}%` }}
-                          transition={{ duration: 0.9, delay: 0.2 + i * 0.08, ease: [0.16, 1, 0.3, 1] }}
-                        />
+                        <motion.div className="h-full bg-emerald-500 rounded-full" initial={{ width: 0 }} animate={{ width: `${s.pertinence * 100}%` }} transition={{ duration: 0.8, delay: 0.2 + i * 0.06 }} />
                       </div>
-                      <span className="text-xs font-semibold tabular-nums text-emerald-600 dark:text-emerald-400 w-10 text-right">
-                        {fmtPct(s.pertinence)}
-                      </span>
+                      <span className="text-xs font-semibold tabular-nums text-emerald-600 dark:text-emerald-400 w-10 text-end">{Math.round(s.pertinence * 100)} %</span>
                     </div>
                   </div>
                 </div>

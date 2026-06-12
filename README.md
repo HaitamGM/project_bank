@@ -1,35 +1,45 @@
 # 🏦 BankIA — Assistant bancaire vocal intelligent
 
-> Projet de Fin d'Études (PFE) — Plateforme bancaire augmentée par l'IA, avec assistant vocal temps réel, scoring de crédit explicable (XAI) et supervision multi-agents.
+> Projet de Fin d'Études (PFE) — Plateforme bancaire augmentée par l'IA : assistant vocal temps réel, authentification 2FA, pipeline de vérification multi-agents pour le crédit et le virement, et scoring de crédit explicable (XAI).
 
-BankIA est une démonstration d'expérience bancaire nouvelle génération pour une banque marocaine. Le client dialogue **par la voix** avec un assistant IA capable de traiter des demandes de **crédit** et de **virement**, en s'appuyant sur le profil réel du compte. Chaque décision est **expliquée** (explicabilité / XAI) et **supervisée**.
+BankIA est une démonstration d'expérience bancaire nouvelle génération pour une banque marocaine. Le client se connecte de façon sécurisée (mot de passe + code OTP), puis dialogue **par la voix** (en **darija**) avec un assistant IA, ou passe par l'écran **Opérations**. Chaque demande de **crédit** ou de **virement** traverse une **pipeline d'agents de vérification** (KYC, solvabilité, anti-fraude, scoring, décision, explication) et chaque décision est **expliquée**.
 
 ---
 
 ## ✨ Fonctionnalités
 
-- **🎙️ Assistant vocal temps réel** — conversation audio bidirectionnelle via Gemini Live (WebSocket), réponses en français (comprend aussi la darija).
-- **💳 Demandes de crédit** — évaluation selon le profil (revenu, taux d'endettement, incidents, fichage BAM) avec décision motivée.
-- **🔁 Virements** — vérification du solde et confirmation de l'opération.
-- **🧠 Explicabilité (XAI)** — visualisation des facteurs ayant influencé chaque décision.
-- **📊 Analytics & Supervision** — tableaux de bord, suivi des décisions et des pipelines.
-- **🧮 Simulateur de crédit** — estimation interactive de la capacité d'emprunt.
-- **📂 Documents & Historique** — gestion documentaire et traçabilité des opérations.
+- **🔐 Connexion sécurisée 2FA** — email + mot de passe (haché en bcrypt) puis code OTP à 6 chiffres ; session par jeton **JWT**.
+- **🎙️ Assistant vocal temps réel** — conversation audio bidirectionnelle via Gemini Live (WebSocket **authentifié**), réponses en **darija marocaine**.
+- **🤖 Pipeline de vérification multi-agents** — pour chaque crédit/virement : KYC → solvabilité → anti-fraude/BAM → scoring → décision → explication (Gemini), affichée en direct.
+- **💳 Crédit** — décision déterministe (taux d'endettement ≤ 40 %, fichage BAM, incidents) + explication en langage naturel.
+- **🔁 Virement** — contrôle du solde et des plafonds, analyse anti-fraude, puis **signature par OTP** avant exécution.
+- **👤 Profil détaillé** — état civil, adresse, situation pro, comptes/IBAN, cartes, plafonds, bénéficiaires, crédits en cours, risque — avec **photo de profil**.
+- **🧠 Explicabilité (XAI), 📊 Analytics, 🧮 Simulateur, 🗂️ Supervision, 📂 RAG, 🛡️ Audit.**
 
 ## 🗂️ Architecture
 
 ```
 PFE Project/
 ├── frontend/        # SPA React 19 + Vite + Tailwind v4 (interface en français)
+│   ├── public/avatars/   # Photos de profil (SVG) par client
 │   └── src/
-│       ├── pages/        # Login, Dashboard, Assistant, XAI, Analytics, Simulateur…
-│       ├── components/   # Layout & composants partagés
-│       ├── services/     # mockData, scoring, clientService
-│       └── hooks/        # useClient, useTheme
-├── backend/         # API FastAPI + passerelle Gemini Live (voix)
-│   └── app/main.py       # endpoints REST + WebSocket /ws
-├── data/            # Données mock (clients, transactions, décisions, XAI…)
-└── validate-data.mjs     # Script de validation des fichiers de données
+│       ├── pages/        # Login (2FA), Dashboard, Assistant, Operations, Profil, XAI…
+│       ├── components/   # Layout, Avatar
+│       ├── services/     # apiClient, authService, pipelineService, clientService,
+│       │                 #   audioRecorder, audioStreamer, geminiLiveClient
+│       └── hooks/         # useClient, useTheme
+├── backend/         # API FastAPI
+│   └── app/
+│       ├── main.py         # app, CORS, en-têtes sécurité, endpoints /me, WebSocket /ws
+│       ├── auth.py         # login + OTP 2FA + JWT
+│       ├── security.py     # bcrypt, JWT, OTP, anti-bruteforce, rate-limit, dépendances
+│       ├── pipeline.py     # agents de vérification crédit/virement
+│       ├── pipeline_routes.py
+│       ├── scoring.py      # moteur de décision (port de scoring.js)
+│       ├── data_store.py   # accès données + seed users + audit
+│       ├── schemas.py / config.py
+├── data/            # clients (profils détaillés), transactions, décisions, users (généré)…
+└── validate-data.mjs
 ```
 
 ## 🛠️ Stack technique
@@ -38,19 +48,19 @@ PFE Project/
 |-----------|--------------|
 | Frontend  | React 19, Vite, Tailwind CSS v4, React Router, TanStack Query, Framer Motion, Axios |
 | Backend   | Python, FastAPI, Uvicorn, WebSockets |
-| IA        | Google Gemini Live (`google-genai`) — audio temps réel |
-| Données   | Fichiers JSON mock (démo) |
+| Sécurité  | bcrypt (mots de passe), PyJWT (jetons), OTP 2FA, rate-limiting, en-têtes sécurité |
+| IA        | Google Gemini Live (voix) + Gemini (explication des décisions) — `google-genai` |
+| Données   | Fichiers JSON (démo) |
 
 ---
 
 ## 🚀 Démarrage
 
 ### Prérequis
-- Node.js 18+
-- Python 3.11+
+- Node.js 18+ · Python 3.11+
 - Une clé API Google Gemini — gratuite sur [Google AI Studio](https://aistudio.google.com)
 
-### 1. Backend (API + voix)
+### 1. Backend
 
 ```bash
 cd backend
@@ -58,11 +68,11 @@ python -m venv .venv
 # Windows : .venv\Scripts\activate   |   macOS/Linux : source .venv/bin/activate
 pip install -r requirements.txt
 
-# Configurer la clé API
-cp .env.example .env        # puis éditez .env et renseignez GOOGLE_API_KEY
-
+cp .env.example .env        # éditez .env : GOOGLE_API_KEY et JWT_SECRET
 uvicorn app.main:app --reload --port 8000
 ```
+
+Au premier démarrage, `data/users.json` est généré automatiquement (un compte par client, mot de passe de démo haché en bcrypt).
 
 ### 2. Frontend
 
@@ -72,28 +82,61 @@ npm install
 npm run dev
 ```
 
-L'application est servie sur **http://localhost:5173** et communique avec l'API sur **http://localhost:8000**.
+Application sur **http://localhost:5173**, API sur **http://localhost:8000** (Vite proxifie `/api` et `/ws`).
+
+### 🔑 Comptes de démonstration
+
+Mot de passe commun : **`BankIA@2026`** · le code OTP est affiché à l'écran en mode démo.
+
+| Email | Client | Profil |
+|-------|--------|--------|
+| `y.elidrissi@email.ma` | Yasmina El Idrissi | Premium — crédit immobilier approuvé (score 79) |
+| `s.amrani@email.ma` | Sara Amrani | Patrimoine — excellent profil (score 87) |
+| `k.benali@email.ma` | Karim Benali | Standard — fiché BAM, crédit refusé |
 
 ---
 
-## 🔐 Variables d'environnement
+## 🔐 Variables d'environnement (`backend/.env`)
 
-À placer dans `backend/.env` (voir `backend/.env.example`) :
+| Variable | Description |
+|----------|-------------|
+| `GOOGLE_API_KEY` | Clé API Google Gemini (**obligatoire** pour voix + explication) |
+| `JWT_SECRET` | Secret de signature des jetons — **valeur aléatoire longue obligatoire** |
+| `GEMINI_LIVE_MODEL` | Modèle Gemini Live (voix), valeur par défaut fournie |
+| `GEMINI_TEXT_MODEL` | Modèle texte pour l'explication des décisions (repli gabarit si absent) |
+| `DEMO_PASSWORD` | Mot de passe de démo commun (haché au seed) |
+| `DEMO_MODE` | `true` = l'OTP est renvoyé au front pour la démo ; `false` en production |
 
-| Variable            | Description |
-|---------------------|-------------|
-| `GOOGLE_API_KEY`    | Clé API Google Gemini (**obligatoire**) |
-| `GEMINI_LIVE_MODEL` | Nom du modèle Gemini Live (optionnel, valeur par défaut fournie) |
+> ⚠️ `.env` et `data/users.json` contiennent des secrets/hashes et **ne sont pas versionnés** (voir `.gitignore`).
 
-> ⚠️ Le fichier `.env` contient des secrets et **n'est jamais versionné** (voir `.gitignore`). Ne partagez que `.env.example`.
+## 🛡️ Sécurité (mesures implémentées)
+
+- Mots de passe **hachés bcrypt**, jamais stockés en clair.
+- **2FA** : code OTP expirant, à essais limités, après le mot de passe.
+- **JWT** signé (HS256), avec expiration ; le client est **toujours dérivé du jeton** (pas d'IDOR).
+- **WebSocket vocal authentifié** par jeton.
+- **Anti-bruteforce** (verrouillage de compte) + **rate-limiting** par IP.
+- **Validation** stricte des entrées (Pydantic) et **plafonds** de virement.
+- **En-têtes de sécurité** (anti-clickjacking, nosniff…) et **CORS** restreint.
+- **Signature OTP** des virements avant exécution + **journal d'audit**.
 
 ---
+
+## 📚 Documentation
+
+La connaissance essentielle du projet est consignée dans des fichiers versionnés (afin de ne rien perdre au fil des sessions) :
+
+| Fichier | Contenu |
+|---------|---------|
+| [`AGENTS.md`](AGENTS.md) | Source de vérité : identité, stack, lancement, agents, conventions et pièges |
+| [`CLAUDE.md`](CLAUDE.md) | Point d'entrée des assistants IA (importe `AGENTS.md`) |
+| [`docs/architecture.md`](docs/architecture.md) | Architecture technique détaillée (auth, pipelines, scoring, voix, données) |
+| [`docs/decisions.md`](docs/decisions.md) | Journal des décisions structurantes (ADR) |
+
+> ⚠️ Ne pas confondre [`docs/decisions.md`](docs/decisions.md) (décisions **de projet**) avec `data/decisions.json` (**données métier** : décisions de crédit/virement des clients).
 
 ## 📝 Notes
 
-- Les données (`data/*.json`) sont **fictives**, destinées à la démonstration.
-- Projet académique — non destiné à une mise en production telle quelle.
-
----
+- Données fictives, destinées à la démonstration. Projet académique — non destiné à la production telle quelle.
 
 *Développé dans le cadre d'un Projet de Fin d'Études.*

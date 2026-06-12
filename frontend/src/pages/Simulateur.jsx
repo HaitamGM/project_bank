@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   RotateCcw,
@@ -13,8 +13,10 @@ import {
   ShieldCheck,
   Sparkles,
   Gauge,
+  UserCircle,
 } from 'lucide-react'
 import { scoreCredit, SIMULATEUR_DEFAUT, SEUIL_ACCEPTATION } from '../services/scoring'
+import { useClient } from '../hooks/useClient'
 
 const fmtMad = (n) => Math.round(n).toLocaleString('fr-MA') + ' MAD'
 
@@ -218,11 +220,38 @@ function Waterfall({ contributions }) {
 }
 
 export default function Simulateur() {
+  const clientId = localStorage.getItem('clientId') || 'CL-2024-0042'
+  const { data: client } = useClient(clientId)
+
+  // Pré-remplissage à partir du profil RÉEL du client connecté.
+  const clientPreset = useMemo(() => {
+    if (!client) return null
+    return {
+      revenuMensuel: client.professionnel?.revenuMensuel ?? SIMULATEUR_DEFAUT.revenuMensuel,
+      montant: 600000,
+      dureeMois: 240,
+      autresCharges: client.bancaire?.chargesMensuelles ?? 0,
+      ancienneteMois: client.professionnel?.ancienneteMois ?? 36,
+      incidentsPaiement: client.risque?.incidentsPaiement ?? 0,
+      fichageBam: !!client.risque?.fichageBam,
+    }
+  }, [client])
+
   const [params, setParams] = useState(SIMULATEUR_DEFAUT)
   const result = useMemo(() => scoreCredit(params), [params])
 
+  // Applique le profil du client une fois ses données chargées (sans écraser les modifications ultérieures).
+  const seeded = useRef(false)
+  useEffect(() => {
+    if (clientPreset && !seeded.current) {
+      seeded.current = true
+      setParams(clientPreset)
+    }
+  }, [clientPreset])
+
   const setParam = (key, value) => setParams((p) => ({ ...p, [key]: value }))
-  const reset = () => setParams(SIMULATEUR_DEFAUT)
+  const reset = () => setParams(clientPreset || SIMULATEUR_DEFAUT)
+  const prenom = client?.personnel?.prenom
 
   const approuve = result.decision === 'approuve'
   const endettementPct = Math.round(result.tauxEndettement * 100)
@@ -242,7 +271,7 @@ export default function Simulateur() {
             Simulateur interactif
           </h1>
           <p className="text-slate-500 dark:text-slate-400 mt-1">
-            Ajustez les paramètres, voyez la décision changer.
+            {prenom ? `Pré-rempli avec le profil réel de ${prenom} — ajustez et voyez la décision changer.` : 'Ajustez les paramètres, voyez la décision changer.'}
           </p>
         </div>
         <button
@@ -300,6 +329,14 @@ export default function Simulateur() {
               <Sparkles size={13} /> Scénarios rapides
             </p>
             <div className="flex flex-wrap gap-2">
+              {clientPreset && (
+                <button
+                  onClick={() => setParams(clientPreset)}
+                  className="flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg border border-sky-200 dark:border-sky-500/30 text-sky-700 dark:text-sky-400 bg-sky-50 dark:bg-sky-500/10 hover:bg-sky-100 dark:hover:bg-sky-500/20 transition"
+                >
+                  <UserCircle size={13} /> Mon profil{prenom ? ` (${prenom})` : ''}
+                </button>
+              )}
               {SCENARIOS.map((s) => {
                 const Icon = s.icon
                 const emerald = s.accent === 'emerald'

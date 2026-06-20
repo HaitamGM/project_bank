@@ -24,6 +24,60 @@ def _jsround(x):
     return math.floor(x + 0.5)
 
 
+def montant_max_eligible(revenu, charges, duree_mois):
+    """Plus grand montant gardant l'endettement ≤ 40 % (pour le contrefactuel)."""
+    mens_dispo = 0.40 * revenu - charges
+    if mens_dispo <= 0:
+        return 0
+    r = TAUX_ANNUEL / 12
+    montant = mens_dispo * (1 - (1 + r) ** (-duree_mois)) / r
+    return max(0, _jsround(montant / 1000) * 1000)
+
+
+def generate_xai(decision_id, client_id, ev, revenu, charges, duree_mois, anc, incidents, fichage, contrat):
+    """Construit l'objet XAI à partir du résultat du scoring pour la page Centre d'explicabilité."""
+    taux = ev["tauxEndettement"]
+    facteurs = [
+        {"nom": "Taux d'endettement après crédit", "valeur": f"{_jsround(taux * 100)}%", "seuil": "40%", "poids": 0.35,
+         "impact": "négatif" if taux > 0.40 else "positif"},
+        {"nom": "Fichage Bank Al-Maghrib", "valeur": "Oui" if fichage else "Non", "poids": 0.25,
+         "impact": "négatif" if fichage else "positif"},
+        {"nom": "Incidents de paiement (12 mois)", "valeur": incidents, "poids": 0.20,
+         "impact": "négatif" if incidents > 0 else "positif"},
+        {"nom": "Ancienneté professionnelle", "valeur": f"{anc} mois", "poids": 0.10,
+         "impact": "positif" if anc >= 24 else "neutre"},
+        {"nom": "Type de contrat", "valeur": contrat, "poids": 0.10,
+         "impact": "positif" if contrat in ("CDI", "Titulaire") else "neutre"},
+    ]
+    cf = None
+    if ev["decision"] == "refuse":
+        if fichage:
+            cf = "La régularisation auprès de Bank Al-Maghrib est requise avant toute nouvelle demande."
+        elif taux > 0.40:
+            cf = f"Un montant réduit à environ {montant_max_eligible(revenu, charges, duree_mois):,} MAD respecterait le seuil de 40 %.".replace(",", " ")
+        elif incidents > 1:
+            cf = "Une réduction des incidents de paiement améliorerait l'éligibilité."
+        else:
+            cf = f"Un score d'au moins {SEUIL_ACCEPTATION} est requis."
+
+    return {
+        "decisionId": decision_id,
+        "clientId": client_id,
+        "scoreFinal": ev["score"],
+        "statut": ev["decision"],
+        "scoreBase": 50,
+        "seuil": SEUIL_ACCEPTATION,
+        "facteurs": facteurs,
+        "contributions": ev.get("contributions", []),
+        "contrefactuel": cf,
+        "reglesActivees": [
+            {"regle": "Taux d'endettement <= 40%", "respectee": taux <= 0.40},
+            {"regle": "Absence de fichage BAM", "respectee": not fichage},
+            {"regle": f"Score minimum de {SEUIL_ACCEPTATION}/100", "respectee": ev["score"] >= SEUIL_ACCEPTATION}
+        ]
+    }
+
+
 def score_credit(
     revenuMensuel,
     montant,

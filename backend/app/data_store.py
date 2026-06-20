@@ -198,6 +198,11 @@ def add_decision(client_id: str, decision: dict) -> None:
     _persist_prepend("decisions.json", client_id, decision)
 
 
+def add_explainability(client_id: str, explainability: dict) -> None:
+    """Persiste l'explicabilité dans data/explainability.json."""
+    _persist_prepend("explainability.json", client_id, explainability)
+
+
 # ───────────────────────── Explicabilité / pipeline / référentiel ─────────────────────────
 
 def get_explainability(client_id: str) -> list:

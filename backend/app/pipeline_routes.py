@@ -49,6 +49,26 @@ def pipeline_credit(body: CreditRequest, request: Request, client_id: str = Depe
     data_store.audit("pipeline_credit", client_id=client_id, ip=_ip(request),
                      montant=body.montant, decision=result["decision"], score=result["score"])
     result["decisionId"] = decision["id"]
+
+    # Génération XAI
+    try:
+        from .scoring import generate_xai
+        prof = client.get("professionnel", {})
+        banc = client.get("bancaire", {})
+        risque = client.get("risque", {})
+
+        revenu = prof.get("revenuMensuel", 0) + prof.get("autresRevenus", 0)
+        charges = banc.get("chargesMensuelles", 0)
+        anc = prof.get("ancienneteMois", 0)
+        incidents = risque.get("incidentsPaiement", 0)
+        fichage = risque.get("fichageBam", False)
+        contrat = prof.get("typeContrat", "")
+
+        xai_data = generate_xai(decision["id"], client_id, result, revenu, charges, body.dureeMois, anc, incidents, fichage, contrat)
+        data_store.add_explainability(client_id, xai_data)
+    except Exception as e:
+        print(f"[XAI Pipeline] Erreur generation explicabilite: {e}")
+
     return result
 
 

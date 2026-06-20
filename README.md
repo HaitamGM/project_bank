@@ -11,7 +11,7 @@ BankIA est une démonstration d'expérience bancaire nouvelle génération pour 
 - **🔐 Connexion sécurisée 2FA** — email + mot de passe (haché en bcrypt) puis code OTP à 6 chiffres ; session par jeton **JWT**.
 - **🎙️ Assistant vocal temps réel** — conversation audio bidirectionnelle via Gemini Live (WebSocket **authentifié**), réponses en **darija marocaine**.
 - **🤖 Pipeline de vérification multi-agents** — pour chaque crédit/virement : KYC → solvabilité → anti-fraude/BAM → scoring → décision → explication (Gemini), affichée en direct.
-- **💳 Crédit** — décision déterministe (taux d'endettement ≤ 40 %, fichage BAM, incidents) + explication en langage naturel.
+- **💳 Crédit** — décision déterministe (taux d'endettement ≤ 40 %, fichage BAM, incidents) + analyse documentaire IA RAG (LangChain/ChromaDB) pour valider la conformité.
 - **🔁 Virement** — contrôle du solde et des plafonds, analyse anti-fraude, puis **signature par OTP** avant exécution.
 - **👤 Profil détaillé** — état civil, adresse, situation pro, comptes/IBAN, cartes, plafonds, bénéficiaires, crédits en cours, risque — avec **photo de profil**.
 - **🧠 Explicabilité (XAI), 📊 Analytics, 🧮 Simulateur, 🗂️ Supervision, 📂 RAG, 🛡️ Audit.**
@@ -49,7 +49,7 @@ PFE Project/
 | Frontend  | React 19, Vite, Tailwind CSS v4, React Router, TanStack Query, Framer Motion, Axios |
 | Backend   | Python, FastAPI, Uvicorn, WebSockets |
 | Sécurité  | bcrypt (mots de passe), PyJWT (jetons), OTP 2FA, rate-limiting, en-têtes sécurité |
-| IA        | Google Gemini Live (voix) + Gemini (explication des décisions) — `google-genai` |
+| IA        | Google Gemini Live (voix) + Gemini (explications) + LangChain + ChromaDB (RAG) + HuggingFace `all-MiniLM-L6-v2` |
 | Données   | Fichiers JSON (démo) |
 
 ---

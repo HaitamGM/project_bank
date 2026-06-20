@@ -134,26 +134,32 @@ class ExplicationAgent(Agent):
         )
 
 
-# Politiques applicables par objet de crédit (titres = ceux de data/documents.json).
-RAG_PAR_OBJET = {
-    "immobilier": ["Politique de crédit immobilier 2026", "Circulaire Bank Al-Maghrib 1/G/2020"],
-    "consommation": ["Conditions générales du crédit à la consommation", "Circulaire Bank Al-Maghrib 1/G/2020"],
-    "auto": ["Barème des crédits automobiles", "Circulaire Bank Al-Maghrib 1/G/2020"],
-    "personnel": ["Conditions générales du crédit à la consommation"],
-    "travaux": ["Politique de crédit immobilier 2026", "Circulaire Bank Al-Maghrib 1/G/2020"],
-}
-
-
 class ConformiteAgent(Agent):
     """Agent INTELLIGENT (RAG) : ancre la décision dans la base documentaire réelle
-    (data/documents.json). Sélectionne la/les politique(s) applicable(s) à l'objet du
-    crédit, vérifie chaque règle clé (endettement ≤ 40 %, consultation BAM) et cite ses
-    sources. Grounding documentaire — ne change pas le verdict, il le justifie."""
-    id, name, agent, tech = "conformite", "Conformité réglementaire (RAG)", "Agent Conformité", "Recherche documentaire"
-    duration_ms = 360
+    (rag_docs). Sélectionne les documents pertinents avec un retriever à 2 étapes (Dense + Cross-Encoder)
+    et utilise Gemini pour générer une vérification stricte."""
+    id, name, agent, tech = "conformite", "Conformité réglementaire (RAG)", "Agent Conformité", "Recherche sémantique + IA"
+    duration_ms = 1200
 
     def run(self, ctx):
-        docs = self._retrieve(ctx.objet)
+        from ..services.rag_service import rag_service
+
+        # Build query for the true RAG service
+        bam_status = "fiché à Bank Al-Maghrib (BAM)" if ctx.bam else "non fiché à Bank Al-Maghrib"
+        query = (
+            f"Je souhaite vérifier la conformité d'un crédit {ctx.objet}. "
+            f"Le client a un taux d'endettement de {round(ctx.taux_endettement * 100)} % "
+            f"et est {bam_status}. Quelles sont les règles applicables selon Bank Al-Maghrib "
+            "et les politiques de crédit concernant l'endettement maximum et le fichage ?"
+        )
+
+        # Retrieve docs
+        retrieved_docs = rag_service.retrieve(query, top_k=3)
+
+        # Generate final answer based on retrieved docs
+        ai_response = rag_service.generate_answer(query, retrieved_docs)
+
+        # Keep deterministic checks for structured payload, but add the true RAG content
         checks = [
             ("Taux d'endettement ≤ 40 %", ctx.taux_endettement <= 0.40, f"{round(ctx.taux_endettement * 100)} %"),
             ("Consultation Bank Al-Maghrib", not ctx.bam, "fiché" if ctx.bam else "non fiché"),
@@ -165,23 +171,16 @@ class ConformiteAgent(Agent):
             status = "warn"
         else:
             status = "ok"
-        titres = [d["titre"] for d in docs]
+
+        titres = list(set([d["source"] for d in retrieved_docs]))
         summary = (f"{nb_ok}/{len(checks)} règles respectées — décision adossée à : " + " · ".join(titres)
                    if titres else f"{nb_ok}/{len(checks)} règles respectées")
-        return self.emit(ctx, status, summary, {
-            "regles": [{"regle": r, "respectee": ok, "valeur": v} for r, ok, v in checks],
-            "sources": [{"docId": d.get("id"), "titre": d.get("titre"), "extrait": d.get("extrait")} for d in docs],
-        })
 
-    def _retrieve(self, objet):
-        try:
-            alldocs = data_store.load_json("documents.json")
-        except Exception:  # noqa: BLE001
-            return []
-        wanted = RAG_PAR_OBJET.get(objet, ["Circulaire Bank Al-Maghrib 1/G/2020"])
-        # Conserve l'ordre de `wanted`.
-        by_titre = {d.get("titre"): d for d in alldocs}
-        return [by_titre[t] for t in wanted if t in by_titre]
+        return self.emit(ctx, status, summary, {
+            "rag_analysis": ai_response,
+            "regles": [{"regle": r, "respectee": ok, "valeur": v} for r, ok, v in checks],
+            "sources": [{"docId": f"doc-{i}", "titre": d["source"], "extrait": d["content"]} for i, d in enumerate(retrieved_docs)],
+        })
 
 
 # Ordre d'exécution de la chaîne crédit (7 agents : conformité RAG insérée avant la décision).

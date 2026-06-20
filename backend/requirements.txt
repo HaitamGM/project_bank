@@ -5,3 +5,10 @@ google-genai
 bcrypt
 pyjwt
 email-validator
+langchain
+langchain-huggingface
+chromadb
+sentence-transformers
+langchain-chroma
+langchain-text-splitters
+langchain-community

@@ -163,10 +163,23 @@ async def _credit(args, client, client_id):
         fichage = risque.get("fichageBam", False)
         contrat = prof.get("typeContrat", "")
 
-        xai_data = generate_xai(decision["id"], client_id, result, revenu, charges, duree, anc, incidents, fichage, contrat)
+        sources_rag = []
+        if "steps" in result:
+            conf_step = next((s for s in result["steps"] if s["id"] == "conformite"), None)
+            if conf_step and "details" in conf_step and "sources" in conf_step["details"]:
+                sources_rag = [{"document": s["titre"], "pertinence": 0.95} for s in conf_step["details"]["sources"]]
+
+        xai_data = generate_xai(decision["id"], client_id, result, revenu, charges, duree, anc, incidents, fichage, contrat, sources_rag)
         data_store.add_explainability(client_id, xai_data)
     except Exception as e:
         print(f"[XAI Voice] Erreur generation explicabilite: {e}")
+
+    try:
+        from .utils import generate_pipeline_run
+        pr_data = generate_pipeline_run(decision["id"], client_id, result)
+        data_store.add_pipeline_run(client_id, pr_data)
+    except Exception as e:
+        print(f"[Pipeline Run] Erreur generation run (vocal): {e}")
 
     model_resp = {
         "decision": result["decision"],
@@ -218,6 +231,7 @@ async def _prepare_transfer(args, client, client_id, pending):
             "beneficiaire": benef,
             "compteSource": result["compteSource"],
             "compteSourceType": result["compteSourceType"],
+            "pipelineResult": result,
         })
         pending["transfer"] = challenge_id
         result["challengeId"] = challenge_id
@@ -235,6 +249,14 @@ async def _prepare_transfer(args, client, client_id, pending):
             ui["devOtp"] = otp
             print(f"[OTP virement vocal] {benef} {montant} DH -> code : {otp}")
     else:
+        try:
+            from .utils import generate_pipeline_run
+            import secrets
+            pr_data = generate_pipeline_run("D-" + secrets.token_hex(3).upper(), client_id, result)
+            data_store.add_pipeline_run(client_id, pr_data)
+        except Exception as e:
+            print(f"[Pipeline Run] Erreur generation run (vocal echec): {e}")
+
         model_resp = {
             "decision": "refuse",
             "motif": result.get("motifRefus") or "Contrôles non satisfaits.",
@@ -279,6 +301,14 @@ async def _confirm_transfer(args, client, client_id, pending):
     data_store.add_decision(client_id, decision)
     data_store.audit("voice_transfer_executed", client_id=client_id,
                      montant=transfer["montant"], beneficiaire=transfer["beneficiaire"])
+
+    try:
+        from .utils import generate_pipeline_run
+        if "pipelineResult" in transfer:
+            pr_data = generate_pipeline_run(decision["id"], client_id, transfer["pipelineResult"])
+            data_store.add_pipeline_run(client_id, pr_data)
+    except Exception as e:
+        print(f"[Pipeline Run] Erreur generation run virement: {e}")
 
     model_resp = {
         "statut": "execute",

@@ -64,10 +64,23 @@ def pipeline_credit(body: CreditRequest, request: Request, client_id: str = Depe
         fichage = risque.get("fichageBam", False)
         contrat = prof.get("typeContrat", "")
 
-        xai_data = generate_xai(decision["id"], client_id, result, revenu, charges, body.dureeMois, anc, incidents, fichage, contrat)
+        sources_rag = []
+        if "steps" in result:
+            conf_step = next((s for s in result["steps"] if s["id"] == "conformite"), None)
+            if conf_step and "details" in conf_step and "sources" in conf_step["details"]:
+                sources_rag = [{"document": s["titre"], "pertinence": 0.95} for s in conf_step["details"]["sources"]]
+
+        xai_data = generate_xai(decision["id"], client_id, result, revenu, charges, body.dureeMois, anc, incidents, fichage, contrat, sources_rag)
         data_store.add_explainability(client_id, xai_data)
     except Exception as e:
         print(f"[XAI Pipeline] Erreur generation explicabilite: {e}")
+
+    try:
+        from .utils import generate_pipeline_run
+        pr_data = generate_pipeline_run(decision["id"], client_id, result)
+        data_store.add_pipeline_run(client_id, pr_data)
+    except Exception as e:
+        print(f"[Pipeline Run] Erreur generation run: {e}")
 
     return result
 
@@ -110,12 +123,22 @@ def pipeline_transfer(body: TransferRequest, request: Request, client_id: str = 
             "beneficiaire": body.beneficiaire,
             "compteSource": result["compteSource"],
             "compteSourceType": result["compteSourceType"],
+            "pipelineResult": result, # Save result here to log it on execution
         })
         result["challengeId"] = challenge_id
         result["otpExpiresIn"] = config.OTP_TTL_SEC
         print(f"[OTP virement] {body.beneficiaire} {body.montant} DH -> code : {otp}")
         if config.DEMO_MODE:
             result["devOtp"] = otp
+    else:
+        # Pipeline failed, generate a pipeline_run right now (with a dummy decision id)
+        try:
+            from .utils import generate_pipeline_run
+            pr_data = generate_pipeline_run("D-" + secrets.token_hex(3).upper(), client_id, result)
+            data_store.add_pipeline_run(client_id, pr_data)
+        except Exception as e:
+            print(f"[Pipeline Run] Erreur generation run (virement echec): {e}")
+
     return result
 
 
@@ -169,6 +192,14 @@ def pipeline_transfer_confirm(body: TransferConfirmRequest, request: Request, cl
     data_store.add_decision(client_id, decision)
     data_store.audit("transfer_executed", client_id=client_id, ip=_ip(request),
                      montant=transfer["montant"], beneficiaire=transfer["beneficiaire"])
+
+    try:
+        from .utils import generate_pipeline_run
+        if "pipelineResult" in transfer:
+            pr_data = generate_pipeline_run(decision["id"], client_id, transfer["pipelineResult"])
+            data_store.add_pipeline_run(client_id, pr_data)
+    except Exception as e:
+        print(f"[Pipeline Run] Erreur generation run virement: {e}")
 
     return {
         "status": "execute",

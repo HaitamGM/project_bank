@@ -34,7 +34,7 @@ def montant_max_eligible(revenu, charges, duree_mois):
     return max(0, _jsround(montant / 1000) * 1000)
 
 
-def generate_xai(decision_id, client_id, ev, revenu, charges, duree_mois, anc, incidents, fichage, contrat):
+def generate_xai(decision_id, client_id, ev, revenu, charges, duree_mois, anc, incidents, fichage, contrat, sources_rag=None):
     """Construit l'objet XAI à partir du résultat du scoring pour la page Centre d'explicabilité."""
     taux = ev["tauxEndettement"]
     facteurs = [
@@ -74,7 +74,8 @@ def generate_xai(decision_id, client_id, ev, revenu, charges, duree_mois, anc, i
             {"regle": "Taux d'endettement <= 40%", "respectee": taux <= 0.40},
             {"regle": "Absence de fichage BAM", "respectee": not fichage},
             {"regle": f"Score minimum de {SEUIL_ACCEPTATION}/100", "respectee": ev["score"] >= SEUIL_ACCEPTATION}
-        ]
+        ],
+        "sourcesRag": sources_rag or []
     }
 
 

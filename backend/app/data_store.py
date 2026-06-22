@@ -203,6 +203,11 @@ def add_explainability(client_id: str, explainability: dict) -> None:
     _persist_prepend("explainability.json", client_id, explainability)
 
 
+def add_pipeline_run(client_id: str, pipeline_run: dict) -> None:
+    """Persiste l'exécution du pipeline dans data/pipeline-runs.json."""
+    _persist_prepend("pipeline-runs.json", client_id, pipeline_run)
+
+
 # ───────────────────────── Explicabilité / pipeline / référentiel ─────────────────────────
 
 def get_explainability(client_id: str) -> list:
@@ -224,11 +229,39 @@ def get_pipeline_runs(client_id: str) -> list:
 
 
 def get_analytics() -> dict:
-    """Indicateurs analytiques globaux (analytics.json)."""
+    """Indicateurs analytiques globaux dynamiques calculés à partir de la base de données réelle."""
     try:
-        return load_json("analytics.json")
+        clients = load_json("clients.json")
     except FileNotFoundError:
-        return {}
+        clients = []
+
+    try:
+        raw_decisions = load_json("decisions.json")
+    except FileNotFoundError:
+        raw_decisions = []
+
+    try:
+        runs = load_json("pipeline-runs.json")
+    except FileNotFoundError:
+        runs = []
+
+    # Inject overlay
+    flat_decisions = []
+    if isinstance(raw_decisions, dict):
+         for cid, dlist in raw_decisions.items():
+              flat_decisions.extend(dlist)
+    elif isinstance(raw_decisions, list):
+         flat_decisions = raw_decisions
+
+    for cid, dlist in _session_decisions.items():
+         flat_decisions.extend(dlist)
+
+    try:
+         from .analytics_engine import calculate_analytics
+         return calculate_analytics(clients, flat_decisions, runs)
+    except Exception as e:
+         print(f"Erreur analytics: {e}")
+         return {}
 
 
 def get_agents() -> list:

@@ -34,7 +34,7 @@ export default function LanguageSwitcher({ align = 'end' }) {
               onClick={() => { setLang(code); setOpen(false) }}
               className={`w-full flex items-center justify-between gap-3 px-3 py-2 rounded-lg text-sm transition ${
                 lang === code
-                  ? 'bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-semibold'
+                  ? 'bg-primary-50 dark:bg-primary-500/10 text-primary-600 dark:text-primary-400 font-semibold'
                   : 'text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800'
               }`}
             >

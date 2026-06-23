@@ -10,7 +10,7 @@ const STEP_ICON = {
   decision: Landmark, explication: Sparkles, provision: Wallet, limites: Scale,
 }
 const STATUS_STYLE = {
-  ok: { dot: 'bg-emerald-500', text: 'text-emerald-600 dark:text-emerald-400', ring: 'border-emerald-500' },
+  ok: { dot: 'bg-primary-500', text: 'text-primary-600 dark:text-primary-400', ring: 'border-primary-500' },
   warn: { dot: 'bg-amber-500', text: 'text-amber-600 dark:text-amber-400', ring: 'border-amber-500' },
   fail: { dot: 'bg-rose-500', text: 'text-rose-600 dark:text-rose-400', ring: 'border-rose-500' },
 }
@@ -71,7 +71,7 @@ export function PipelineView({ steps, reveal }) {
                 <p className="font-semibold text-sm">{s.name}</p>
                 <span className="text-[10px] text-slate-400 flex items-center gap-1"><Clock size={10} />{s.durationMs} ms</span>
               </div>
-              <p className="text-[11px] text-emerald-600 dark:text-emerald-400 font-medium">{s.agent} · {s.tech}</p>
+              <p className="text-[11px] text-primary-600 dark:text-primary-400 font-medium">{s.agent} · {s.tech}</p>
               {shown && <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">{s.summary}</p>}
             </div>
             {shown && (

@@ -10,7 +10,7 @@ const STEP_ICON = {
   decision: Landmark, explication: Sparkles, provision: Wallet, limites: Scale,
 }
 const STATUS = {
-  ok: { node: 'bg-emerald-500', glow: 'shadow-emerald-500/40', text: 'text-emerald-600 dark:text-emerald-400', from: 'from-emerald-500' },
+  ok: { node: 'bg-primary-500', glow: 'shadow-primary-500/40', text: 'text-primary-600 dark:text-primary-400', from: 'from-primary-500' },
   warn: { node: 'bg-amber-500', glow: 'shadow-amber-500/40', text: 'text-amber-600 dark:text-amber-400', from: 'from-amber-500' },
   fail: { node: 'bg-rose-500', glow: 'shadow-rose-500/40', text: 'text-rose-600 dark:text-rose-400', from: 'from-rose-500' },
 }
@@ -38,10 +38,10 @@ export function AgentOrchestration({ steps, revealed = 0, done = false }) {
       {/* En-tête : titre + état global */}
       <div className="flex items-center justify-between gap-3 mb-5">
         <div className="flex items-center gap-2 min-w-0">
-          <span className="relative flex w-8 h-8 shrink-0 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
+          <span className="relative flex w-8 h-8 shrink-0 items-center justify-center rounded-lg bg-primary-500/10 text-primary-600 dark:text-primary-400">
             <Cpu size={16} />
             {!done && (
-              <span className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
+              <span className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-primary-500 animate-ping" />
             )}
           </span>
           <div className="min-w-0">
@@ -50,7 +50,7 @@ export function AgentOrchestration({ steps, revealed = 0, done = false }) {
               {done
                 ? `${total} agents · ${totalMs} ms`
                 : activeStep
-                  ? <>En cours — <span className="text-emerald-600 dark:text-emerald-400 font-medium">{activeStep.agent}</span></>
+                  ? <>En cours — <span className="text-primary-600 dark:text-primary-400 font-medium">{activeStep.agent}</span></>
                   : 'Initialisation…'}
             </p>
           </div>
@@ -60,7 +60,7 @@ export function AgentOrchestration({ steps, revealed = 0, done = false }) {
             <Clock size={11} /> {totalMs} ms
           </span>
           <span className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[11px] font-semibold ${
-            done ? 'bg-emerald-100 dark:bg-emerald-500/15 text-emerald-700 dark:text-emerald-400'
+            done ? 'bg-primary-100 dark:bg-primary-500/15 text-primary-700 dark:text-primary-400'
                  : 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-300'
           }`}>
             <Zap size={11} /> {Math.min(revealed, total)}/{total}
@@ -90,13 +90,13 @@ export function AgentOrchestration({ steps, revealed = 0, done = false }) {
                   transition={{ type: 'spring', stiffness: 320, damping: 20 }}
                   className={`relative w-12 h-12 rounded-2xl flex items-center justify-center text-white shadow-lg transition-colors duration-300 ${
                     shown ? `${st.node} ${st.glow}`
-                          : running ? 'bg-emerald-500 shadow-emerald-500/40'
+                          : running ? 'bg-primary-500 shadow-primary-500/40'
                                     : 'bg-slate-200 dark:bg-slate-800 text-slate-400 shadow-none'
                   }`}
                 >
                   {running ? <Loader2 size={20} className="animate-spin" /> : <Icon size={20} />}
                   {running && (
-                    <span className="absolute inset-0 rounded-2xl ring-2 ring-emerald-400/60 animate-pulse" />
+                    <span className="absolute inset-0 rounded-2xl ring-2 ring-primary-400/60 animate-pulse" />
                   )}
                   {/* Badge de statut */}
                   {shown && (
@@ -133,7 +133,7 @@ export function AgentOrchestration({ steps, revealed = 0, done = false }) {
                     initial={false}
                     animate={{ width: linkActive ? '100%' : '0%' }}
                     transition={{ duration: 0.45, ease: 'easeInOut' }}
-                    className={`absolute inset-y-0 left-0 rounded-full bg-gradient-to-r ${st.from} to-emerald-400`}
+                    className={`absolute inset-y-0 left-0 rounded-full bg-gradient-to-r ${st.from} to-primary-400`}
                   />
                   {linkFlowing && (
                     <motion.span
@@ -156,7 +156,7 @@ export function AgentOrchestration({ steps, revealed = 0, done = false }) {
           initial={false}
           animate={{ width: `${(Math.min(revealed, total) / total) * 100}%` }}
           transition={{ duration: 0.4, ease: 'easeOut' }}
-          className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-teal-400"
+          className="h-full rounded-full bg-gradient-to-r from-primary-500 to-teal-400"
         />
       </div>
     </div>

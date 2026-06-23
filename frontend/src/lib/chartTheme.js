@@ -2,8 +2,8 @@
 // Couleurs choisies pour rester lisibles en thème clair ET sombre.
 
 export const CHART = {
-  emerald: '#10b981',
-  emeraldSoft: 'rgba(16,185,129,0.18)',
+  primary: '#4f46e5', // indigo-600
+  primarySoft: 'rgba(79,70,229,0.18)',
   rose: '#f43f5e',
   roseSoft: 'rgba(244,63,94,0.18)',
   amber: '#f59e0b',
@@ -16,7 +16,7 @@ export const CHART = {
 }
 
 // Palette ordonnée pour les séries multiples (camemberts, etc.).
-export const CHART_SERIES = [CHART.emerald, CHART.sky, CHART.amber, CHART.violet, CHART.rose, CHART.teal]
+export const CHART_SERIES = [CHART.primary, CHART.sky, CHART.amber, CHART.violet, CHART.rose, CHART.teal]
 
 // Réglages communs des axes (tick lisible sur clair/sombre, pas de ligne d'axe).
 export const AXIS_PROPS = {

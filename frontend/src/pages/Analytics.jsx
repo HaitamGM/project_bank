@@ -51,7 +51,7 @@ export default function Analytics() {
     }))
     const rt = data.repartitionParType || {}
     const typeData = [
-      { name: 'Crédits', value: rt.credit || 0, color: CHART.emerald },
+      { name: 'Crédits', value: rt.credit || 0, color: CHART.primary },
       { name: 'Virements', value: rt.virement || 0, color: CHART.sky },
     ]
     const scores = Object.entries(data.distributionScoresCredit || {}).map(([bucket, count]) => ({ bucket, count }))
@@ -63,8 +63,8 @@ export default function Analytics() {
 
   const kpis = [
     { icon: FileText, value: fmt(data.totalDecisions), label: 'Décisions traitées', accent: 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300' },
-    { icon: Percent, value: fmtPct(data.tauxApprobation), label: "Taux d'approbation", accent: 'bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400' },
-    { icon: Wallet, value: fmtMillions(data.montantTotalAccorde) + ' MAD', label: 'Montant octroyé', accent: 'bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400' },
+    { icon: Percent, value: fmtPct(data.tauxApprobation), label: "Taux d'approbation", accent: 'bg-primary-50 dark:bg-primary-500/10 text-primary-600 dark:text-primary-400' },
+    { icon: Wallet, value: fmtMillions(data.montantTotalAccorde) + ' MAD', label: 'Montant octroyé', accent: 'bg-primary-50 dark:bg-primary-500/10 text-primary-600 dark:text-primary-400' },
     { icon: Clock, value: (data.tempsDecisionMoyenMs / 1000).toLocaleString('fr-MA', { maximumFractionDigits: 1 }) + ' s', label: 'Délai moyen', accent: 'bg-sky-50 dark:bg-sky-500/10 text-sky-600 dark:text-sky-400' },
     { icon: Layers, value: fmt(data.totalCredits), label: 'Crédits analysés', accent: 'bg-teal-50 dark:bg-teal-500/10 text-teal-600 dark:text-teal-400' },
   ]
@@ -89,7 +89,7 @@ export default function Analytics() {
           <ResponsiveContainer width="100%" height={260}>
             <AreaChart data={view.evolution} margin={{ top: 8, right: 8, left: -16, bottom: 0 }}>
               <defs>
-                <linearGradient id="gA" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor={CHART.emerald} stopOpacity={0.35} /><stop offset="100%" stopColor={CHART.emerald} stopOpacity={0} /></linearGradient>
+                <linearGradient id="gA" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor={CHART.primary} stopOpacity={0.35} /><stop offset="100%" stopColor={CHART.primary} stopOpacity={0} /></linearGradient>
                 <linearGradient id="gR" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stopColor={CHART.rose} stopOpacity={0.3} /><stop offset="100%" stopColor={CHART.rose} stopOpacity={0} /></linearGradient>
               </defs>
               <CartesianGrid strokeDasharray="3 3" stroke={CHART.grid} vertical={false} />
@@ -97,7 +97,7 @@ export default function Analytics() {
               <YAxis {...AXIS_PROPS} allowDecimals={false} width={28} />
               <Tooltip content={<ChartTooltip />} />
               <Legend iconType="circle" wrapperStyle={{ fontSize: 12 }} />
-              <Area type="monotone" dataKey="approuvées" stroke={CHART.emerald} strokeWidth={2.5} fill="url(#gA)" />
+              <Area type="monotone" dataKey="approuvées" stroke={CHART.primary} strokeWidth={2.5} fill="url(#gA)" />
               <Area type="monotone" dataKey="refusées" stroke={CHART.rose} strokeWidth={2.5} fill="url(#gR)" />
             </AreaChart>
           </ResponsiveContainer>
@@ -126,7 +126,7 @@ export default function Analytics() {
               <Tooltip content={<ChartTooltip />} cursor={{ fill: 'rgba(148,163,184,0.1)' }} />
               <Bar dataKey="count" name="Crédits" radius={[6, 6, 0, 0]}>
                 {view.scores.map((d) => (
-                  <Cell key={d.bucket} fill={d.bucket === '60-80' || d.bucket === '80-100' ? CHART.emerald : CHART.emeraldSoft} />
+                  <Cell key={d.bucket} fill={d.bucket === '60-80' || d.bucket === '80-100' ? CHART.primary : CHART.primarySoft} />
                 ))}
               </Bar>
             </BarChart>
@@ -147,7 +147,7 @@ export default function Analytics() {
 
 function StatutBars({ statut, total }) {
   const items = [
-    { key: 'approuve', label: 'Approuvé', color: CHART.emerald, value: statut.approuve || 0 },
+    { key: 'approuve', label: 'Approuvé', color: CHART.primary, value: statut.approuve || 0 },
     { key: 'execute', label: 'Exécuté', color: CHART.sky, value: statut.execute || 0 },
     { key: 'refuse', label: 'Refusé', color: CHART.rose, value: statut.refuse || 0 },
   ]
@@ -188,9 +188,9 @@ function ClientTable({ rows, current }) {
           {rows.map((r) => {
             const me = r.clientId === current
             return (
-              <tr key={r.clientId} className={`border-b border-slate-100 dark:border-slate-800/60 ${me ? 'bg-emerald-50/60 dark:bg-emerald-500/10' : ''}`}>
+              <tr key={r.clientId} className={`border-b border-slate-100 dark:border-slate-800/60 ${me ? 'bg-primary-50/60 dark:bg-primary-500/10' : ''}`}>
                 <td className="py-2.5 px-2 font-medium">
-                  {r.clientNom}{me && <span className="ms-2 text-[10px] font-semibold text-emerald-600 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-500/40 rounded-full px-1.5 py-0.5">vous</span>}
+                  {r.clientNom}{me && <span className="ms-2 text-[10px] font-semibold text-primary-600 dark:text-primary-400 border border-primary-300 dark:border-primary-500/40 rounded-full px-1.5 py-0.5">vous</span>}
                 </td>
                 <td className="py-2.5 px-2 text-slate-500 dark:text-slate-400">{r.segment}</td>
                 <td className="py-2.5 px-2 text-end tabular-nums">{r.totalDecisions}</td>

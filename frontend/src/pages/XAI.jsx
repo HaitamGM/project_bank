@@ -29,7 +29,7 @@ function ScoreGauge({ score, seuil, statut }) {
         <circle cx={size / 2} cy={size / 2} r={r} fill="none" strokeWidth={stroke} className="stroke-slate-100 dark:stroke-slate-800" />
         <motion.circle
           cx={size / 2} cy={size / 2} r={r} fill="none" strokeWidth={stroke} strokeLinecap="round"
-          className={approuve ? 'stroke-emerald-500' : 'stroke-rose-500'}
+          className={approuve ? 'stroke-primary-500' : 'stroke-rose-500'}
           strokeDasharray={c} initial={{ strokeDashoffset: c }} animate={{ strokeDashoffset: c * (1 - score / 100) }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         />
@@ -38,7 +38,7 @@ function ScoreGauge({ score, seuil, statut }) {
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         <span className="text-5xl font-bold tracking-tight tabular-nums">{score}</span>
         <span className="text-xs text-slate-400 mt-0.5">/ 100 · seuil {seuil}</span>
-        <span className={`mt-2 inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full ${approuve ? 'bg-emerald-50 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-400' : 'bg-rose-50 text-rose-700 dark:bg-rose-500/10 dark:text-rose-400'}`}>
+        <span className={`mt-2 inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full ${approuve ? 'bg-primary-50 text-primary-700 dark:bg-primary-500/10 dark:text-primary-400' : 'bg-rose-50 text-rose-700 dark:bg-rose-500/10 dark:text-rose-400'}`}>
           {approuve ? <Check size={13} /> : <X size={13} />}{approuve ? 'Approuvé' : 'Refusé'}
         </span>
       </div>
@@ -79,10 +79,10 @@ function Waterfall({ contributions, score, seuil }) {
             const height = Math.abs(toY(s.from) - toY(s.to))
             const positive = s.impact >= 0
             const anchor = s.type === 'base' || s.type === 'total'
-            const color = anchor ? (s.type === 'total' ? 'bg-emerald-600 dark:bg-emerald-500' : 'bg-slate-300 dark:bg-slate-700') : positive ? 'bg-emerald-500' : 'bg-rose-500'
+            const color = anchor ? (s.type === 'total' ? 'bg-primary-600 dark:bg-primary-500' : 'bg-slate-300 dark:bg-slate-700') : positive ? 'bg-primary-500' : 'bg-rose-500'
             return (
               <div key={i} className="relative h-full flex flex-col justify-end items-center" style={{ width: colW }}>
-                <motion.span className={`absolute text-[11px] font-bold tabular-nums ${anchor ? 'text-slate-700 dark:text-slate-200' : positive ? 'text-emerald-600 dark:text-emerald-400' : 'text-rose-600 dark:text-rose-400'}`}
+                <motion.span className={`absolute text-[11px] font-bold tabular-nums ${anchor ? 'text-slate-700 dark:text-slate-200' : positive ? 'text-primary-600 dark:text-primary-400' : 'text-rose-600 dark:text-rose-400'}`}
                   style={{ top: top - 18 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 + i * 0.1 }}>
                   {anchor ? s.to : `${positive ? '+' : ''}${s.impact}`}
                 </motion.span>
@@ -133,7 +133,7 @@ export default function XAI() {
   return (
     <div className="p-4 sm:p-8 max-w-6xl mx-auto">
       <motion.div className="mb-5" initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
-        <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 mb-1"><Brain size={18} /><span className="text-xs font-semibold uppercase tracking-wider">Explicabilité</span></div>
+        <div className="flex items-center gap-2 text-primary-600 dark:text-primary-400 mb-1"><Brain size={18} /><span className="text-xs font-semibold uppercase tracking-wider">Explicabilité</span></div>
         <h1 className="text-2xl font-bold tracking-tight">Centre d'explicabilité (XAI)</h1>
         <p className="text-slate-500 dark:text-slate-400 mt-1">Radiographie des décisions de l'IA pour vos demandes de crédit</p>
       </motion.div>
@@ -143,7 +143,7 @@ export default function XAI() {
         <label className="block text-xs font-medium text-slate-400 mb-1.5">Décision à analyser ({items.length} disponibles)</label>
         <div className="relative max-w-xl">
           <select value={current.decisionId} onChange={(e) => setSelId(e.target.value)}
-            className="w-full appearance-none ps-4 pe-10 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm font-medium focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 dark:focus:ring-emerald-500/20 outline-none">
+            className="w-full appearance-none ps-4 pe-10 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm font-medium focus:border-primary-500 focus:ring-2 focus:ring-primary-100 dark:focus:ring-primary-500/20 outline-none">
             {items.map((x) => (
               <option key={x.decisionId} value={x.decisionId}>
                 {x.decision.date} · {x.decision.intent} {fmt(x.decision.montant)} DH · {x.statut === 'approuve' ? 'Approuvé' : 'Refusé'} ({x.scoreFinal}/100)
@@ -157,13 +157,13 @@ export default function XAI() {
       {/* Bandeau récap */}
       <motion.div key={current.decisionId} className={`${card} p-5 mb-6 flex flex-wrap items-center gap-x-8 gap-y-4`} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
         <div className="flex items-center gap-3">
-          <div className="w-11 h-11 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center"><Scale size={20} /></div>
+          <div className="w-11 h-11 rounded-xl bg-primary-50 dark:bg-primary-500/10 text-primary-600 dark:text-primary-400 flex items-center justify-center"><Scale size={20} /></div>
           <div><p className="text-[11px] uppercase tracking-wider text-slate-400">Décision {current.decisionId}</p><p className="font-semibold">{d.intent}</p></div>
         </div>
         <div><p className="text-[11px] uppercase tracking-wider text-slate-400">Montant</p><p className="font-semibold tabular-nums">{fmtMontant(d.montant)}</p></div>
         {d.dureeMois && <div><p className="text-[11px] uppercase tracking-wider text-slate-400">Durée</p><p className="font-semibold tabular-nums">{d.dureeMois} mois</p></div>}
         <div className="ms-auto">
-          <span className={`inline-flex items-center gap-1.5 text-sm font-semibold px-3.5 py-1.5 rounded-full ${approuve ? 'bg-emerald-50 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-400' : 'bg-rose-50 text-rose-700 dark:bg-rose-500/10 dark:text-rose-400'}`}>
+          <span className={`inline-flex items-center gap-1.5 text-sm font-semibold px-3.5 py-1.5 rounded-full ${approuve ? 'bg-primary-50 text-primary-700 dark:bg-primary-500/10 dark:text-primary-400' : 'bg-rose-50 text-rose-700 dark:bg-rose-500/10 dark:text-rose-400'}`}>
             {approuve ? <BadgeCheck size={16} /> : <X size={16} />}{approuve ? 'Approuvé' : 'Refusé'}
           </span>
         </div>
@@ -172,19 +172,19 @@ export default function XAI() {
       <motion.div key={`body-${current.decisionId}`} variants={stagger} initial="hidden" animate="show" className="space-y-6">
         {/* Score + marge */}
         <motion.section variants={fadeUp} className={`${card} p-6`}>
-          <h2 className="flex items-center gap-2 font-semibold mb-5"><Gauge size={18} className="text-emerald-600 dark:text-emerald-400" /> Score d'octroi</h2>
+          <h2 className="flex items-center gap-2 font-semibold mb-5"><Gauge size={18} className="text-primary-600 dark:text-primary-400" /> Score d'octroi</h2>
           <div className="flex flex-col md:flex-row items-center gap-8">
             <ScoreGauge score={current.scoreFinal} seuil={current.seuil} statut={current.statut} />
             <div className="flex-1 w-full space-y-3">
               <div className="rounded-xl border border-slate-200 dark:border-slate-800 p-4">
                 <p className="text-xs text-slate-400 mb-1">Marge par rapport au seuil</p>
-                <p className={`text-2xl font-bold tabular-nums ${current.scoreFinal >= current.seuil ? 'text-emerald-600 dark:text-emerald-400' : 'text-rose-600 dark:text-rose-400'}`}>
+                <p className={`text-2xl font-bold tabular-nums ${current.scoreFinal >= current.seuil ? 'text-primary-600 dark:text-primary-400' : 'text-rose-600 dark:text-rose-400'}`}>
                   {current.scoreFinal >= current.seuil ? '+' : ''}{current.scoreFinal - current.seuil}
                 </p>
                 <p className="text-xs text-slate-400 mt-1">{current.scoreFinal} {current.scoreFinal >= current.seuil ? '≥' : '<'} {current.seuil} requis</p>
               </div>
               <div className="rounded-xl bg-slate-50 dark:bg-slate-800/50 p-4 flex gap-3">
-                <Sparkles size={16} className="text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+                <Sparkles size={16} className="text-primary-600 dark:text-primary-400 shrink-0 mt-0.5" />
                 <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-300">{d.explication}</p>
               </div>
             </div>
@@ -193,21 +193,21 @@ export default function XAI() {
 
         {/* Waterfall */}
         <motion.section variants={fadeUp} className={`${card} p-6`}>
-          <h2 className="flex items-center gap-2 font-semibold mb-1"><Layers size={18} className="text-emerald-600 dark:text-emerald-400" /> Décomposition du score</h2>
+          <h2 className="flex items-center gap-2 font-semibold mb-1"><Layers size={18} className="text-primary-600 dark:text-primary-400" /> Décomposition du score</h2>
           <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">Du score de base au score final, chaque facteur empile sa contribution.</p>
           <Waterfall contributions={current.contributions} score={current.scoreFinal} seuil={current.seuil} />
         </motion.section>
 
         {/* Poids des facteurs */}
         <motion.section variants={fadeUp} className={`${card} p-6`}>
-          <h2 className="flex items-center gap-2 font-semibold mb-1"><TrendingUp size={18} className="text-emerald-600 dark:text-emerald-400" /> Poids des facteurs</h2>
+          <h2 className="flex items-center gap-2 font-semibold mb-1"><TrendingUp size={18} className="text-primary-600 dark:text-primary-400" /> Poids des facteurs</h2>
           <p className="text-sm text-slate-500 dark:text-slate-400 mb-5">Importance de chaque critère dans la décision et son sens (favorable / défavorable).</p>
           <div className="space-y-3">
             {[...feats].sort((a, b) => b.poids - a.poids).map((f, i) => {
               const neg = (f.impact || '').toLowerCase().includes('né') || (f.impact || '').toLowerCase().includes('ne')
               const neutre = (f.impact || '').toLowerCase().includes('neutre')
-              const colorBar = neutre ? 'bg-slate-400' : neg ? 'bg-rose-500' : 'bg-emerald-500'
-              const colorTxt = neutre ? 'text-slate-500' : neg ? 'text-rose-600 dark:text-rose-400' : 'text-emerald-600 dark:text-emerald-400'
+              const colorBar = neutre ? 'bg-slate-400' : neg ? 'bg-rose-500' : 'bg-primary-500'
+              const colorTxt = neutre ? 'text-slate-500' : neg ? 'text-rose-600 dark:text-rose-400' : 'text-primary-600 dark:text-primary-400'
               return (
                 <motion.div key={f.nom} initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }}>
                   <div className="flex items-baseline justify-between gap-2 mb-1">
@@ -232,11 +232,11 @@ export default function XAI() {
         {/* Règles + contrefactuel */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <motion.section variants={fadeUp} className={`${card} p-6`}>
-            <h2 className="flex items-center gap-2 font-semibold mb-5"><ShieldCheck size={18} className="text-emerald-600 dark:text-emerald-400" /> Règles métier appliquées</h2>
+            <h2 className="flex items-center gap-2 font-semibold mb-5"><ShieldCheck size={18} className="text-primary-600 dark:text-primary-400" /> Règles métier appliquées</h2>
             <div className="space-y-2.5">
               {(current.reglesActivees || []).map((r) => (
                 <div key={r.regle} className="flex items-center gap-3 rounded-xl border border-slate-200 dark:border-slate-800 p-3">
-                  <span className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 ${r.respectee ? 'bg-emerald-100 dark:bg-emerald-500/15 text-emerald-600 dark:text-emerald-400' : 'bg-rose-100 dark:bg-rose-500/15 text-rose-600 dark:text-rose-400'}`}>
+                  <span className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 ${r.respectee ? 'bg-primary-100 dark:bg-primary-500/15 text-primary-600 dark:text-primary-400' : 'bg-rose-100 dark:bg-rose-500/15 text-rose-600 dark:text-rose-400'}`}>
                     {r.respectee ? <Check size={15} /> : <X size={15} />}
                   </span>
                   <span className="text-sm font-medium">{r.regle}</span>
@@ -246,7 +246,7 @@ export default function XAI() {
           </motion.section>
 
           <motion.section variants={fadeUp} className={`${card} p-6`}>
-            <h2 className="flex items-center gap-2 font-semibold mb-1"><Search size={18} className="text-emerald-600 dark:text-emerald-400" /> Analyse contrefactuelle</h2>
+            <h2 className="flex items-center gap-2 font-semibold mb-1"><Search size={18} className="text-primary-600 dark:text-primary-400" /> Analyse contrefactuelle</h2>
             <p className="text-sm text-slate-500 dark:text-slate-400 mb-4">« Que faudrait-il pour changer la décision ? »</p>
             {current.contrefactuel ? (
               <div className="rounded-xl border border-amber-300 dark:border-amber-500/40 bg-amber-50/60 dark:bg-amber-500/5 p-4 flex gap-3">
@@ -254,8 +254,8 @@ export default function XAI() {
                 <p className="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">{current.contrefactuel}</p>
               </div>
             ) : (
-              <div className="rounded-xl border border-emerald-300 dark:border-emerald-500/40 bg-emerald-50/60 dark:bg-emerald-500/5 p-4 flex gap-3">
-                <BadgeCheck size={18} className="text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+              <div className="rounded-xl border border-primary-300 dark:border-primary-500/40 bg-primary-50/60 dark:bg-primary-500/5 p-4 flex gap-3">
+                <BadgeCheck size={18} className="text-primary-600 dark:text-primary-400 shrink-0 mt-0.5" />
                 <p className="text-sm text-slate-700 dark:text-slate-200 leading-relaxed">Décision favorable : tous les critères réglementaires sont respectés.</p>
               </div>
             )}
@@ -264,21 +264,21 @@ export default function XAI() {
 
         {/* Sources RAG */}
         <motion.section variants={fadeUp} className={`${card} p-6`}>
-          <h2 className="flex items-center gap-2 font-semibold mb-1"><FileText size={18} className="text-emerald-600 dark:text-emerald-400" /> Sources consultées (RAG)</h2>
+          <h2 className="flex items-center gap-2 font-semibold mb-1"><FileText size={18} className="text-primary-600 dark:text-primary-400" /> Sources consultées (RAG)</h2>
           <p className="text-sm text-slate-500 dark:text-slate-400 mb-5">Les documents réglementaires sur lesquels la décision s'appuie.</p>
           <div className="space-y-3">
             {(current.sourcesRag || []).map((s, i) => (
               <motion.div key={`${s.document}-${i}`} className="rounded-xl border border-slate-200 dark:border-slate-800 p-4" initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.06 }}>
                 <div className="flex items-start gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0"><Quote size={16} /></div>
+                  <div className="w-9 h-9 rounded-lg bg-primary-50 dark:bg-primary-500/10 text-primary-600 dark:text-primary-400 flex items-center justify-center shrink-0"><Quote size={16} /></div>
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-semibold">{s.document}</p>
                     <div className="flex items-center gap-2 mt-2">
                       <span className="text-[11px] text-slate-400 w-16 shrink-0">Pertinence</span>
                       <div className="flex-1 h-1.5 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden">
-                        <motion.div className="h-full bg-emerald-500 rounded-full" initial={{ width: 0 }} animate={{ width: `${s.pertinence * 100}%` }} transition={{ duration: 0.8, delay: 0.2 + i * 0.06 }} />
+                        <motion.div className="h-full bg-primary-500 rounded-full" initial={{ width: 0 }} animate={{ width: `${s.pertinence * 100}%` }} transition={{ duration: 0.8, delay: 0.2 + i * 0.06 }} />
                       </div>
-                      <span className="text-xs font-semibold tabular-nums text-emerald-600 dark:text-emerald-400 w-10 text-end">{Math.round(s.pertinence * 100)} %</span>
+                      <span className="text-xs font-semibold tabular-nums text-primary-600 dark:text-primary-400 w-10 text-end">{Math.round(s.pertinence * 100)} %</span>
                     </div>
                   </div>
                 </div>

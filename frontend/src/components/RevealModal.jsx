@@ -37,7 +37,7 @@ export default function RevealModal({
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-start justify-between mb-4">
-          <div className="w-11 h-11 rounded-xl bg-primary-50 dark:bg-primary-500/10 text-primary-600 dark:text-primary-400 flex items-center justify-center">
+          <div className="w-11 h-11 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
             <Lock size={22} />
           </div>
           <button onClick={onClose} aria-label="Fermer" className="text-slate-400 hover:text-slate-700 dark:hover:text-white transition">
@@ -54,14 +54,14 @@ export default function RevealModal({
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Mot de passe"
-              className="w-full ps-4 pe-11 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white placeholder:text-slate-400 focus:border-primary-500 focus:ring-2 focus:ring-primary-100 dark:focus:ring-primary-500/20 outline-none transition"
+              className="w-full ps-4 pe-11 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-950 text-slate-900 dark:text-white placeholder:text-slate-400 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 dark:focus:ring-emerald-500/20 outline-none transition"
             />
             <button
               type="button"
               onClick={() => setShowPwd((v) => !v)}
               aria-label={showPwd ? 'Masquer le mot de passe' : 'Afficher le mot de passe'}
               title={showPwd ? 'Masquer le mot de passe' : 'Afficher le mot de passe'}
-              className="absolute end-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition p-0.5"
+              className="absolute end-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition p-0.5"
             >
               {showPwd ? <EyeOff size={18} /> : <Eye size={18} />}
             </button>
@@ -70,7 +70,7 @@ export default function RevealModal({
           <button
             type="submit"
             disabled={loading}
-            className="w-full mt-4 py-3 rounded-xl bg-primary-600 text-white font-semibold hover:bg-primary-700 transition flex items-center justify-center gap-2 disabled:opacity-60"
+            className="w-full mt-4 py-3 rounded-xl bg-emerald-600 text-white font-semibold hover:bg-emerald-700 transition flex items-center justify-center gap-2 disabled:opacity-60"
           >
             {loading ? <Loader2 size={18} className="animate-spin" /> : null}
             Afficher

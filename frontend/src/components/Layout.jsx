@@ -29,23 +29,22 @@ const demoNav = [
 
 function NavGroup({ title, items, pathname, onNavigate, t }) {
   return (
-    <div className="mb-8">
-      <p className="px-4 mb-3 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500">{title}</p>
-      <div className="space-y-1.5 px-2">
+    <div className="mb-6">
+      <p className="px-3 mb-2 text-[11px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">{title}</p>
+      <div className="space-y-1">
         {items.map(({ key, path, icon: Icon }) => {
           const active = pathname === path
           return (
             <button
               key={path}
               onClick={() => onNavigate(path)}
-              className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${
+              className={`w-full flex items-center gap-3 px-3 py-2 rounded-xl text-sm font-medium transition ${
                 active
-                  ? 'bg-primary-50 dark:bg-primary-500/10 text-primary-600 dark:text-primary-400 shadow-sm ring-1 ring-primary-100/50 dark:ring-primary-500/20'
-                  : 'text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-slate-900 dark:hover:text-slate-200'
+                  ? 'bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400'
+                  : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800'
               }`}
             >
-              <Icon size={18} className={active ? 'text-primary-600 dark:text-primary-400' : 'opacity-70'} />
-              {t(`nav.${key}`)}
+              <Icon size={18} /> {t(`nav.${key}`)}
             </button>
           )
         })}
@@ -58,12 +57,10 @@ function NavGroup({ title, items, pathname, onNavigate, t }) {
 function SidebarContent({ pathname, onNavigate, client, theme, toggle, logout, t }) {
   return (
     <>
-      <div className="flex items-center justify-between mb-10 px-2 mt-2">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-900 to-primary-700 text-white flex items-center justify-center font-serif font-bold text-xl shadow-md ring-1 ring-white/20">
-            B
-          </div>
-          <span className="font-serif font-bold text-xl tracking-tight text-slate-900 dark:text-white">BankIA</span>
+      <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center gap-3 px-2">
+          <div className="w-9 h-9 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold">B</div>
+          <span className="font-bold text-lg tracking-tight">BankIA</span>
         </div>
         <LanguageSwitcher />
       </div>
@@ -71,12 +68,12 @@ function SidebarContent({ pathname, onNavigate, client, theme, toggle, logout, t
       {client && (
         <button
           onClick={() => onNavigate('/profil')}
-          className="flex items-center gap-3 mx-2 mb-8 p-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-primary-200 dark:hover:border-primary-800 transition-all duration-300 text-start group"
+          className="flex items-center gap-3 mb-6 p-2.5 rounded-2xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition text-start"
         >
-          <Avatar photo={client.photo} prenom={client.prenom} nom={client.nom} size={42} rounded="rounded-xl" className="ring-2 ring-white dark:ring-slate-900 group-hover:ring-primary-100 dark:group-hover:ring-primary-900 transition-all" />
-          <div className="min-w-0 flex-1">
-            <p className="text-sm font-semibold text-slate-900 dark:text-slate-100 truncate">{client.prenom} {client.nom}</p>
-            <p className="text-xs text-primary-600 dark:text-primary-400 font-medium truncate mt-0.5">{client.segment}</p>
+          <Avatar photo={client.photo} prenom={client.prenom} nom={client.nom} size={40} rounded="rounded-xl" />
+          <div className="min-w-0">
+            <p className="text-sm font-semibold truncate">{client.prenom} {client.nom}</p>
+            <p className="text-xs text-slate-400 truncate">{client.segment} · {client.id}</p>
           </div>
         </button>
       )}
@@ -86,13 +83,13 @@ function SidebarContent({ pathname, onNavigate, client, theme, toggle, logout, t
         <NavGroup title={t('nav.demo')} items={demoNav} pathname={pathname} onNavigate={onNavigate} t={t} />
       </div>
 
-      <div className="space-y-1 pt-6 pb-2 px-2 border-t border-slate-200/60 dark:border-slate-800/60 mt-auto">
-        <button onClick={toggle} className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-slate-900 dark:hover:text-slate-200 transition-all duration-300">
-          {theme === 'dark' ? <Sun size={18} className="opacity-70" /> : <Moon size={18} className="opacity-70" />}
+      <div className="space-y-1 pt-4 border-t border-slate-200 dark:border-slate-800">
+        <button onClick={toggle} className="w-full flex items-center gap-3 px-3 py-2 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+          {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
           {theme === 'dark' ? t('common.lightMode') : t('common.darkMode')}
         </button>
-        <button onClick={logout} className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-rose-600 dark:text-rose-400 hover:bg-rose-50 dark:hover:bg-rose-500/10 transition-all duration-300">
-          <LogOut size={18} className="opacity-70" /> {t('common.logout')}
+        <button onClick={logout} className="w-full flex items-center gap-3 px-3 py-2 rounded-xl text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+          <LogOut size={18} /> {t('common.logout')}
         </button>
       </div>
     </>
@@ -114,25 +111,25 @@ function Layout() {
   const offX = dir === 'rtl' ? '100%' : '-100%'
 
   return (
-    <div className="min-h-screen flex flex-col lg:flex-row bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 p-0 lg:p-4 gap-4">
-      {/* Sidebar desktop (Floating) */}
-      <aside className="hidden lg:flex w-[280px] shrink-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-slate-200/60 dark:border-slate-800/60 flex-col p-4 overflow-y-auto rounded-3xl shadow-sm">
+    <div className="min-h-screen flex flex-col lg:flex-row bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100">
+      {/* Sidebar desktop */}
+      <aside className="hidden lg:flex w-64 shrink-0 bg-white dark:bg-slate-900 border-e border-slate-200 dark:border-slate-800 flex-col p-5 overflow-y-auto">
         <SidebarContent {...sidebarProps} />
       </aside>
 
       {/* Barre supérieure mobile */}
-      <header className="lg:hidden sticky top-0 z-30 flex items-center justify-between px-4 h-16 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800">
-        <button onClick={() => setMobileOpen(true)} aria-label={t('common.menu')} className="p-2 -ms-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition text-slate-600 dark:text-slate-300">
-          <Menu size={24} />
+      <header className="lg:hidden sticky top-0 z-30 flex items-center justify-between px-4 h-14 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+        <button onClick={() => setMobileOpen(true)} aria-label={t('common.menu')} className="p-2 -ms-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+          <Menu size={22} />
         </button>
-        <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-900 to-primary-700 text-white flex items-center justify-center font-serif font-bold text-sm shadow-sm ring-1 ring-white/20">B</div>
-          <span className="font-serif font-bold tracking-tight text-lg">BankIA</span>
+        <div className="flex items-center gap-2">
+          <div className="w-7 h-7 rounded-lg bg-emerald-600 text-white flex items-center justify-center font-bold text-sm">B</div>
+          <span className="font-bold tracking-tight">BankIA</span>
         </div>
-        <div className="flex items-center gap-1.5">
+        <div className="flex items-center gap-1">
           <LanguageSwitcher />
-          <button onClick={toggle} aria-label="theme" className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition text-slate-600 dark:text-slate-300">
-            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+          <button onClick={toggle} aria-label="theme" className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
           </button>
         </div>
       </header>
@@ -160,7 +157,7 @@ function Layout() {
         )}
       </AnimatePresence>
 
-      <main className="flex-1 min-w-0 overflow-auto bg-white/40 dark:bg-slate-900/40 rounded-3xl border border-slate-200/40 dark:border-slate-800/40 shadow-sm relative">
+      <main className="flex-1 min-w-0 overflow-auto">
         <Outlet />
       </main>
     </div>

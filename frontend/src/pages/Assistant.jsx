@@ -289,13 +289,13 @@ function Assistant() {
   return (
     <div className="p-4 sm:p-8 max-w-3xl mx-auto">
       {/* Hero + contrôle micro */}
-      <div className="relative overflow-hidden rounded-3xl mb-5 p-8 sm:p-10 bg-gradient-to-br from-primary-600 via-primary-600 to-teal-700 text-white shadow-sm">
+      <div className="relative overflow-hidden rounded-3xl mb-5 p-8 sm:p-10 bg-gradient-to-br from-emerald-600 via-emerald-600 to-teal-700 text-white shadow-sm">
         <div className="pointer-events-none absolute -top-16 -end-16 w-56 h-56 rounded-full bg-white/10 blur-2xl" />
         <div className="pointer-events-none absolute -bottom-20 -start-10 w-64 h-64 rounded-full bg-teal-300/10 blur-3xl" />
         <div className="relative flex flex-col items-center text-center">
           <span className="inline-flex items-center gap-1.5 text-xs font-medium bg-white/15 px-3 py-1 rounded-full"><Sparkles size={13} /> Propulsé par Gemini Live</span>
           <h1 className="text-2xl sm:text-3xl font-bold tracking-tight mt-3">Assistant vocal BankIA</h1>
-          <p className="text-primary-100 mt-1 max-w-md">Demandez un crédit ou un virement à voix haute — les agents s'occupent du reste.</p>
+          <p className="text-emerald-100 mt-1 max-w-md">Demandez un crédit ou un virement à voix haute — les agents s'occupent du reste.</p>
 
           <div className="relative my-7 flex items-center justify-center">
             <VoiceOrb phase={phase} isActive={isActive} onClick={isActive ? stopSession : () => startSession({ withMic: true })} MicIcon={MicIcon} />
@@ -328,9 +328,9 @@ function Assistant() {
           <button
             type="button"
             onClick={() => sendText('Je voudrais un crédit immobilier de 600 000 DH sur 20 ans.')}
-            className={`${card} p-5 text-left hover:border-primary-400 dark:hover:border-primary-500/50 hover:shadow-sm transition`}
+            className={`${card} p-5 text-left hover:border-emerald-400 dark:hover:border-emerald-500/50 hover:shadow-sm transition`}
           >
-            <div className="w-10 h-10 rounded-xl bg-primary-100 dark:bg-primary-500/10 text-primary-600 dark:text-primary-400 flex items-center justify-center mb-3">
+            <div className="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-3">
               <CreditCard size={20} />
             </div>
             <p className="font-semibold mb-1">Demander un crédit</p>
@@ -341,9 +341,9 @@ function Assistant() {
           <button
             type="button"
             onClick={() => sendText('Vire 2 000 dirhams à Karim depuis mon compte courant.')}
-            className={`${card} p-5 text-left hover:border-primary-400 dark:hover:border-primary-500/50 hover:shadow-sm transition`}
+            className={`${card} p-5 text-left hover:border-emerald-400 dark:hover:border-emerald-500/50 hover:shadow-sm transition`}
           >
-            <div className="w-10 h-10 rounded-xl bg-primary-100 dark:bg-primary-500/10 text-primary-600 dark:text-primary-400 flex items-center justify-center mb-3">
+            <div className="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-3">
               <ArrowLeftRight size={20} />
             </div>
             <p className="font-semibold mb-1">Faire un virement</p>
@@ -364,12 +364,12 @@ function Assistant() {
                 <div
                   className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${
                     m.role === 'user'
-                      ? 'bg-primary-600 text-white rounded-br-sm'
+                      ? 'bg-emerald-600 text-white rounded-br-sm'
                       : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 rounded-bl-sm'
                   }`}
                 >
                   {m.role === 'agent' && (
-                    <p className="text-[10px] uppercase tracking-wide font-semibold text-primary-600 dark:text-primary-400 mb-0.5">
+                    <p className="text-[10px] uppercase tracking-wide font-semibold text-emerald-600 dark:text-emerald-400 mb-0.5">
                       BankIA
                     </p>
                   )}
@@ -398,7 +398,7 @@ function Assistant() {
           type="submit"
           disabled={!draft.trim() || phase === 'connecting'}
           aria-label="Envoyer le message"
-          className="w-10 h-10 shrink-0 rounded-xl bg-primary-600 hover:bg-primary-700 disabled:opacity-40 disabled:hover:bg-primary-600 text-white flex items-center justify-center transition"
+          className="w-10 h-10 shrink-0 rounded-xl bg-emerald-600 hover:bg-emerald-700 disabled:opacity-40 disabled:hover:bg-emerald-600 text-white flex items-center justify-center transition"
         >
           {phase === 'connecting' ? <Loader2 size={18} className="animate-spin" /> : <Send size={18} />}
         </button>
@@ -425,7 +425,7 @@ function VoiceOrb({ phase, isActive, onClick, MicIcon }) {
         onClick={onClick}
         disabled={phase === 'connecting'}
         aria-label={isActive ? 'Terminer la session' : 'Parler à l’assistant'}
-        className="relative w-24 h-24 rounded-full bg-white text-primary-600 flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition disabled:opacity-70"
+        className="relative w-24 h-24 rounded-full bg-white text-emerald-600 flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition disabled:opacity-70"
       >
         <MicIcon size={34} className={phase === 'connecting' ? 'animate-spin' : ''} />
       </button>
@@ -462,7 +462,7 @@ function OperationPanel({ op }) {
   if (op.kind === 'comptes') {
     return (
       <div className={`${card} p-5 mb-4`}>
-        <h3 className="font-semibold mb-3 flex items-center gap-2"><Wallet size={18} className="text-primary-500" /> Vos comptes</h3>
+        <h3 className="font-semibold mb-3 flex items-center gap-2"><Wallet size={18} className="text-emerald-500" /> Vos comptes</h3>
         <div className="space-y-2">
           {(op.comptes || []).map((c, i) => (
             <div key={i} className="flex items-center justify-between rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-800/40 p-3">
@@ -471,7 +471,7 @@ function OperationPanel({ op }) {
             </div>
           ))}
         </div>
-        <p className="text-right text-sm text-slate-500 mt-3">Solde total : <span className="font-bold text-primary-600 dark:text-primary-400">{fmt(op.soldeTotal)} DH</span></p>
+        <p className="text-right text-sm text-slate-500 mt-3">Solde total : <span className="font-bold text-emerald-600 dark:text-emerald-400">{fmt(op.soldeTotal)} DH</span></p>
       </div>
     )
   }
@@ -481,7 +481,7 @@ function OperationPanel({ op }) {
     const approved = r.decision === 'approuve'
     return (
       <div className={`${card} p-5 mb-4`}>
-        <h3 className="font-semibold mb-4 flex items-center gap-2"><Cpu size={18} className="text-primary-500" /> Pipeline crédit — déclenchée par l’assistant</h3>
+        <h3 className="font-semibold mb-4 flex items-center gap-2"><Cpu size={18} className="text-emerald-500" /> Pipeline crédit — déclenchée par l’assistant</h3>
         <AgentOrchestration steps={r.steps} revealed={reveal.revealed} done={reveal.done} />
         <div className="mt-4">
           <p className="text-[11px] uppercase tracking-wide font-medium text-slate-400 mb-2">Détail des vérifications</p>
@@ -489,7 +489,7 @@ function OperationPanel({ op }) {
         </div>
         <div className="mt-5 pt-5 border-t border-slate-100 dark:border-slate-800">
           <div className="flex items-center gap-3 mb-3">
-            <span className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-semibold ${approved ? 'bg-primary-100 dark:bg-primary-500/15 text-primary-700 dark:text-primary-400' : 'bg-rose-100 dark:bg-rose-500/15 text-rose-700 dark:text-rose-400'}`}>
+            <span className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-semibold ${approved ? 'bg-emerald-100 dark:bg-emerald-500/15 text-emerald-700 dark:text-emerald-400' : 'bg-rose-100 dark:bg-rose-500/15 text-rose-700 dark:text-rose-400'}`}>
               {approved ? <Check size={15} /> : <X size={15} />}{approved ? 'Crédit approuvé' : 'Crédit refusé'}
             </span>
             <span className="text-sm text-slate-500">Score {r.score}/100</span>
@@ -512,7 +512,7 @@ function OperationPanel({ op }) {
     const approved = r?.decision === 'approuve'
     return (
       <div className={`${card} p-5 mb-4`}>
-        <h3 className="font-semibold mb-4 flex items-center gap-2"><Cpu size={18} className="text-primary-500" /> Pipeline virement — déclenchée par l’assistant</h3>
+        <h3 className="font-semibold mb-4 flex items-center gap-2"><Cpu size={18} className="text-emerald-500" /> Pipeline virement — déclenchée par l’assistant</h3>
         <AgentOrchestration steps={r?.steps} revealed={reveal.revealed} done={reveal.done} />
         <div className="mt-4">
           <p className="text-[11px] uppercase tracking-wide font-medium text-slate-400 mb-2">Détail des vérifications</p>
@@ -521,14 +521,14 @@ function OperationPanel({ op }) {
         <div className="mt-5 pt-5 border-t border-slate-100 dark:border-slate-800">
           {op.executed ? (
             <div className="text-center py-2">
-              <div className="w-12 h-12 mx-auto rounded-full bg-primary-100 dark:bg-primary-500/15 text-primary-600 dark:text-primary-400 flex items-center justify-center mb-3"><Check size={24} /></div>
-              <p className="font-semibold text-primary-600 dark:text-primary-400">Virement exécuté</p>
+              <div className="w-12 h-12 mx-auto rounded-full bg-emerald-100 dark:bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-3"><Check size={24} /></div>
+              <p className="font-semibold text-emerald-600 dark:text-emerald-400">Virement exécuté</p>
               <p className="text-sm text-slate-500 mt-1">{fmt(op.exec?.montant)} DH → {op.exec?.beneficiaire}</p>
               <p className="text-xs text-slate-400 mt-1 font-mono">Réf. {op.exec?.reference}</p>
             </div>
           ) : approved ? (
             <div>
-              <div className="flex items-center gap-2 mb-3 text-primary-600 dark:text-primary-400 text-sm font-medium">
+              <div className="flex items-center gap-2 mb-3 text-emerald-600 dark:text-emerald-400 text-sm font-medium">
                 <KeyRound size={16} /> Virement autorisé — signature par OTP requise
               </div>
               <p className="text-sm text-slate-500 mb-3">
@@ -536,9 +536,9 @@ function OperationPanel({ op }) {
                 {r.beneficiaireConnu ? '' : ' (nouveau bénéficiaire)'}.
               </p>
               {op.devOtp && (
-                <div className="rounded-xl border border-primary-200 dark:border-primary-500/30 bg-primary-50 dark:bg-primary-500/10 p-4 text-center">
+                <div className="rounded-xl border border-emerald-200 dark:border-emerald-500/30 bg-emerald-50 dark:bg-emerald-500/10 p-4 text-center">
                   <p className="text-xs text-slate-500 dark:text-slate-400 mb-1">Lisez ce code à voix haute (ou tapez-le) pour signer</p>
-                  <p className="text-3xl font-mono font-bold tracking-[0.3em] text-primary-600 dark:text-primary-400">{op.devOtp}</p>
+                  <p className="text-3xl font-mono font-bold tracking-[0.3em] text-emerald-600 dark:text-emerald-400">{op.devOtp}</p>
                 </div>
               )}
               {op.otpError && <p className="text-sm text-rose-600 dark:text-rose-400 mt-2">Code incorrect — redites le code affiché.</p>}

@@ -4,7 +4,7 @@ import { FileText, Search, Database, Layers, Quote } from 'lucide-react'
 import { useDocuments } from '../hooks/useClient'
 
 const TYPE_COLORS = {
-  Politique: 'bg-primary-100 dark:bg-primary-500/15 text-primary-700 dark:text-primary-400',
+  Politique: 'bg-emerald-100 dark:bg-emerald-500/15 text-emerald-700 dark:text-emerald-400',
   Réglementation: 'bg-violet-100 dark:bg-violet-500/15 text-violet-700 dark:text-violet-400',
   Procédure: 'bg-sky-100 dark:bg-sky-500/15 text-sky-700 dark:text-sky-400',
   Sécurité: 'bg-rose-100 dark:bg-rose-500/15 text-rose-700 dark:text-rose-400',
@@ -31,7 +31,7 @@ export default function Documents() {
   return (
     <div className="p-4 sm:p-8 max-w-4xl mx-auto">
       <div className="mb-6">
-        <div className="flex items-center gap-2 text-primary-600 dark:text-primary-400 mb-1"><Database size={18} /><span className="text-xs font-semibold uppercase tracking-wider">Base RAG</span></div>
+        <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 mb-1"><Database size={18} /><span className="text-xs font-semibold uppercase tracking-wider">Base RAG</span></div>
         <h1 className="text-2xl font-bold tracking-tight">Base documentaire</h1>
         <p className="text-slate-500 dark:text-slate-400 mt-1">{documents.length} documents indexés · {totalFragments.toLocaleString('fr-MA')} fragments vectorisés — les sources que l'IA consulte pour décider.</p>
       </div>
@@ -41,11 +41,11 @@ export default function Documents() {
         <div className="relative flex-1">
           <Search size={17} className="absolute start-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
           <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Rechercher dans la base…"
-            className="w-full ps-11 pe-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:border-primary-500 focus:ring-2 focus:ring-primary-100 dark:focus:ring-primary-500/20 outline-none" />
+            className="w-full ps-11 pe-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm focus:border-emerald-500 focus:ring-2 focus:ring-emerald-100 dark:focus:ring-emerald-500/20 outline-none" />
         </div>
         <div className="flex flex-wrap gap-2">
           {categories.map((c) => (
-            <button key={c} onClick={() => setCat(c)} className={`text-xs font-medium px-3 py-1.5 rounded-lg border transition ${cat === c ? 'border-primary-500 bg-primary-50 dark:bg-primary-500/10 text-primary-700 dark:text-primary-400' : 'border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800'}`}>{c}</button>
+            <button key={c} onClick={() => setCat(c)} className={`text-xs font-medium px-3 py-1.5 rounded-lg border transition ${cat === c ? 'border-emerald-500 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400' : 'border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800'}`}>{c}</button>
           ))}
         </div>
       </div>
@@ -55,7 +55,7 @@ export default function Documents() {
           <motion.div key={doc.id} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.04 }}
             className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-5">
             <div className="flex items-start gap-4">
-              <div className="w-11 h-11 rounded-xl bg-primary-50 dark:bg-primary-500/10 text-primary-600 dark:text-primary-400 flex items-center justify-center shrink-0"><FileText size={20} /></div>
+              <div className="w-11 h-11 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0"><FileText size={20} /></div>
               <div className="flex-1 min-w-0">
                 <div className="flex items-center justify-between gap-3">
                   <p className="font-semibold">{doc.titre}</p>

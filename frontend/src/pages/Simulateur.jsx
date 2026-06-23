@@ -33,7 +33,7 @@ const SCENARIOS = [
   {
     label: 'Profil solide',
     icon: TrendingUp,
-    accent: 'primary',
+    accent: 'emerald',
     preset: { revenuMensuel: 32000, montant: 600000, dureeMois: 240, autresCharges: 800, ancienneteMois: 96, incidentsPaiement: 0, fichageBam: false },
   },
   {
@@ -107,7 +107,7 @@ function ScoreGauge({ score, decision, seuil }) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -8, scale: 0.9 }}
             transition={{ duration: 0.25 }}
-            className={`text-5xl font-bold tracking-tight tabular-nums ${approuve ? 'text-primary-600 dark:text-primary-400' : 'text-rose-600 dark:text-rose-400'}`}
+            className={`text-5xl font-bold tracking-tight tabular-nums ${approuve ? 'text-emerald-600 dark:text-emerald-400' : 'text-rose-600 dark:text-rose-400'}`}
           >
             {score}
           </motion.span>
@@ -142,13 +142,13 @@ function Slider({ cfg, value, onChange }) {
         step={cfg.step}
         value={value}
         onChange={(e) => onChange(cfg.key, Number(e.target.value))}
-        className="w-full h-2 appearance-none cursor-pointer rounded-full bg-slate-200 dark:bg-slate-800 accent-primary-500
+        className="w-full h-2 appearance-none cursor-pointer rounded-full bg-slate-200 dark:bg-slate-800 accent-emerald-500
           [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4
-          [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-primary-500
+          [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-emerald-500
           [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-white dark:[&::-webkit-slider-thumb]:border-slate-900
           [&::-webkit-slider-thumb]:shadow [&::-webkit-slider-thumb]:transition
           [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:rounded-full
-          [&::-moz-range-thumb]:bg-primary-500 [&::-moz-range-thumb]:border-0"
+          [&::-moz-range-thumb]:bg-emerald-500 [&::-moz-range-thumb]:border-0"
         style={{
           background: `linear-gradient(to right, rgb(16 185 129) ${pct}%, transparent ${pct}%)`,
         }}
@@ -191,7 +191,7 @@ function Waterfall({ contributions }) {
                   isBase
                     ? 'bg-slate-300 dark:bg-slate-600'
                     : positive
-                    ? 'bg-primary-500/80'
+                    ? 'bg-emerald-500/80'
                     : 'bg-rose-500/80'
                 }`}
                 style={positive ? { left: '50%' } : { right: '50%' }}
@@ -205,7 +205,7 @@ function Waterfall({ contributions }) {
                 isBase
                   ? 'text-slate-400 dark:text-slate-500'
                   : positive
-                  ? 'text-primary-600 dark:text-primary-400'
+                  ? 'text-emerald-600 dark:text-emerald-400'
                   : 'text-rose-600 dark:text-rose-400'
               }`}
             >
@@ -267,7 +267,7 @@ export default function Simulateur() {
       >
         <div>
           <h1 className="text-2xl font-bold tracking-tight flex items-center gap-2">
-            <Gauge className="text-primary-500" size={26} />
+            <Gauge className="text-emerald-500" size={26} />
             Simulateur interactif
           </h1>
           <p className="text-slate-500 dark:text-slate-400 mt-1">
@@ -339,14 +339,14 @@ export default function Simulateur() {
               )}
               {SCENARIOS.map((s) => {
                 const Icon = s.icon
-                const primary = s.accent === 'primary'
+                const emerald = s.accent === 'emerald'
                 return (
                   <button
                     key={s.label}
                     onClick={() => setParams(s.preset)}
                     className={`flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg border transition ${
-                      primary
-                        ? 'border-primary-200 dark:border-primary-500/30 text-primary-700 dark:text-primary-400 bg-primary-50 dark:bg-primary-500/10 hover:bg-primary-100 dark:hover:bg-primary-500/20'
+                      emerald
+                        ? 'border-emerald-200 dark:border-emerald-500/30 text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 hover:bg-emerald-100 dark:hover:bg-emerald-500/20'
                         : 'border-rose-200 dark:border-rose-500/30 text-rose-700 dark:text-rose-400 bg-rose-50 dark:bg-rose-500/10 hover:bg-rose-100 dark:hover:bg-rose-500/20'
                     }`}
                   >
@@ -379,7 +379,7 @@ export default function Simulateur() {
                   transition={{ duration: 0.25 }}
                   className={`flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold ${
                     approuve
-                      ? 'bg-primary-100 dark:bg-primary-500/15 text-primary-700 dark:text-primary-400'
+                      ? 'bg-emerald-100 dark:bg-emerald-500/15 text-emerald-700 dark:text-emerald-400'
                       : 'bg-rose-100 dark:bg-rose-500/15 text-rose-700 dark:text-rose-400'
                   }`}
                 >

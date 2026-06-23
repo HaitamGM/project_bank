@@ -13,7 +13,7 @@ export default function Avatar({ photo, prenom = '', nom = '', size = 64, classN
         alt={`${prenom} ${nom}`.trim() || 'Avatar'}
         onError={() => setErr(true)}
         style={style}
-        className={`${rounded} object-cover bg-primary-600 shrink-0 ${className}`}
+        className={`${rounded} object-cover bg-emerald-600 shrink-0 ${className}`}
       />
     )
   }
@@ -21,7 +21,7 @@ export default function Avatar({ photo, prenom = '', nom = '', size = 64, classN
   return (
     <div
       style={{ ...style, fontSize: size / 2.6 }}
-      className={`${rounded} bg-gradient-to-br from-primary-500 to-primary-700 text-white flex items-center justify-center font-serif font-bold shrink-0 ${className}`}
+      className={`${rounded} bg-emerald-600 text-white flex items-center justify-center font-bold shrink-0 ${className}`}
     >
       {initials || '?'}
     </div>

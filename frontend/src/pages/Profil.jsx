@@ -27,7 +27,7 @@ function Profil() {
   const soldeTotal = comptes.reduce((s, c) => s + (c.solde || 0), 0)
 
   const riskColor = {
-    Faible: 'bg-primary-100 dark:bg-primary-500/10 text-primary-700 dark:text-primary-400',
+    Faible: 'bg-emerald-100 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400',
     Moyen: 'bg-amber-100 dark:bg-amber-500/10 text-amber-700 dark:text-amber-400',
     'Élevé': 'bg-rose-100 dark:bg-rose-500/10 text-rose-700 dark:text-rose-400',
   }[risque.niveauRisque] || 'bg-slate-100 dark:bg-slate-800 text-slate-600'
@@ -50,7 +50,7 @@ function Profil() {
           <h1 className="text-2xl font-bold tracking-tight">{personnel.civilite} {personnel.prenom} {personnel.nom}</h1>
           <p className="text-slate-500 dark:text-slate-400">{professionnel.profession} · Client {client.id}</p>
           <div className="flex flex-wrap items-center gap-2 mt-3">
-            <Badge className="bg-primary-100 dark:bg-primary-500/10 text-primary-700 dark:text-primary-400">{bancaire.segment}</Badge>
+            <Badge className="bg-emerald-100 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400">{bancaire.segment}</Badge>
             <Badge className={riskColor}>Risque {risque.niveauRisque}</Badge>
             {personnel.pieceIdentite?.verifiee && (
               <Badge className="bg-sky-100 dark:bg-sky-500/10 text-sky-700 dark:text-sky-400"><BadgeCheck size={13} className="inline -mt-0.5 mr-1" />Identité vérifiée</Badge>
@@ -62,7 +62,7 @@ function Profil() {
         </div>
         <div className="sm:text-right">
           <p className="text-xs text-slate-400 uppercase tracking-wide font-medium">Solde total</p>
-          <p className="text-2xl font-bold text-primary-600 dark:text-primary-400">{fmtMad(soldeTotal)}</p>
+          <p className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">{fmtMad(soldeTotal)}</p>
         </div>
       </div>
 
@@ -130,7 +130,7 @@ function Profil() {
                     <p className="text-sm font-semibold">{c.intitule || c.type}</p>
                     <p className="text-xs text-slate-400 capitalize">{c.type}</p>
                   </div>
-                  <p className="font-bold text-primary-600 dark:text-primary-400">{fmtMad(c.solde)}</p>
+                  <p className="font-bold text-emerald-600 dark:text-emerald-400">{fmtMad(c.solde)}</p>
                 </div>
                 <p className="text-[11px] text-slate-400 font-mono mt-2">{c.iban || c.rib}</p>
               </div>
@@ -142,14 +142,14 @@ function Profil() {
         {cartes.length > 0 && (
           <div className={`${card} md:col-span-2`}>
             <div className="flex items-center justify-between mb-5">
-              <div className="flex items-center gap-2 text-primary-600 dark:text-primary-400">
+              <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400">
                 <CreditCard size={18} />
                 <h2 className="font-semibold text-slate-900 dark:text-white">Cartes bancaires</h2>
               </div>
               <button
                 onClick={onEye}
                 title={revealed ? 'Masquer les détails' : 'Afficher le numéro et le CVV'}
-                className="flex items-center gap-1.5 text-xs font-medium text-slate-500 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition"
+                className="flex items-center gap-1.5 text-xs font-medium text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition"
               >
                 {revealed ? <EyeOff size={16} /> : <Eye size={16} />}
                 {revealed ? 'Masquer' : 'Afficher'}
@@ -231,7 +231,7 @@ function BankCard({ carte, revealed }) {
   const isMc = (carte.reseau || '').toLowerCase().includes('mastercard')
   return (
     <div>
-      <div className="relative overflow-hidden rounded-2xl p-5 text-white bg-gradient-to-br from-primary-700 via-primary-800 to-slate-900 shadow-md min-h-[190px] flex flex-col justify-between">
+      <div className="relative overflow-hidden rounded-2xl p-5 text-white bg-gradient-to-br from-emerald-700 via-emerald-800 to-slate-900 shadow-md min-h-[190px] flex flex-col justify-between">
         <div className="absolute -right-10 -top-10 w-40 h-40 rounded-full bg-white/10 pointer-events-none" />
         <div className="absolute right-8 top-12 w-24 h-24 rounded-full bg-white/5 pointer-events-none" />
 
@@ -276,7 +276,7 @@ function BankCard({ carte, revealed }) {
 
       <div className="flex items-center justify-between mt-2 px-1">
         <span className="text-xs text-slate-500 dark:text-slate-400">Plafond {(carte.plafondMensuel || 0).toLocaleString('fr-MA')} DH/mois</span>
-        <span className={`text-[10px] font-medium px-2 py-0.5 rounded-full ${carte.statut === 'active' ? 'bg-primary-100 dark:bg-primary-500/10 text-primary-700 dark:text-primary-400' : 'bg-rose-100 dark:bg-rose-500/10 text-rose-700 dark:text-rose-400'}`}>{carte.statut}</span>
+        <span className={`text-[10px] font-medium px-2 py-0.5 rounded-full ${carte.statut === 'active' ? 'bg-emerald-100 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400' : 'bg-rose-100 dark:bg-rose-500/10 text-rose-700 dark:text-rose-400'}`}>{carte.statut}</span>
       </div>
     </div>
   )
@@ -288,7 +288,7 @@ function Badge({ children, className }) {
 
 function SectionTitle({ icon: Icon, title, small }) {
   return (
-    <div className={`flex items-center gap-2 ${small ? 'mb-2' : 'mb-4'} text-primary-600 dark:text-primary-400`}>
+    <div className={`flex items-center gap-2 ${small ? 'mb-2' : 'mb-4'} text-emerald-600 dark:text-emerald-400`}>
       <Icon size={small ? 15 : 18} />
       <h2 className={`font-semibold text-slate-900 dark:text-white ${small ? 'text-sm' : ''}`}>{title}</h2>
     </div>

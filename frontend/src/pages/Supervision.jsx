@@ -97,12 +97,12 @@ export default function Supervision() {
     <div className="p-4 sm:p-8 max-w-6xl mx-auto">
       <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
         <div>
-          <div className="flex items-center gap-2 text-primary-600 dark:text-primary-400 mb-1"><Network size={18} /><span className="text-xs font-semibold uppercase tracking-wider">Coulisses techniques</span></div>
+          <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 mb-1"><Network size={18} /><span className="text-xs font-semibold uppercase tracking-wider">Coulisses techniques</span></div>
           <h1 className="text-2xl font-bold tracking-tight">Supervision multi-agents</h1>
           <p className="text-slate-500 dark:text-slate-400 mt-1">Rejeu d'une exécution réelle du pipeline pour vos décisions</p>
         </div>
         <div className="flex items-center gap-2">
-          <button onClick={replay} className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-500 text-white text-sm font-semibold px-4 py-2.5 rounded-xl shadow-sm transition active:scale-95">
+          <button onClick={replay} className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold px-4 py-2.5 rounded-xl shadow-sm transition active:scale-95">
             <Play size={16} /> {finished ? 'Rejouer' : "Rejouer l'exécution"}
           </button>
           <button onClick={reset} disabled={idle} className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition active:scale-95 disabled:opacity-40">
@@ -114,7 +114,7 @@ export default function Supervision() {
       {/* Sélecteur d'exécution */}
       <div className="mb-6 relative max-w-xl">
         <select value={run.runId} onChange={(e) => setSelId(e.target.value)}
-          className="w-full appearance-none ps-4 pe-10 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm font-medium focus:border-primary-500 outline-none">
+          className="w-full appearance-none ps-4 pe-10 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm font-medium focus:border-emerald-500 outline-none">
           {items.map((r) => (
             <option key={r.runId} value={r.runId}>
               {r.horodatage} · {r.decision ? r.decision.intent : r.decisionId} {r.decision ? `· ${r.decision.statut}` : ''} ({fmtMs(r.dureeTotaleMs)})
@@ -147,7 +147,7 @@ export default function Supervision() {
           <span className="tabular-nums">{fmtMs(elapsed)} / {fmtMs(total)}</span>
         </div>
         <div className="h-2.5 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden">
-          <motion.div className="h-full rounded-full bg-gradient-to-r from-primary-500 to-primary-400" animate={{ width: `${progress}%` }} transition={{ ease: 'linear', duration: TICK_MS / 1000 }} />
+          <motion.div className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-emerald-400" animate={{ width: `${progress}%` }} transition={{ ease: 'linear', duration: TICK_MS / 1000 }} />
         </div>
       </div>
 
@@ -172,7 +172,7 @@ export default function Supervision() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className={`${card} lg:col-span-2 overflow-hidden shadow-sm`}>
           <div className="flex items-center justify-between px-5 py-3 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/40">
-            <div className="flex items-center gap-2"><Terminal size={15} className="text-primary-600 dark:text-primary-400" /><span className="text-sm font-semibold">Journal d'exécution</span></div>
+            <div className="flex items-center gap-2"><Terminal size={15} className="text-emerald-600 dark:text-emerald-400" /><span className="text-sm font-semibold">Journal d'exécution</span></div>
             <span className="text-xs text-slate-400 font-mono">{run.runId}</span>
           </div>
           <div ref={logRef} className="font-mono text-[13px] p-4 h-72 overflow-y-auto bg-slate-50/50 dark:bg-slate-950/30">
@@ -182,7 +182,7 @@ export default function Supervision() {
                 <motion.div key={`${b.agentId}-${i}`} initial={{ opacity: 0, x: -12 }} animate={{ opacity: 1, x: 0 }} className="mb-2 leading-snug">
                   <div className="flex flex-wrap items-baseline gap-x-2">
                     <span className="text-slate-400 tabular-nums">[{String(Math.round(b.end)).padStart(4, '0')} ms]</span>
-                    <span className="text-primary-600 dark:text-primary-400 font-medium">{b.agent}</span>
+                    <span className="text-emerald-600 dark:text-emerald-400 font-medium">{b.agent}</span>
                     <span className="text-slate-400">·</span>
                     <span className="font-bold text-slate-800 dark:text-slate-100">{b.statut}</span>
                   </div>
@@ -190,7 +190,7 @@ export default function Supervision() {
                 </motion.div>
               ))}
             </AnimatePresence>
-            {running && <span className="inline-block w-2 h-4 bg-primary-500 align-middle animate-pulse" />}
+            {running && <span className="inline-block w-2 h-4 bg-emerald-500 align-middle animate-pulse" />}
           </div>
         </div>
 
@@ -199,7 +199,7 @@ export default function Supervision() {
           <AnimatePresence mode="wait">
             {finished ? (
               <motion.div key="v" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="flex-1 flex flex-col">
-                <div className={`inline-flex items-center gap-2 self-start px-3 py-1.5 rounded-full text-sm font-semibold mb-3 ${approuve ? 'bg-primary-50 dark:bg-primary-500/10 text-primary-700 dark:text-primary-400' : 'bg-rose-50 dark:bg-rose-500/10 text-rose-700 dark:text-rose-400'}`}>
+                <div className={`inline-flex items-center gap-2 self-start px-3 py-1.5 rounded-full text-sm font-semibold mb-3 ${approuve ? 'bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400' : 'bg-rose-50 dark:bg-rose-500/10 text-rose-700 dark:text-rose-400'}`}>
                   {approuve ? <Check size={15} /> : <X size={15} />} {dec ? (dec.statut === 'execute' ? 'Exécuté' : dec.statut === 'approuve' ? 'Approuvé' : 'Refusé') : '—'}
                 </div>
                 {dec?.score != null && <p className="text-3xl font-bold tracking-tight">{dec.score}<span className="text-base text-slate-400 font-medium">/100</span></p>}
@@ -227,23 +227,23 @@ function AgentNode({ etape, meta, state }) {
   const Icon = AGENT_ICONS[etape.agentId] || Cpu
   const styles = {
     pending: 'border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900',
-    active: 'border-primary-500 bg-primary-50 dark:bg-primary-500/10 shadow-[0_0_0_4px_rgba(16,185,129,0.15)]',
-    done: 'border-primary-200 dark:border-primary-500/30 bg-white dark:bg-slate-900',
+    active: 'border-emerald-500 bg-emerald-50 dark:bg-emerald-500/10 shadow-[0_0_0_4px_rgba(16,185,129,0.15)]',
+    done: 'border-emerald-200 dark:border-emerald-500/30 bg-white dark:bg-slate-900',
   }[state]
   const iconWrap = {
     pending: 'bg-slate-100 dark:bg-slate-800 text-slate-400',
-    active: 'bg-primary-500 text-white',
-    done: 'bg-primary-50 dark:bg-primary-500/10 text-primary-600 dark:text-primary-400',
+    active: 'bg-emerald-500 text-white',
+    done: 'bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400',
   }[state]
   return (
     <motion.div animate={{ scale: state === 'active' ? 1.04 : 1 }} transition={{ type: 'spring', stiffness: 280, damping: 18 }} className={`relative rounded-xl border p-3.5 transition-colors ${styles}`}>
       <div className="flex items-start justify-between gap-2">
         <div className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 transition-colors ${iconWrap}`}><Icon size={18} /></div>
-        {state === 'done' && <span className="w-5 h-5 rounded-full bg-primary-500 text-white flex items-center justify-center shrink-0"><Check size={12} strokeWidth={3} /></span>}
-        {state === 'active' && <span className="text-[10px] font-bold uppercase tracking-wide text-primary-600 dark:text-primary-400 bg-primary-500/10 px-1.5 py-0.5 rounded-full">actif</span>}
+        {state === 'done' && <span className="w-5 h-5 rounded-full bg-emerald-500 text-white flex items-center justify-center shrink-0"><Check size={12} strokeWidth={3} /></span>}
+        {state === 'active' && <span className="text-[10px] font-bold uppercase tracking-wide text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded-full">actif</span>}
       </div>
       <p className="font-semibold text-sm mt-2.5 truncate">{etape.agent}</p>
-      {meta && <p className="text-[11px] text-primary-600 dark:text-primary-400 font-medium truncate mt-0.5">{meta.technologie}</p>}
+      {meta && <p className="text-[11px] text-emerald-600 dark:text-emerald-400 font-medium truncate mt-0.5">{meta.technologie}</p>}
       {meta && <p className="text-[11px] text-slate-400 leading-snug mt-1 line-clamp-2">{meta.role}</p>}
       <div className="flex items-center gap-1 text-[11px] text-slate-400 mt-2 pt-2 border-t border-slate-100 dark:border-slate-800"><Clock size={11} /><span className="tabular-nums">{etape.dureeMs} ms</span></div>
     </motion.div>

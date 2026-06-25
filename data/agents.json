@@ -1,0 +1,68 @@
+[
+  {
+    "id": "AG-CRM",
+    "ordre": 1,
+    "nom": "Agent CRM",
+    "role": "Récupère le profil, l'historique et les comptes du client.",
+    "technologie": "Service CRM",
+    "statut": "actif",
+    "nombreExecutions": 113,
+    "latenceMoyenneMs": 212,
+    "latenceMaxMs": 374
+  },
+  {
+    "id": "AG-FIN",
+    "ordre": 2,
+    "nom": "Agent Analyse Financière",
+    "role": "Analyse les revenus, charges et calcule la capacité de remboursement.",
+    "technologie": "Calcul d'annuités",
+    "statut": "actif",
+    "nombreExecutions": 113,
+    "latenceMoyenneMs": 209,
+    "latenceMaxMs": 379
+  },
+  {
+    "id": "AG-RISK",
+    "ordre": 3,
+    "nom": "Agent Risque",
+    "role": "Évalue le niveau de risque (endettement, incidents, fichage BAM).",
+    "technologie": "Fichier central BAM",
+    "statut": "actif",
+    "nombreExecutions": 113,
+    "latenceMoyenneMs": 224,
+    "latenceMaxMs": 380
+  },
+  {
+    "id": "AG-DEC",
+    "ordre": 4,
+    "nom": "Agent Décision",
+    "role": "Prend la décision finale selon le score et les règles dures.",
+    "technologie": "Règles + seuil",
+    "statut": "actif",
+    "nombreExecutions": 113,
+    "latenceMoyenneMs": 194,
+    "latenceMaxMs": 376
+  },
+  {
+    "id": "AG-EXEC",
+    "ordre": 5,
+    "nom": "Agent Exécution",
+    "role": "Exécute l'opération (validation crédit, signature et virement).",
+    "technologie": "Core banking",
+    "statut": "actif",
+    "nombreExecutions": 113,
+    "latenceMoyenneMs": 203,
+    "latenceMaxMs": 380
+  },
+  {
+    "id": "AG-XAI",
+    "ordre": 6,
+    "nom": "Agent Explicabilité",
+    "role": "Explique la décision en langage clair et propose des alternatives.",
+    "technologie": "Gemini · génération",
+    "statut": "actif",
+    "nombreExecutions": 113,
+    "latenceMoyenneMs": 205,
+    "latenceMaxMs": 371
+  }
+]

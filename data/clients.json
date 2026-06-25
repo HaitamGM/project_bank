@@ -1,0 +1,1298 @@
+[
+  {
+    "id": "CL-2024-0042",
+    "photo": "/avatars/CL-2024-0042.svg",
+    "personnel": {
+      "civilite": "Mme",
+      "prenom": "Yasmina",
+      "nom": "El Idrissi",
+      "genre": "F",
+      "cin": "XL983794",
+      "dateNaissance": "1999-01-30",
+      "lieuNaissance": "Casablanca",
+      "age": 27,
+      "nationalite": "Marocaine",
+      "telephone": "+212 6 17 39 14 50",
+      "email": "y.elidrissi@email.ma",
+      "ville": "Casablanca",
+      "adresse": {
+        "rue": "103 Avenue Ibn Batouta",
+        "quartier": "Maârif",
+        "ville": "Casablanca",
+        "codePostal": "20330",
+        "pays": "Maroc"
+      },
+      "situationFamiliale": "Marié(e)",
+      "nombreEnfants": 3,
+      "niveauEtudes": "Bac+5 — Ingénierie",
+      "pieceIdentite": {
+        "type": "CIN",
+        "numero": "XL983794",
+        "validiteJusquau": "2029-07-03",
+        "verifiee": true
+      }
+    },
+    "professionnel": {
+      "profession": "Ingénieure informatique",
+      "secteur": "Technologie",
+      "employeur": "Capgemini Maroc",
+      "typeContrat": "CDI",
+      "secteurActivite": "Technologie",
+      "dateEmbauche": "2023-06-28",
+      "ancienneteMois": 36,
+      "revenuMensuel": 18000,
+      "revenuAnnuel": 216000,
+      "autresRevenus": 0,
+      "modeVersementSalaire": "Virement"
+    },
+    "bancaire": {
+      "agence": "BankIA Maârif",
+      "conseiller": "Mme Nadia Cherkaoui",
+      "clientDepuis": "2019-06-14",
+      "segment": "Premium",
+      "scoreInterne": 81,
+      "compteActif": true,
+      "chargesMensuelles": 1100,
+      "comptes": [
+        {
+          "rib": "230 815 8196001338908386 38",
+          "iban": "MA64 2308 1581 9600 1338 9083",
+          "type": "courant",
+          "intitule": "Compte courant principal",
+          "solde": 39835.14,
+          "devise": "MAD",
+          "dateOuverture": "2019-06-14"
+        },
+        {
+          "rib": "230 815 0265423511615594 15",
+          "iban": "MA64 2308 1502 6542 3511 6155",
+          "type": "epargne",
+          "intitule": "Compte sur carnet",
+          "solde": 260811.49,
+          "devise": "MAD",
+          "dateOuverture": "2019-10-12",
+          "tauxInteret": 0.025
+        }
+      ],
+      "cartes": [
+        {
+          "type": "Crédit",
+          "reseau": "Visa Gold",
+          "titulaire": "YASMINA EL IDRISSI",
+          "numero": "4012 9696 5328 2388",
+          "numeroMasque": "4012 •••• •••• 2388",
+          "cvv": "710",
+          "plafondMensuel": 30000,
+          "expiration": "02/28",
+          "statut": "active"
+        },
+        {
+          "type": "Crédit",
+          "reseau": "Visa Gold",
+          "titulaire": "YASMINA EL IDRISSI",
+          "numero": "4024 8480 1845 9166",
+          "numeroMasque": "4024 •••• •••• 9166",
+          "cvv": "146",
+          "plafondMensuel": 30000,
+          "expiration": "03/30",
+          "statut": "active"
+        }
+      ],
+      "plafonds": {
+        "virementParOperation": 50000,
+        "virementQuotidien": 100000,
+        "retraitQuotidien": 5000
+      },
+      "beneficiaires": [
+        {
+          "nom": "Loyer — Résidence Al Manar",
+          "rib": "230 815 8495931034131647 91",
+          "banque": "CIH"
+        },
+        {
+          "nom": "Mohammed Alaoui",
+          "rib": "230 815 5255341928327648 38",
+          "banque": "BMCE"
+        }
+      ],
+      "creditsEnCours": [
+        {
+          "type": "Crédit auto",
+          "organisme": "BankIA",
+          "capitalRestant": 20857,
+          "mensualite": 1100,
+          "echeance": "2028-04-07"
+        }
+      ]
+    },
+    "risque": {
+      "incidentsPaiement": 0,
+      "fichageBam": false,
+      "tauxEndettement": 0.061,
+      "niveauRisque": "Faible",
+      "scoreBam": "A",
+      "categorieRisque": "Faible",
+      "derniereRevue": "2026-06-02"
+    }
+  },
+  {
+    "id": "CL-2024-0043",
+    "photo": "/avatars/CL-2024-0043.svg",
+    "personnel": {
+      "civilite": "M.",
+      "prenom": "Karim",
+      "nom": "Benali",
+      "genre": "M",
+      "cin": "HR946721",
+      "dateNaissance": "1983-03-24",
+      "lieuNaissance": "Fès",
+      "age": 43,
+      "nationalite": "Marocaine",
+      "telephone": "+212 6 62 34 22 22",
+      "email": "k.benali@email.ma",
+      "ville": "Fès",
+      "adresse": {
+        "rue": "169 Avenue Hassan II",
+        "quartier": "Saiss",
+        "ville": "Fès",
+        "codePostal": "30000",
+        "pays": "Maroc"
+      },
+      "situationFamiliale": "Divorcé(e)",
+      "nombreEnfants": 1,
+      "niveauEtudes": "Bac+2 — Gestion",
+      "pieceIdentite": {
+        "type": "CIN",
+        "numero": "HR946721",
+        "validiteJusquau": "2030-09-28",
+        "verifiee": true
+      }
+    },
+    "professionnel": {
+      "profession": "Commerçant",
+      "secteur": "Commerce",
+      "employeur": "Cosumar",
+      "typeContrat": "Indépendant",
+      "secteurActivite": "Commerce",
+      "dateEmbauche": "2025-04-18",
+      "ancienneteMois": 14,
+      "revenuMensuel": 8500,
+      "revenuAnnuel": 102000,
+      "autresRevenus": 0,
+      "modeVersementSalaire": "Virement"
+    },
+    "bancaire": {
+      "agence": "BankIA Saiss",
+      "conseiller": "M. Tarik Bennani",
+      "clientDepuis": "2021-06-13",
+      "segment": "Standard",
+      "scoreInterne": 15,
+      "compteActif": true,
+      "chargesMensuelles": 1200,
+      "comptes": [
+        {
+          "rib": "230 815 4893252880957015 49",
+          "iban": "MA64 2308 1548 9325 2880 9570",
+          "type": "courant",
+          "intitule": "Compte courant principal",
+          "solde": 27635.09,
+          "devise": "MAD",
+          "dateOuverture": "2021-06-13"
+        },
+        {
+          "rib": "230 815 9117182278248963 79",
+          "iban": "MA64 2308 1591 1718 2278 2489",
+          "type": "epargne",
+          "intitule": "Compte sur carnet",
+          "solde": 269237.51,
+          "devise": "MAD",
+          "dateOuverture": "2021-10-11",
+          "tauxInteret": 0.025
+        }
+      ],
+      "cartes": [
+        {
+          "type": "Crédit",
+          "reseau": "Visa Premier",
+          "titulaire": "KARIM BENALI",
+          "numero": "4012 2624 7317 1333",
+          "numeroMasque": "4012 •••• •••• 1333",
+          "cvv": "810",
+          "plafondMensuel": 15000,
+          "expiration": "11/27",
+          "statut": "active"
+        }
+      ],
+      "plafonds": {
+        "virementParOperation": 20000,
+        "virementQuotidien": 40000,
+        "retraitQuotidien": 3000
+      },
+      "beneficiaires": [
+        {
+          "nom": "Karim Tazi",
+          "rib": "230 815 6578713315098393 10",
+          "banque": "CFG Bank"
+        },
+        {
+          "nom": "Société ATLAS SARL",
+          "rib": "230 815 1031051834738299 70",
+          "banque": "Banque Populaire"
+        }
+      ],
+      "creditsEnCours": [
+        {
+          "type": "Crédit auto",
+          "organisme": "Sofac",
+          "capitalRestant": 30734,
+          "mensualite": 1200,
+          "echeance": "2028-03-08"
+        }
+      ]
+    },
+    "risque": {
+      "incidentsPaiement": 2,
+      "fichageBam": true,
+      "tauxEndettement": 0.141,
+      "niveauRisque": "Élevé",
+      "scoreBam": "D",
+      "categorieRisque": "Élevé",
+      "derniereRevue": "2026-05-22"
+    }
+  },
+  {
+    "id": "CL-2024-0044",
+    "photo": "/avatars/CL-2024-0044.svg",
+    "personnel": {
+      "civilite": "Mme",
+      "prenom": "Sara",
+      "nom": "Amrani",
+      "genre": "F",
+      "cin": "KF559469",
+      "dateNaissance": "1993-11-24",
+      "lieuNaissance": "Rabat",
+      "age": 32,
+      "nationalite": "Marocaine",
+      "telephone": "+212 6 79 48 88 93",
+      "email": "s.amrani@email.ma",
+      "ville": "Rabat",
+      "adresse": {
+        "rue": "136 Rue Al Massira",
+        "quartier": "Hassan",
+        "ville": "Rabat",
+        "codePostal": "10080",
+        "pays": "Maroc"
+      },
+      "situationFamiliale": "Marié(e)",
+      "nombreEnfants": 3,
+      "niveauEtudes": "Doctorat en médecine",
+      "pieceIdentite": {
+        "type": "CIN",
+        "numero": "KF559469",
+        "validiteJusquau": "2029-03-26",
+        "verifiee": true
+      }
+    },
+    "professionnel": {
+      "profession": "Médecin",
+      "secteur": "Santé",
+      "employeur": "CHU Ibn Rochd",
+      "typeContrat": "CDI",
+      "secteurActivite": "Santé",
+      "dateEmbauche": "2021-07-08",
+      "ancienneteMois": 60,
+      "revenuMensuel": 25000,
+      "revenuAnnuel": 300000,
+      "autresRevenus": 0,
+      "modeVersementSalaire": "Virement"
+    },
+    "bancaire": {
+      "agence": "BankIA Hassan",
+      "conseiller": "M. Reda Fassi",
+      "clientDepuis": "2015-06-15",
+      "segment": "Patrimoine",
+      "scoreInterne": 86,
+      "compteActif": true,
+      "chargesMensuelles": 1500,
+      "comptes": [
+        {
+          "rib": "230 815 0260647468723430 84",
+          "iban": "MA64 2308 1502 6064 7468 7234",
+          "type": "courant",
+          "intitule": "Compte courant principal",
+          "solde": 61330.45,
+          "devise": "MAD",
+          "dateOuverture": "2015-06-15"
+        },
+        {
+          "rib": "230 815 5009788208121913 61",
+          "iban": "MA64 2308 1550 0978 8208 1219",
+          "type": "epargne",
+          "intitule": "Compte sur carnet",
+          "solde": 59562.58,
+          "devise": "MAD",
+          "dateOuverture": "2015-10-13",
+          "tauxInteret": 0.025
+        }
+      ],
+      "cartes": [
+        {
+          "type": "Débit",
+          "reseau": "Mastercard",
+          "titulaire": "SARA AMRANI",
+          "numero": "5301 4874 0164 4935",
+          "numeroMasque": "5301 •••• •••• 4935",
+          "cvv": "005",
+          "plafondMensuel": 60000,
+          "expiration": "03/29",
+          "statut": "active"
+        }
+      ],
+      "plafonds": {
+        "virementParOperation": 100000,
+        "virementQuotidien": 200000,
+        "retraitQuotidien": 10000
+      },
+      "beneficiaires": [
+        {
+          "nom": "École Al Madina",
+          "rib": "230 815 0916998543534624 68",
+          "banque": "Attijariwafa"
+        },
+        {
+          "nom": "Karim Tazi",
+          "rib": "230 815 5107991183842513 57",
+          "banque": "CFG Bank"
+        },
+        {
+          "nom": "Abdessalam",
+          "banque": "BCC (Banque Centrale Populaire)",
+          "rib": "888888888888888888888888"
+        }
+      ],
+      "creditsEnCours": [
+        {
+          "type": "Crédit immobilier",
+          "organisme": "Wafasalaf",
+          "capitalRestant": 150803,
+          "mensualite": 1500,
+          "echeance": "2034-06-19"
+        }
+      ]
+    },
+    "risque": {
+      "incidentsPaiement": 0,
+      "fichageBam": false,
+      "tauxEndettement": 0.06,
+      "niveauRisque": "Faible",
+      "scoreBam": "A",
+      "categorieRisque": "Faible",
+      "derniereRevue": "2026-05-13"
+    }
+  },
+  {
+    "id": "CL-2024-0045",
+    "photo": "/avatars/CL-2024-0045.svg",
+    "personnel": {
+      "civilite": "Mme",
+      "prenom": "Nisrine",
+      "nom": "Bennis",
+      "genre": "F",
+      "cin": "NY410016",
+      "dateNaissance": "1982-06-05",
+      "lieuNaissance": "Fès",
+      "age": 44,
+      "nationalite": "Marocaine",
+      "telephone": "+212 6 26 34 63 95",
+      "email": "n.bennis@email.ma",
+      "ville": "Fès",
+      "adresse": {
+        "rue": "98 Bd Mohammed V",
+        "quartier": "Atlas",
+        "ville": "Fès",
+        "codePostal": "30000",
+        "pays": "Maroc"
+      },
+      "situationFamiliale": "Marié(e)",
+      "nombreEnfants": 1,
+      "niveauEtudes": "Doctorat en médecine",
+      "pieceIdentite": {
+        "type": "CIN",
+        "numero": "NY410016",
+        "validiteJusquau": "2029-07-01",
+        "verifiee": true
+      }
+    },
+    "professionnel": {
+      "profession": "Médecin",
+      "secteur": "Santé",
+      "employeur": "Clinique Al Madina",
+      "typeContrat": "CDI",
+      "secteurActivite": "Santé",
+      "dateEmbauche": "2022-09-01",
+      "ancienneteMois": 46,
+      "revenuMensuel": 16500,
+      "revenuAnnuel": 198000,
+      "autresRevenus": 0,
+      "modeVersementSalaire": "Virement"
+    },
+    "bancaire": {
+      "agence": "BankIA Atlas",
+      "conseiller": "M. Reda Fassi",
+      "clientDepuis": "2019-06-14",
+      "segment": "Premium",
+      "scoreInterne": 80,
+      "compteActif": true,
+      "chargesMensuelles": 1288.21,
+      "comptes": [
+        {
+          "rib": "230 815 6923226025634216 14",
+          "iban": "MA64 2308 1569 2322 6025 6342",
+          "type": "courant",
+          "intitule": "Compte courant principal",
+          "solde": 78404.65,
+          "devise": "MAD",
+          "dateOuverture": "2019-06-14"
+        },
+        {
+          "rib": "230 815 7543303654145868 52",
+          "iban": "MA64 2308 1575 4330 3654 1458",
+          "type": "epargne",
+          "intitule": "Compte sur carnet",
+          "solde": 329948.26,
+          "devise": "MAD",
+          "dateOuverture": "2019-10-12",
+          "tauxInteret": 0.025
+        }
+      ],
+      "cartes": [
+        {
+          "type": "Débit",
+          "reseau": "Visa Premier",
+          "titulaire": "NISRINE BENNIS",
+          "numero": "4024 1489 5134 7387",
+          "numeroMasque": "4024 •••• •••• 7387",
+          "cvv": "332",
+          "plafondMensuel": 30000,
+          "expiration": "01/27",
+          "statut": "active"
+        },
+        {
+          "type": "Débit",
+          "reseau": "Visa Gold",
+          "titulaire": "NISRINE BENNIS",
+          "numero": "4024 6763 2016 9176",
+          "numeroMasque": "4024 •••• •••• 9176",
+          "cvv": "328",
+          "plafondMensuel": 30000,
+          "expiration": "08/27",
+          "statut": "active"
+        }
+      ],
+      "plafonds": {
+        "virementParOperation": 50000,
+        "virementQuotidien": 100000,
+        "retraitQuotidien": 5000
+      },
+      "beneficiaires": [
+        {
+          "nom": "Société ATLAS SARL",
+          "rib": "230 815 9401965569816934 15",
+          "banque": "Banque Populaire"
+        },
+        {
+          "nom": "Fatima Berrada",
+          "rib": "230 815 6088356159514846 51",
+          "banque": "Attijariwafa"
+        }
+      ],
+      "creditsEnCours": [
+        {
+          "type": "Crédit immobilier",
+          "organisme": "Sofac",
+          "capitalRestant": 98563,
+          "mensualite": 1288.21,
+          "echeance": "2033-05-16"
+        }
+      ]
+    },
+    "risque": {
+      "incidentsPaiement": 0,
+      "fichageBam": false,
+      "tauxEndettement": 0.078,
+      "niveauRisque": "Faible",
+      "scoreBam": "A",
+      "categorieRisque": "Faible",
+      "derniereRevue": "2026-03-23"
+    }
+  },
+  {
+    "id": "CL-2024-0052",
+    "photo": "/avatars/CL-2024-0052.svg",
+    "personnel": {
+      "civilite": "M.",
+      "prenom": "Youssef",
+      "nom": "Naciri",
+      "genre": "M",
+      "cin": "MH781725",
+      "dateNaissance": "1979-10-09",
+      "lieuNaissance": "Rabat",
+      "age": 46,
+      "nationalite": "Marocaine",
+      "telephone": "+212 6 18 93 15 13",
+      "email": "y.naciri@email.ma",
+      "ville": "Rabat",
+      "adresse": {
+        "rue": "64 Rue Ibn Batouta",
+        "quartier": "Souissi",
+        "ville": "Rabat",
+        "codePostal": "10080",
+        "pays": "Maroc"
+      },
+      "situationFamiliale": "Marié(e)",
+      "nombreEnfants": 0,
+      "niveauEtudes": "Bac+6 — Architecture",
+      "pieceIdentite": {
+        "type": "CIN",
+        "numero": "MH781725",
+        "validiteJusquau": "2030-06-28",
+        "verifiee": true
+      }
+    },
+    "professionnel": {
+      "profession": "Architecte",
+      "secteur": "BTP",
+      "employeur": "TGCC",
+      "typeContrat": "Libéral",
+      "secteurActivite": "BTP",
+      "dateEmbauche": "2016-07-04",
+      "ancienneteMois": 121,
+      "revenuMensuel": 25300,
+      "revenuAnnuel": 303600,
+      "autresRevenus": 3000,
+      "modeVersementSalaire": "Virement"
+    },
+    "bancaire": {
+      "agence": "BankIA Souissi",
+      "conseiller": "Mme Nadia Cherkaoui",
+      "clientDepuis": "2018-06-14",
+      "segment": "Privilège",
+      "scoreInterne": 61,
+      "compteActif": true,
+      "chargesMensuelles": 4520.49,
+      "comptes": [
+        {
+          "rib": "230 815 5581223623166587 63",
+          "iban": "MA64 2308 1555 8122 3623 1665",
+          "type": "courant",
+          "intitule": "Compte courant principal",
+          "solde": 13105.79,
+          "devise": "MAD",
+          "dateOuverture": "2018-06-14"
+        }
+      ],
+      "cartes": [
+        {
+          "type": "Débit",
+          "reseau": "Mastercard",
+          "titulaire": "YOUSSEF NACIRI",
+          "numero": "5301 4190 4966 2991",
+          "numeroMasque": "5301 •••• •••• 2991",
+          "cvv": "319",
+          "plafondMensuel": 30000,
+          "expiration": "12/28",
+          "statut": "active"
+        },
+        {
+          "type": "Crédit",
+          "reseau": "Visa Classic",
+          "titulaire": "YOUSSEF NACIRI",
+          "numero": "4012 8651 8506 9190",
+          "numeroMasque": "4012 •••• •••• 9190",
+          "cvv": "716",
+          "plafondMensuel": 30000,
+          "expiration": "06/30",
+          "statut": "active"
+        }
+      ],
+      "plafonds": {
+        "virementParOperation": 50000,
+        "virementQuotidien": 100000,
+        "retraitQuotidien": 5000
+      },
+      "beneficiaires": [
+        {
+          "nom": "École Al Madina",
+          "rib": "230 815 7054668893734670 59",
+          "banque": "Attijariwafa"
+        },
+        {
+          "nom": "Mohammed Alaoui",
+          "rib": "230 815 5627298069901627 33",
+          "banque": "BMCE"
+        },
+        {
+          "nom": "Loyer — Résidence Al Manar",
+          "rib": "230 815 0465375564641708 16",
+          "banque": "CIH"
+        }
+      ],
+      "creditsEnCours": [
+        {
+          "type": "Crédit personnel",
+          "organisme": "Wafasalaf",
+          "capitalRestant": 48582,
+          "mensualite": 3051.62,
+          "echeance": "2029-02-27"
+        },
+        {
+          "type": "Crédit personnel",
+          "organisme": "Wafasalaf",
+          "capitalRestant": 17325,
+          "mensualite": 1468.87,
+          "echeance": "2028-03-10"
+        }
+      ]
+    },
+    "risque": {
+      "incidentsPaiement": 1,
+      "fichageBam": false,
+      "tauxEndettement": 0.179,
+      "niveauRisque": "Modéré",
+      "scoreBam": "B",
+      "categorieRisque": "Modéré",
+      "derniereRevue": "2026-03-04"
+    }
+  },
+  {
+    "id": "CL-2024-0059",
+    "photo": "/avatars/CL-2024-0059.svg",
+    "personnel": {
+      "civilite": "M.",
+      "prenom": "Mehdi",
+      "nom": "El Amrani",
+      "genre": "M",
+      "cin": "FG326895",
+      "dateNaissance": "1991-01-07",
+      "lieuNaissance": "Agadir",
+      "age": 35,
+      "nationalite": "Marocaine",
+      "telephone": "+212 6 71 45 85 77",
+      "email": "m.elamrani@email.ma",
+      "ville": "Agadir",
+      "adresse": {
+        "rue": "153 Avenue Ibn Batouta",
+        "quartier": "Talborjt",
+        "ville": "Agadir",
+        "codePostal": "80000",
+        "pays": "Maroc"
+      },
+      "situationFamiliale": "Marié(e)",
+      "nombreEnfants": 0,
+      "niveauEtudes": "Doctorat en pharmacie",
+      "pieceIdentite": {
+        "type": "CIN",
+        "numero": "FG326895",
+        "validiteJusquau": "2028-12-12",
+        "verifiee": true
+      }
+    },
+    "professionnel": {
+      "profession": "Pharmacien(ne)",
+      "secteur": "Santé",
+      "employeur": "Cabinet privé",
+      "typeContrat": "Libéral",
+      "secteurActivite": "Santé",
+      "dateEmbauche": "2013-05-21",
+      "ancienneteMois": 159,
+      "revenuMensuel": 17600,
+      "revenuAnnuel": 211200,
+      "autresRevenus": 0,
+      "modeVersementSalaire": "Virement"
+    },
+    "bancaire": {
+      "agence": "BankIA Talborjt",
+      "conseiller": "M. Reda Fassi",
+      "clientDepuis": "2021-06-13",
+      "segment": "Premium",
+      "scoreInterne": 74,
+      "compteActif": true,
+      "chargesMensuelles": 0,
+      "comptes": [
+        {
+          "rib": "230 815 9965075273545494 81",
+          "iban": "MA64 2308 1599 6507 5273 5454",
+          "type": "courant",
+          "intitule": "Compte courant principal",
+          "solde": 8832.39,
+          "devise": "MAD",
+          "dateOuverture": "2021-06-13"
+        }
+      ],
+      "cartes": [
+        {
+          "type": "Débit",
+          "reseau": "Mastercard",
+          "titulaire": "MEHDI EL AMRANI",
+          "numero": "5301 7109 4777 0084",
+          "numeroMasque": "5301 •••• •••• 0084",
+          "cvv": "520",
+          "plafondMensuel": 30000,
+          "expiration": "05/30",
+          "statut": "active"
+        }
+      ],
+      "plafonds": {
+        "virementParOperation": 50000,
+        "virementQuotidien": 100000,
+        "retraitQuotidien": 5000
+      },
+      "beneficiaires": [
+        {
+          "nom": "Fatima Berrada",
+          "rib": "230 815 7837770143634957 80",
+          "banque": "Attijariwafa"
+        },
+        {
+          "nom": "Loyer — Résidence Al Manar",
+          "rib": "230 815 8568557444313518 98",
+          "banque": "CIH"
+        }
+      ],
+      "creditsEnCours": []
+    },
+    "risque": {
+      "incidentsPaiement": 0,
+      "fichageBam": false,
+      "tauxEndettement": 0.0,
+      "niveauRisque": "Faible",
+      "scoreBam": "A",
+      "categorieRisque": "Faible",
+      "derniereRevue": "2026-05-19"
+    }
+  },
+  {
+    "id": "CL-2024-0066",
+    "photo": "/avatars/CL-2024-0066.svg",
+    "personnel": {
+      "civilite": "M.",
+      "prenom": "Mehdi",
+      "nom": "Naciri",
+      "genre": "M",
+      "cin": "WQ391668",
+      "dateNaissance": "1990-05-09",
+      "lieuNaissance": "Casablanca",
+      "age": 36,
+      "nationalite": "Marocaine",
+      "telephone": "+212 6 33 84 65 91",
+      "email": "m.naciri@email.ma",
+      "ville": "Casablanca",
+      "adresse": {
+        "rue": "126 Rue des FAR",
+        "quartier": "Maârif",
+        "ville": "Casablanca",
+        "codePostal": "20330",
+        "pays": "Maroc"
+      },
+      "situationFamiliale": "Marié(e)",
+      "nombreEnfants": 1,
+      "niveauEtudes": "Bac+5",
+      "pieceIdentite": {
+        "type": "CIN",
+        "numero": "WQ391668",
+        "validiteJusquau": "2031-04-25",
+        "verifiee": true
+      }
+    },
+    "professionnel": {
+      "profession": "Enseignant(e)",
+      "secteur": "Éducation",
+      "employeur": "Université Mohammed V",
+      "typeContrat": "CDI",
+      "secteurActivite": "Éducation",
+      "dateEmbauche": "2013-12-17",
+      "ancienneteMois": 152,
+      "revenuMensuel": 6900,
+      "revenuAnnuel": 82800,
+      "autresRevenus": 0,
+      "modeVersementSalaire": "Virement"
+    },
+    "bancaire": {
+      "agence": "BankIA Maârif",
+      "conseiller": "M. Younes Alaoui",
+      "clientDepuis": "2021-06-13",
+      "segment": "Premium",
+      "scoreInterne": 81,
+      "compteActif": true,
+      "chargesMensuelles": 1961.44,
+      "comptes": [
+        {
+          "rib": "230 815 4990913341232812 10",
+          "iban": "MA64 2308 1549 9091 3341 2328",
+          "type": "courant",
+          "intitule": "Compte courant principal",
+          "solde": 41498.44,
+          "devise": "MAD",
+          "dateOuverture": "2021-06-13"
+        }
+      ],
+      "cartes": [
+        {
+          "type": "Débit",
+          "reseau": "Visa Premier",
+          "titulaire": "MEHDI NACIRI",
+          "numero": "4012 5451 6808 6807",
+          "numeroMasque": "4012 •••• •••• 6807",
+          "cvv": "760",
+          "plafondMensuel": 30000,
+          "expiration": "04/29",
+          "statut": "active"
+        },
+        {
+          "type": "Débit",
+          "reseau": "Visa Premier",
+          "titulaire": "MEHDI NACIRI",
+          "numero": "4024 4771 0932 0348",
+          "numeroMasque": "4024 •••• •••• 0348",
+          "cvv": "480",
+          "plafondMensuel": 30000,
+          "expiration": "09/30",
+          "statut": "active"
+        }
+      ],
+      "plafonds": {
+        "virementParOperation": 50000,
+        "virementQuotidien": 100000,
+        "retraitQuotidien": 5000
+      },
+      "beneficiaires": [
+        {
+          "nom": "Société ATLAS SARL",
+          "rib": "230 815 4471349361832421 17",
+          "banque": "Banque Populaire"
+        },
+        {
+          "nom": "Mohammed Alaoui",
+          "rib": "230 815 2499471746488771 86",
+          "banque": "BMCE"
+        },
+        {
+          "nom": "Fatima Berrada",
+          "rib": "230 815 0659401399049027 76",
+          "banque": "Attijariwafa"
+        }
+      ],
+      "creditsEnCours": [
+        {
+          "type": "Crédit consommation",
+          "organisme": "Wafasalaf",
+          "capitalRestant": 37709,
+          "mensualite": 1961.44,
+          "echeance": "2029-04-28"
+        }
+      ]
+    },
+    "risque": {
+      "incidentsPaiement": 0,
+      "fichageBam": false,
+      "tauxEndettement": 0.284,
+      "niveauRisque": "Faible",
+      "scoreBam": "A",
+      "categorieRisque": "Faible",
+      "derniereRevue": "2026-05-22"
+    }
+  },
+  {
+    "id": "CL-2024-0073",
+    "photo": "/avatars/CL-2024-0073.svg",
+    "personnel": {
+      "civilite": "M.",
+      "prenom": "Youssef",
+      "nom": "Naciri",
+      "genre": "M",
+      "cin": "YK130353",
+      "dateNaissance": "1982-06-27",
+      "lieuNaissance": "Casablanca",
+      "age": 43,
+      "nationalite": "Marocaine",
+      "telephone": "+212 6 15 51 17 47",
+      "email": "y.naciri2@email.ma",
+      "ville": "Casablanca",
+      "adresse": {
+        "rue": "92 Avenue des FAR",
+        "quartier": "Gauthier",
+        "ville": "Casablanca",
+        "codePostal": "20330",
+        "pays": "Maroc"
+      },
+      "situationFamiliale": "Marié(e)",
+      "nombreEnfants": 0,
+      "niveauEtudes": "Doctorat en pharmacie",
+      "pieceIdentite": {
+        "type": "CIN",
+        "numero": "YK130353",
+        "validiteJusquau": "2031-02-17",
+        "verifiee": true
+      }
+    },
+    "professionnel": {
+      "profession": "Pharmacien(ne)",
+      "secteur": "Santé",
+      "employeur": "CHU Ibn Rochd",
+      "typeContrat": "Libéral",
+      "secteurActivite": "Santé",
+      "dateEmbauche": "2019-09-17",
+      "ancienneteMois": 82,
+      "revenuMensuel": 23200,
+      "revenuAnnuel": 278400,
+      "autresRevenus": 3000,
+      "modeVersementSalaire": "Virement"
+    },
+    "bancaire": {
+      "agence": "BankIA Gauthier",
+      "conseiller": "Mme Salma Idrissi",
+      "clientDepuis": "2020-06-13",
+      "segment": "Standard",
+      "scoreInterne": 43,
+      "compteActif": true,
+      "chargesMensuelles": 1233.71,
+      "comptes": [
+        {
+          "rib": "230 815 1465840449972787 54",
+          "iban": "MA64 2308 1514 6584 0449 9727",
+          "type": "courant",
+          "intitule": "Compte courant principal",
+          "solde": 35260.08,
+          "devise": "MAD",
+          "dateOuverture": "2020-06-13"
+        }
+      ],
+      "cartes": [
+        {
+          "type": "Débit",
+          "reseau": "Visa Classic",
+          "titulaire": "YOUSSEF NACIRI",
+          "numero": "4024 3747 4074 9379",
+          "numeroMasque": "4024 •••• •••• 9379",
+          "cvv": "821",
+          "plafondMensuel": 15000,
+          "expiration": "08/29",
+          "statut": "active"
+        }
+      ],
+      "plafonds": {
+        "virementParOperation": 20000,
+        "virementQuotidien": 40000,
+        "retraitQuotidien": 3000
+      },
+      "beneficiaires": [
+        {
+          "nom": "Loyer — Résidence Al Manar",
+          "rib": "230 815 3963605766270289 52",
+          "banque": "CIH"
+        },
+        {
+          "nom": "Société ATLAS SARL",
+          "rib": "230 815 1718702621745961 52",
+          "banque": "Banque Populaire"
+        },
+        {
+          "nom": "Fatima Berrada",
+          "rib": "230 815 8657809134316117 31",
+          "banque": "Attijariwafa"
+        }
+      ],
+      "creditsEnCours": [
+        {
+          "type": "Crédit consommation",
+          "organisme": "BankIA",
+          "capitalRestant": 27484,
+          "mensualite": 1233.71,
+          "echeance": "2029-02-05"
+        }
+      ]
+    },
+    "risque": {
+      "incidentsPaiement": 3,
+      "fichageBam": false,
+      "tauxEndettement": 0.053,
+      "niveauRisque": "Élevé",
+      "scoreBam": "D",
+      "categorieRisque": "Élevé",
+      "derniereRevue": "2026-03-19"
+    }
+  },
+  {
+    "id": "CL-2024-0080",
+    "photo": "/avatars/CL-2024-0080.svg",
+    "personnel": {
+      "civilite": "Mme",
+      "prenom": "Loubna",
+      "nom": "Lahlou",
+      "genre": "F",
+      "cin": "QQ347582",
+      "dateNaissance": "1996-02-19",
+      "lieuNaissance": "Tanger",
+      "age": 30,
+      "nationalite": "Marocaine",
+      "telephone": "+212 6 56 22 97 57",
+      "email": "l.lahlou@email.ma",
+      "ville": "Tanger",
+      "adresse": {
+        "rue": "140 Bd Hassan II",
+        "quartier": "Iberia",
+        "ville": "Tanger",
+        "codePostal": "90000",
+        "pays": "Maroc"
+      },
+      "situationFamiliale": "Célibataire",
+      "nombreEnfants": 0,
+      "niveauEtudes": "Bac+3 — Comptabilité",
+      "pieceIdentite": {
+        "type": "CIN",
+        "numero": "QQ347582",
+        "validiteJusquau": "2031-03-21",
+        "verifiee": true
+      }
+    },
+    "professionnel": {
+      "profession": "Comptable",
+      "secteur": "Finance",
+      "employeur": "BMCE Bank",
+      "typeContrat": "CDI",
+      "secteurActivite": "Finance",
+      "dateEmbauche": "2015-09-08",
+      "ancienneteMois": 131,
+      "revenuMensuel": 16000,
+      "revenuAnnuel": 192000,
+      "autresRevenus": 1500,
+      "modeVersementSalaire": "Virement"
+    },
+    "bancaire": {
+      "agence": "BankIA Iberia",
+      "conseiller": "M. Tarik Bennani",
+      "clientDepuis": "2018-06-14",
+      "segment": "Privilège",
+      "scoreInterne": 59,
+      "compteActif": true,
+      "chargesMensuelles": 3754.62,
+      "comptes": [
+        {
+          "rib": "230 815 9533942104709521 47",
+          "iban": "MA64 2308 1595 3394 2104 7095",
+          "type": "courant",
+          "intitule": "Compte courant principal",
+          "solde": 34790.97,
+          "devise": "MAD",
+          "dateOuverture": "2018-06-14"
+        },
+        {
+          "rib": "230 815 3285884247451712 38",
+          "iban": "MA64 2308 1532 8588 4247 4517",
+          "type": "epargne",
+          "intitule": "Compte sur carnet",
+          "solde": 303846.4,
+          "devise": "MAD",
+          "dateOuverture": "2018-10-12",
+          "tauxInteret": 0.025
+        }
+      ],
+      "cartes": [
+        {
+          "type": "Débit",
+          "reseau": "Visa Classic",
+          "titulaire": "LOUBNA LAHLOU",
+          "numero": "4539 1839 3352 5329",
+          "numeroMasque": "4539 •••• •••• 5329",
+          "cvv": "904",
+          "plafondMensuel": 30000,
+          "expiration": "03/28",
+          "statut": "active"
+        }
+      ],
+      "plafonds": {
+        "virementParOperation": 50000,
+        "virementQuotidien": 100000,
+        "retraitQuotidien": 5000
+      },
+      "beneficiaires": [
+        {
+          "nom": "École Al Madina",
+          "rib": "230 815 6048175496513709 81",
+          "banque": "Attijariwafa"
+        },
+        {
+          "nom": "Société ATLAS SARL",
+          "rib": "230 815 5931746120047113 78",
+          "banque": "Banque Populaire"
+        },
+        {
+          "nom": "Mohammed Alaoui",
+          "rib": "230 815 2675869261796405 37",
+          "banque": "BMCE"
+        }
+      ],
+      "creditsEnCours": [
+        {
+          "type": "Crédit immobilier",
+          "organisme": "BankIA",
+          "capitalRestant": 100332,
+          "mensualite": 722.67,
+          "echeance": "2040-01-11"
+        },
+        {
+          "type": "Crédit consommation",
+          "organisme": "BankIA",
+          "capitalRestant": 86982,
+          "mensualite": 3031.95,
+          "echeance": "2029-02-26"
+        }
+      ]
+    },
+    "risque": {
+      "incidentsPaiement": 3,
+      "fichageBam": false,
+      "tauxEndettement": 0.235,
+      "niveauRisque": "Élevé",
+      "scoreBam": "D",
+      "categorieRisque": "Élevé",
+      "derniereRevue": "2026-03-25"
+    }
+  },
+  {
+    "id": "CL-2024-0087",
+    "photo": "/avatars/CL-2024-0087.svg",
+    "personnel": {
+      "civilite": "Mme",
+      "prenom": "Nada",
+      "nom": "Cherkaoui",
+      "genre": "F",
+      "cin": "MX886730",
+      "dateNaissance": "1981-01-09",
+      "lieuNaissance": "Agadir",
+      "age": 45,
+      "nationalite": "Marocaine",
+      "telephone": "+212 6 64 16 46 86",
+      "email": "n.cherkaoui@email.ma",
+      "ville": "Agadir",
+      "adresse": {
+        "rue": "80 Avenue Ibn Batouta",
+        "quartier": "Founty",
+        "ville": "Agadir",
+        "codePostal": "80000",
+        "pays": "Maroc"
+      },
+      "situationFamiliale": "Marié(e)",
+      "nombreEnfants": 0,
+      "niveauEtudes": "Bac+5",
+      "pieceIdentite": {
+        "type": "CIN",
+        "numero": "MX886730",
+        "validiteJusquau": "2029-03-18",
+        "verifiee": true
+      }
+    },
+    "professionnel": {
+      "profession": "Enseignant(e)",
+      "secteur": "Éducation",
+      "employeur": "Groupe Scolaire OSUI",
+      "typeContrat": "CDI",
+      "secteurActivite": "Éducation",
+      "dateEmbauche": "2020-11-10",
+      "ancienneteMois": 68,
+      "revenuMensuel": 6100,
+      "revenuAnnuel": 73200,
+      "autresRevenus": 0,
+      "modeVersementSalaire": "Virement"
+    },
+    "bancaire": {
+      "agence": "BankIA Founty",
+      "conseiller": "M. Reda Fassi",
+      "clientDepuis": "2024-06-12",
+      "segment": "Privilège",
+      "scoreInterne": 70,
+      "compteActif": true,
+      "chargesMensuelles": 2033.49,
+      "comptes": [
+        {
+          "rib": "230 815 7839084700766177 19",
+          "iban": "MA64 2308 1578 3908 4700 7661",
+          "type": "courant",
+          "intitule": "Compte courant principal",
+          "solde": 81739.87,
+          "devise": "MAD",
+          "dateOuverture": "2024-06-12"
+        },
+        {
+          "rib": "230 815 2124998569847896 22",
+          "iban": "MA64 2308 1521 2499 8569 8478",
+          "type": "epargne",
+          "intitule": "Compte sur carnet",
+          "solde": 281721.71,
+          "devise": "MAD",
+          "dateOuverture": "2024-10-10",
+          "tauxInteret": 0.025
+        }
+      ],
+      "cartes": [
+        {
+          "type": "Débit",
+          "reseau": "Visa Classic",
+          "titulaire": "NADA CHERKAOUI",
+          "numero": "4012 9402 4455 9368",
+          "numeroMasque": "4012 •••• •••• 9368",
+          "cvv": "022",
+          "plafondMensuel": 30000,
+          "expiration": "10/30",
+          "statut": "active"
+        },
+        {
+          "type": "Crédit",
+          "reseau": "Visa Classic",
+          "titulaire": "NADA CHERKAOUI",
+          "numero": "4716 6752 5459 0183",
+          "numeroMasque": "4716 •••• •••• 0183",
+          "cvv": "910",
+          "plafondMensuel": 30000,
+          "expiration": "03/28",
+          "statut": "active"
+        }
+      ],
+      "plafonds": {
+        "virementParOperation": 50000,
+        "virementQuotidien": 100000,
+        "retraitQuotidien": 5000
+      },
+      "beneficiaires": [
+        {
+          "nom": "Karim Tazi",
+          "rib": "230 815 3673657661565452 97",
+          "banque": "CFG Bank"
+        },
+        {
+          "nom": "École Al Madina",
+          "rib": "230 815 7111161528098851 62",
+          "banque": "Attijariwafa"
+        }
+      ],
+      "creditsEnCours": [
+        {
+          "type": "Crédit auto",
+          "organisme": "BankIA",
+          "capitalRestant": 66457,
+          "mensualite": 2033.49,
+          "echeance": "2029-03-09"
+        }
+      ]
+    },
+    "risque": {
+      "incidentsPaiement": 0,
+      "fichageBam": false,
+      "tauxEndettement": 0.333,
+      "niveauRisque": "Modéré",
+      "scoreBam": "A",
+      "categorieRisque": "Modéré",
+      "derniereRevue": "2026-02-26"
+    }
+  }
+]

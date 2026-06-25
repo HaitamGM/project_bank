@@ -1,0 +1,9 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+.env
+
+# Comptes générés (hashes bcrypt)
+../data/users.json
+users.json

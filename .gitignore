@@ -1,0 +1,56 @@
+# ---------- Secrets / environnement ----------
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+!**/.env.example
+
+# Comptes générés (hashes bcrypt) — NE JAMAIS committer
+data/users.json
+users.json
+
+# Fichiers workspace VS Code (référencent des chemins locaux, ex. keyboard-demo)
+*.code-workspace
+
+# ---------- Node / Frontend ----------
+node_modules/
+dist/
+dist-ssr/
+*.local
+.vite/
+
+# ---------- Python / Backend ----------
+venv/
+.venv/
+.mivenv/
+mivenv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# ---------- Logs ----------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---------- Éditeurs / IDE ----------
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ---------- OS ----------
+.DS_Store
+Thumbs.db
+desktop.ini

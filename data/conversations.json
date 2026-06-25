@@ -1,0 +1,184 @@
+{
+  "CL-2024-0042": [
+    {
+      "id": "CONV-42C861",
+      "date": "2026-06-12 15:16",
+      "canal": "texte",
+      "titre": "salam alaikum",
+      "nbMessages": 7,
+      "messages": [
+        {
+          "role": "user",
+          "text": "salam alaikum"
+        },
+        {
+          "role": "user",
+          "text": "kidayra labas"
+        },
+        {
+          "role": "user",
+          "text": "ah mhtaja, brit virement"
+        },
+        {
+          "role": "user",
+          "text": "brit nsifet l karim, 5000 dh"
+        },
+        {
+          "role": "user",
+          "text": "964950 hahowa"
+        },
+        {
+          "role": "user",
+          "text": "la sf xokran"
+        },
+        {
+          "role": "user",
+          "text": "bslama"
+        }
+      ]
+    },
+    {
+      "id": "CONV-22365B",
+      "date": "2026-06-12 15:12",
+      "canal": "texte",
+      "titre": "salam",
+      "nbMessages": 3,
+      "messages": [
+        {
+          "role": "user",
+          "text": "salam"
+        },
+        {
+          "role": "user",
+          "text": "hamdolilah mezyana"
+        },
+        {
+          "role": "user",
+          "text": "ana brit ndir virement"
+        }
+      ]
+    },
+    {
+      "id": "CONV-4C7F07",
+      "date": "2026-06-12 15:11",
+      "canal": "texte",
+      "titre": "salam",
+      "nbMessages": 4,
+      "messages": [
+        {
+          "role": "user",
+          "text": "salam"
+        },
+        {
+          "role": "user",
+          "text": "brit ndir virement"
+        },
+        {
+          "role": "user",
+          "text": "brit nsifet l karim 300 dh"
+        },
+        {
+          "role": "user",
+          "text": "wax sma3tini"
+        }
+      ]
+    },
+    {
+      "id": "CONV-5577D2",
+      "date": "2026-06-12 14:54",
+      "canal": "texte",
+      "titre": "Je voudrais un crédit immobilier de 600 000 DH sur 20 ans.",
+      "nbMessages": 8,
+      "messages": [
+        {
+          "role": "user",
+          "text": "Je voudrais un crédit immobilier de 600 000 DH sur 20 ans."
+        },
+        {
+          "role": "user",
+          "text": "ah"
+        },
+        {
+          "role": "user",
+          "text": "ah nkmlo"
+        },
+        {
+          "role": "user",
+          "text": "ma3andix lwa9t nji, rir siftoh lya"
+        },
+        {
+          "role": "user",
+          "text": "ah"
+        },
+        {
+          "role": "user",
+          "text": "la sf xokran"
+        },
+        {
+          "role": "user",
+          "text": "wax kadwi b fr"
+        },
+        {
+          "role": "user",
+          "text": "la lah i3awnek"
+        }
+      ]
+    }
+  ],
+  "CL-2024-0044": [
+    {
+      "id": "CONV-7931C5",
+      "date": "2026-06-23 09:59",
+      "canal": "texte",
+      "titre": "wa duwei",
+      "nbMessages": 6,
+      "messages": [
+        {
+          "role": "user",
+          "text": "wa duwei"
+        },
+        {
+          "role": "user",
+          "text": "pass credit 700 000DH"
+        },
+        {
+          "role": "user",
+          "text": "immobilier"
+        },
+        {
+          "role": "user",
+          "text": "15ans"
+        },
+        {
+          "role": "user",
+          "text": "db"
+        },
+        {
+          "role": "user",
+          "text": "passeh asahbvi"
+        }
+      ]
+    },
+    {
+      "id": "CONV-295AAE",
+      "date": "2026-06-23 09:53",
+      "canal": "vocal",
+      "titre": "سمعتيني؟",
+      "nbMessages": 3,
+      "messages": [
+        {
+          "role": "user",
+          "text": "سمعتيني؟"
+        },
+        {
+          "role": "user",
+          "text": "Alô."
+        },
+        {
+          "role": "user",
+          "text": "824813"
+        }
+      ]
+    }
+  ]
+}

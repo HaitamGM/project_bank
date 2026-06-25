@@ -1,0 +1,5982 @@
+[
+  {
+    "runId": "RUN-3DE2",
+    "decisionId": "D-1A2AE2",
+    "clientId": "CL-2024-0044",
+    "horodatage": "2026-06-23 09:58:40",
+    "dureeTotaleMs": 2730,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "kyc",
+        "agent": "Vérification d'identité (KYC)",
+        "statut": "succès",
+        "dureeMs": 280,
+        "sortie": "Identité confirmée — CIN KF559469, client depuis 2015-06-15"
+      },
+      {
+        "agentId": "capacite",
+        "agent": "Capacité de remboursement",
+        "statut": "succès",
+        "dureeMs": 240,
+        "sortie": "Mensualité ≈ 5 481 DH · taux d'endettement 28 % (≤ plafond 40 %)"
+      },
+      {
+        "agentId": "fraude",
+        "agent": "Anti-fraude & conformité",
+        "statut": "succès",
+        "dureeMs": 300,
+        "sortie": "Aucun incident, non fiché BAM"
+      },
+      {
+        "agentId": "scoring",
+        "agent": "Scoring de crédit",
+        "statut": "succès",
+        "dureeMs": 260,
+        "sortie": "Score 86/100 (seuil 60)"
+      },
+      {
+        "agentId": "conformite",
+        "agent": "Conformité réglementaire (RAG)",
+        "statut": "succès",
+        "dureeMs": 1200,
+        "sortie": "2/2 règles respectées — décision adossée à : politiques_bancaires_dsti_ltv · loi_31_08_protection_consommateur · circulaire_bam_1_G_10"
+      },
+      {
+        "agentId": "decision",
+        "agent": "Décision finale",
+        "statut": "succès",
+        "dureeMs": 130,
+        "sortie": "Crédit approuvé"
+      },
+      {
+        "agentId": "explication",
+        "agent": "Explication (XAI)",
+        "statut": "succès",
+        "dureeMs": 320,
+        "sortie": "Justificatif en langage naturel généré"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-B694",
+    "decisionId": "D-90E322",
+    "clientId": "CL-2024-0044",
+    "horodatage": "2026-06-23 09:53:54",
+    "dureeTotaleMs": 990,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "kyc",
+        "agent": "Vérification d'identité (KYC)",
+        "statut": "succès",
+        "dureeMs": 250,
+        "sortie": "Donneur d'ordre vérifié — compte courant (230 815 0260647468723430 84)"
+      },
+      {
+        "agentId": "provision",
+        "agent": "Contrôle de provision",
+        "statut": "succès",
+        "dureeMs": 200,
+        "sortie": "Solde 68 330 DH ≥ montant 7 000 DH"
+      },
+      {
+        "agentId": "limites",
+        "agent": "Plafonds & limites",
+        "statut": "succès",
+        "dureeMs": 180,
+        "sortie": "Montant ≤ 100 000 DH/op · cumul jour 7 000 ≤ 200 000 DH"
+      },
+      {
+        "agentId": "fraude",
+        "agent": "Analyse anti-fraude",
+        "statut": "succès",
+        "dureeMs": 240,
+        "sortie": "Bénéficiaire enregistré et habituel · Avis IA : Le niveau de risque est faible, car ce virement est destiné à un bénéficiaire habituel enregistré et son montant est largement couvert par le solde disponible."
+      },
+      {
+        "agentId": "decision",
+        "agent": "Décision",
+        "statut": "succès",
+        "dureeMs": 120,
+        "sortie": "Virement autorisé — signature OTP requise"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0001",
+    "decisionId": "DEC-0001",
+    "clientId": "CL-2024-0042",
+    "horodatage": "2026-01-15 07:00:00",
+    "dureeTotaleMs": 1074,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 227,
+        "sortie": "Profil chargé : Premium, score 81"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 246,
+        "sortie": "Revenu 18000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 227,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 63,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 245,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 66,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0002",
+    "decisionId": "DEC-0002",
+    "clientId": "CL-2024-0042",
+    "horodatage": "2025-08-23 06:48:00",
+    "dureeTotaleMs": 1246,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 359,
+        "sortie": "Profil chargé : Premium, score 81"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 352,
+        "sortie": "Revenu 18000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 100,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 105,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 89,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 241,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0003",
+    "decisionId": "DEC-0003",
+    "clientId": "CL-2024-0042",
+    "horodatage": "2025-12-01 13:25:00",
+    "dureeTotaleMs": 1312,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 348,
+        "sortie": "Profil chargé : Premium, score 81"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 300,
+        "sortie": "Revenu 18000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 245,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 296,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 60,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 63,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0004",
+    "decisionId": "DEC-0004",
+    "clientId": "CL-2024-0042",
+    "horodatage": "2026-05-22 19:15:00",
+    "dureeTotaleMs": 1300,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 303,
+        "sortie": "Profil chargé : Premium, score 81"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 111,
+        "sortie": "Revenu 18000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 207,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 353,
+        "sortie": "Décision : APPROUVE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 203,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 123,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0005",
+    "decisionId": "DEC-0005",
+    "clientId": "CL-2024-0042",
+    "horodatage": "2025-11-21 04:13:00",
+    "dureeTotaleMs": 1289,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 328,
+        "sortie": "Profil chargé : Premium, score 81"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 193,
+        "sortie": "Revenu 18000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 283,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 48,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 228,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 209,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0006",
+    "decisionId": "DEC-0006",
+    "clientId": "CL-2024-0042",
+    "horodatage": "2025-07-01 20:34:00",
+    "dureeTotaleMs": 1516,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 336,
+        "sortie": "Profil chargé : Premium, score 81"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 335,
+        "sortie": "Revenu 18000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 156,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 66,
+        "sortie": "Décision : APPROUVE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 338,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 285,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0007",
+    "decisionId": "DEC-0007",
+    "clientId": "CL-2024-0042",
+    "horodatage": "2026-03-15 07:20:00",
+    "dureeTotaleMs": 901,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 115,
+        "sortie": "Profil chargé : Premium, score 81"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 164,
+        "sortie": "Revenu 18000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 56,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 333,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 96,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 137,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0008",
+    "decisionId": "DEC-0008",
+    "clientId": "CL-2024-0042",
+    "horodatage": "2026-06-01 09:40:00",
+    "dureeTotaleMs": 1266,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 353,
+        "sortie": "Profil chargé : Premium, score 81"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 281,
+        "sortie": "Revenu 18000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 71,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 110,
+        "sortie": "Décision : APPROUVE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 305,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 146,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0009",
+    "decisionId": "DEC-0009",
+    "clientId": "CL-2024-0042",
+    "horodatage": "2025-08-27 13:18:00",
+    "dureeTotaleMs": 1611,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 312,
+        "sortie": "Profil chargé : Premium, score 81"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 215,
+        "sortie": "Revenu 18000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 319,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 221,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 369,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 175,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0010",
+    "decisionId": "DEC-0010",
+    "clientId": "CL-2024-0042",
+    "horodatage": "2025-08-02 08:48:00",
+    "dureeTotaleMs": 1172,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 155,
+        "sortie": "Profil chargé : Premium, score 81"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 192,
+        "sortie": "Revenu 18000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 187,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 146,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 290,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 202,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0011",
+    "decisionId": "DEC-0011",
+    "clientId": "CL-2024-0042",
+    "horodatage": "2025-10-08 12:25:00",
+    "dureeTotaleMs": 1416,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 187,
+        "sortie": "Profil chargé : Premium, score 81"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 102,
+        "sortie": "Revenu 18000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 333,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 318,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 234,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 242,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0012",
+    "decisionId": "DEC-0012",
+    "clientId": "CL-2024-0042",
+    "horodatage": "2025-12-16 19:42:00",
+    "dureeTotaleMs": 1291,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 149,
+        "sortie": "Profil chargé : Premium, score 81"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 143,
+        "sortie": "Revenu 18000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 315,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 178,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 327,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 179,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0013",
+    "decisionId": "DEC-0013",
+    "clientId": "CL-2024-0042",
+    "horodatage": "2026-04-01 20:21:00",
+    "dureeTotaleMs": 1148,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 311,
+        "sortie": "Profil chargé : Premium, score 81"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 155,
+        "sortie": "Revenu 18000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 366,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 159,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 66,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 91,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0014",
+    "decisionId": "DEC-0014",
+    "clientId": "CL-2024-0042",
+    "horodatage": "2025-11-11 13:15:00",
+    "dureeTotaleMs": 1643,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 374,
+        "sortie": "Profil chargé : Premium, score 81"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 283,
+        "sortie": "Revenu 18000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 284,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 373,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 142,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 187,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0015",
+    "decisionId": "DEC-0015",
+    "clientId": "CL-2024-0042",
+    "horodatage": "2025-12-28 14:19:00",
+    "dureeTotaleMs": 872,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 59,
+        "sortie": "Profil chargé : Premium, score 81"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 129,
+        "sortie": "Revenu 18000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 253,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 130,
+        "sortie": "Décision : APPROUVE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 58,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 243,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0016",
+    "decisionId": "DEC-0016",
+    "clientId": "CL-2024-0043",
+    "horodatage": "2026-03-07 00:05:00",
+    "dureeTotaleMs": 1360,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 192,
+        "sortie": "Profil chargé : Standard, score 15"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 330,
+        "sortie": "Revenu 8500 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 348,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 94,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 211,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 185,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0017",
+    "decisionId": "DEC-0017",
+    "clientId": "CL-2024-0043",
+    "horodatage": "2025-10-21 03:26:00",
+    "dureeTotaleMs": 1283,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 209,
+        "sortie": "Profil chargé : Standard, score 15"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 123,
+        "sortie": "Revenu 8500 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 274,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 371,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 171,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 135,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0018",
+    "decisionId": "DEC-0018",
+    "clientId": "CL-2024-0043",
+    "horodatage": "2026-06-03 00:39:00",
+    "dureeTotaleMs": 1656,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 129,
+        "sortie": "Profil chargé : Standard, score 15"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 352,
+        "sortie": "Revenu 8500 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 367,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 247,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 258,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 303,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0019",
+    "decisionId": "DEC-0019",
+    "clientId": "CL-2024-0043",
+    "horodatage": "2025-12-25 21:35:00",
+    "dureeTotaleMs": 1108,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 284,
+        "sortie": "Profil chargé : Standard, score 15"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 205,
+        "sortie": "Revenu 8500 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 167,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 43,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 173,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 236,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0020",
+    "decisionId": "DEC-0020",
+    "clientId": "CL-2024-0043",
+    "horodatage": "2026-02-10 09:12:00",
+    "dureeTotaleMs": 1030,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 224,
+        "sortie": "Profil chargé : Standard, score 15"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 160,
+        "sortie": "Revenu 8500 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 71,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 100,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 278,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 197,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0021",
+    "decisionId": "DEC-0021",
+    "clientId": "CL-2024-0043",
+    "horodatage": "2026-03-21 11:17:00",
+    "dureeTotaleMs": 1169,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 354,
+        "sortie": "Profil chargé : Standard, score 15"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 153,
+        "sortie": "Revenu 8500 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 152,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 108,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 284,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 118,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0022",
+    "decisionId": "DEC-0022",
+    "clientId": "CL-2024-0043",
+    "horodatage": "2025-10-21 00:22:00",
+    "dureeTotaleMs": 1320,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 151,
+        "sortie": "Profil chargé : Standard, score 15"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 166,
+        "sortie": "Revenu 8500 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 345,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 81,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 309,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 268,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0023",
+    "decisionId": "DEC-0023",
+    "clientId": "CL-2024-0043",
+    "horodatage": "2025-09-13 01:37:00",
+    "dureeTotaleMs": 1328,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 298,
+        "sortie": "Profil chargé : Standard, score 15"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 143,
+        "sortie": "Revenu 8500 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 333,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 314,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 116,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 124,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0024",
+    "decisionId": "DEC-0024",
+    "clientId": "CL-2024-0043",
+    "horodatage": "2025-12-25 07:32:00",
+    "dureeTotaleMs": 1274,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 68,
+        "sortie": "Profil chargé : Standard, score 15"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 272,
+        "sortie": "Revenu 8500 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 107,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 302,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 252,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 273,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0025",
+    "decisionId": "DEC-0025",
+    "clientId": "CL-2024-0043",
+    "horodatage": "2025-08-26 22:25:00",
+    "dureeTotaleMs": 1099,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 151,
+        "sortie": "Profil chargé : Standard, score 15"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 336,
+        "sortie": "Revenu 8500 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 77,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 63,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 256,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 216,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0026",
+    "decisionId": "DEC-0026",
+    "clientId": "CL-2024-0043",
+    "horodatage": "2025-06-17 21:26:00",
+    "dureeTotaleMs": 1013,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 281,
+        "sortie": "Profil chargé : Standard, score 15"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 56,
+        "sortie": "Revenu 8500 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 186,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 249,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 132,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 109,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0027",
+    "decisionId": "DEC-0027",
+    "clientId": "CL-2024-0043",
+    "horodatage": "2025-07-17 00:19:00",
+    "dureeTotaleMs": 1509,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 269,
+        "sortie": "Profil chargé : Standard, score 15"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 233,
+        "sortie": "Revenu 8500 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 232,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 81,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 378,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 316,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0028",
+    "decisionId": "DEC-0028",
+    "clientId": "CL-2024-0043",
+    "horodatage": "2026-04-03 03:05:00",
+    "dureeTotaleMs": 1136,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 41,
+        "sortie": "Profil chargé : Standard, score 15"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 51,
+        "sortie": "Revenu 8500 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 192,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 277,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 318,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 257,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0029",
+    "decisionId": "DEC-0029",
+    "clientId": "CL-2024-0043",
+    "horodatage": "2025-09-11 11:08:00",
+    "dureeTotaleMs": 1187,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 97,
+        "sortie": "Profil chargé : Standard, score 15"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 56,
+        "sortie": "Revenu 8500 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 378,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 254,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 354,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 48,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0030",
+    "decisionId": "DEC-0030",
+    "clientId": "CL-2024-0043",
+    "horodatage": "2026-02-07 17:56:00",
+    "dureeTotaleMs": 1197,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 62,
+        "sortie": "Profil chargé : Standard, score 15"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 245,
+        "sortie": "Revenu 8500 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 264,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 159,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 316,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 151,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0031",
+    "decisionId": "DEC-0031",
+    "clientId": "CL-2024-0044",
+    "horodatage": "2026-03-31 07:42:00",
+    "dureeTotaleMs": 1356,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 204,
+        "sortie": "Profil chargé : Patrimoine, score 86"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 161,
+        "sortie": "Revenu 25000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 194,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 113,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 378,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 306,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0032",
+    "decisionId": "DEC-0032",
+    "clientId": "CL-2024-0044",
+    "horodatage": "2026-02-17 10:41:00",
+    "dureeTotaleMs": 1515,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 360,
+        "sortie": "Profil chargé : Patrimoine, score 86"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 258,
+        "sortie": "Revenu 25000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 324,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 293,
+        "sortie": "Décision : APPROUVE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 64,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 216,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0033",
+    "decisionId": "DEC-0033",
+    "clientId": "CL-2024-0044",
+    "horodatage": "2025-07-16 02:36:00",
+    "dureeTotaleMs": 1239,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 249,
+        "sortie": "Profil chargé : Patrimoine, score 86"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 116,
+        "sortie": "Revenu 25000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 193,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 232,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 134,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 315,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0034",
+    "decisionId": "DEC-0034",
+    "clientId": "CL-2024-0044",
+    "horodatage": "2025-10-11 16:06:00",
+    "dureeTotaleMs": 1399,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 253,
+        "sortie": "Profil chargé : Patrimoine, score 86"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 325,
+        "sortie": "Revenu 25000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 311,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 108,
+        "sortie": "Décision : APPROUVE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 238,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 164,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0035",
+    "decisionId": "DEC-0035",
+    "clientId": "CL-2024-0044",
+    "horodatage": "2026-01-31 17:39:00",
+    "dureeTotaleMs": 1014,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 87,
+        "sortie": "Profil chargé : Patrimoine, score 86"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 314,
+        "sortie": "Revenu 25000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 137,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 66,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 177,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 233,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0036",
+    "decisionId": "DEC-0036",
+    "clientId": "CL-2024-0044",
+    "horodatage": "2025-07-01 04:22:00",
+    "dureeTotaleMs": 1034,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 151,
+        "sortie": "Profil chargé : Patrimoine, score 86"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 285,
+        "sortie": "Revenu 25000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 146,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 210,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 195,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 47,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0037",
+    "decisionId": "DEC-0037",
+    "clientId": "CL-2024-0044",
+    "horodatage": "2026-02-22 17:13:00",
+    "dureeTotaleMs": 1349,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 243,
+        "sortie": "Profil chargé : Patrimoine, score 86"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 162,
+        "sortie": "Revenu 25000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 322,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 204,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 184,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 234,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0038",
+    "decisionId": "DEC-0038",
+    "clientId": "CL-2024-0044",
+    "horodatage": "2025-10-15 06:19:00",
+    "dureeTotaleMs": 1307,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 280,
+        "sortie": "Profil chargé : Patrimoine, score 86"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 203,
+        "sortie": "Revenu 25000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 144,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 229,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 200,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 251,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0039",
+    "decisionId": "DEC-0039",
+    "clientId": "CL-2024-0045",
+    "horodatage": "2025-08-26 16:13:00",
+    "dureeTotaleMs": 1188,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 118,
+        "sortie": "Profil chargé : Premium, score 80"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 140,
+        "sortie": "Revenu 16500 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 208,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 157,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 234,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 331,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0040",
+    "decisionId": "DEC-0040",
+    "clientId": "CL-2024-0045",
+    "horodatage": "2026-02-05 08:25:00",
+    "dureeTotaleMs": 1570,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 290,
+        "sortie": "Profil chargé : Premium, score 80"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 368,
+        "sortie": "Revenu 16500 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 291,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 275,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 126,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 220,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0041",
+    "decisionId": "DEC-0041",
+    "clientId": "CL-2024-0045",
+    "horodatage": "2026-03-16 19:14:00",
+    "dureeTotaleMs": 908,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 78,
+        "sortie": "Profil chargé : Premium, score 80"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 64,
+        "sortie": "Revenu 16500 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 43,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 251,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 110,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 362,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0042",
+    "decisionId": "DEC-0042",
+    "clientId": "CL-2024-0045",
+    "horodatage": "2026-02-12 21:15:00",
+    "dureeTotaleMs": 1399,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 355,
+        "sortie": "Profil chargé : Premium, score 80"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 287,
+        "sortie": "Revenu 16500 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 377,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 289,
+        "sortie": "Décision : APPROUVE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 48,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 43,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0043",
+    "decisionId": "DEC-0043",
+    "clientId": "CL-2024-0045",
+    "horodatage": "2025-09-11 06:34:00",
+    "dureeTotaleMs": 919,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 48,
+        "sortie": "Profil chargé : Premium, score 80"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 297,
+        "sortie": "Revenu 16500 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 260,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 131,
+        "sortie": "Décision : APPROUVE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 94,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 89,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0044",
+    "decisionId": "DEC-0044",
+    "clientId": "CL-2024-0045",
+    "horodatage": "2025-09-15 19:45:00",
+    "dureeTotaleMs": 1405,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 243,
+        "sortie": "Profil chargé : Premium, score 80"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 80,
+        "sortie": "Revenu 16500 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 231,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 247,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 275,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 329,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0045",
+    "decisionId": "DEC-0045",
+    "clientId": "CL-2024-0045",
+    "horodatage": "2026-02-06 01:46:00",
+    "dureeTotaleMs": 1387,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 247,
+        "sortie": "Profil chargé : Premium, score 80"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 234,
+        "sortie": "Revenu 16500 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 233,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 322,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 283,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 68,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0046",
+    "decisionId": "DEC-0046",
+    "clientId": "CL-2024-0045",
+    "horodatage": "2025-07-19 23:16:00",
+    "dureeTotaleMs": 1093,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 329,
+        "sortie": "Profil chargé : Premium, score 80"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 88,
+        "sortie": "Revenu 16500 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 310,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 61,
+        "sortie": "Décision : APPROUVE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 157,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 148,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0047",
+    "decisionId": "DEC-0047",
+    "clientId": "CL-2024-0052",
+    "horodatage": "2026-01-23 22:01:00",
+    "dureeTotaleMs": 1091,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 201,
+        "sortie": "Profil chargé : Privilège, score 61"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 48,
+        "sortie": "Revenu 25300 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 146,
+        "sortie": "Catégorie de risque : Modéré"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 340,
+        "sortie": "Décision : APPROUVE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 113,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 243,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0048",
+    "decisionId": "DEC-0048",
+    "clientId": "CL-2024-0052",
+    "horodatage": "2026-05-02 14:50:00",
+    "dureeTotaleMs": 1248,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 316,
+        "sortie": "Profil chargé : Privilège, score 61"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 209,
+        "sortie": "Revenu 25300 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 236,
+        "sortie": "Catégorie de risque : Modéré"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 111,
+        "sortie": "Décision : APPROUVE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 80,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 296,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0049",
+    "decisionId": "DEC-0049",
+    "clientId": "CL-2024-0052",
+    "horodatage": "2025-12-15 22:54:00",
+    "dureeTotaleMs": 1366,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 207,
+        "sortie": "Profil chargé : Privilège, score 61"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 55,
+        "sortie": "Revenu 25300 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 364,
+        "sortie": "Catégorie de risque : Modéré"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 179,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 270,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 291,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0050",
+    "decisionId": "DEC-0050",
+    "clientId": "CL-2024-0052",
+    "horodatage": "2026-02-14 12:25:00",
+    "dureeTotaleMs": 1581,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 339,
+        "sortie": "Profil chargé : Privilège, score 61"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 378,
+        "sortie": "Revenu 25300 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 234,
+        "sortie": "Catégorie de risque : Modéré"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 83,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 356,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 191,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0051",
+    "decisionId": "DEC-0051",
+    "clientId": "CL-2024-0052",
+    "horodatage": "2026-02-04 01:56:00",
+    "dureeTotaleMs": 845,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 202,
+        "sortie": "Profil chargé : Privilège, score 61"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 224,
+        "sortie": "Revenu 25300 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 94,
+        "sortie": "Catégorie de risque : Modéré"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 86,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 42,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 197,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0052",
+    "decisionId": "DEC-0052",
+    "clientId": "CL-2024-0052",
+    "horodatage": "2025-10-26 12:12:00",
+    "dureeTotaleMs": 1022,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 248,
+        "sortie": "Profil chargé : Privilège, score 61"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 92,
+        "sortie": "Revenu 25300 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 53,
+        "sortie": "Catégorie de risque : Modéré"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 85,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 221,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 323,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0053",
+    "decisionId": "DEC-0053",
+    "clientId": "CL-2024-0052",
+    "horodatage": "2026-04-24 04:22:00",
+    "dureeTotaleMs": 1251,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 189,
+        "sortie": "Profil chargé : Privilège, score 61"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 251,
+        "sortie": "Revenu 25300 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 238,
+        "sortie": "Catégorie de risque : Modéré"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 83,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 326,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 164,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0054",
+    "decisionId": "DEC-0054",
+    "clientId": "CL-2024-0052",
+    "horodatage": "2025-08-22 07:50:00",
+    "dureeTotaleMs": 974,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 194,
+        "sortie": "Profil chargé : Privilège, score 61"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 177,
+        "sortie": "Revenu 25300 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 292,
+        "sortie": "Catégorie de risque : Modéré"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 114,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 72,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 125,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0055",
+    "decisionId": "DEC-0055",
+    "clientId": "CL-2024-0052",
+    "horodatage": "2025-10-31 15:34:00",
+    "dureeTotaleMs": 1316,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 344,
+        "sortie": "Profil chargé : Privilège, score 61"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 355,
+        "sortie": "Revenu 25300 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 140,
+        "sortie": "Catégorie de risque : Modéré"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 274,
+        "sortie": "Décision : APPROUVE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 94,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 109,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0056",
+    "decisionId": "DEC-0056",
+    "clientId": "CL-2024-0052",
+    "horodatage": "2026-01-06 23:35:00",
+    "dureeTotaleMs": 1490,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 211,
+        "sortie": "Profil chargé : Privilège, score 61"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 260,
+        "sortie": "Revenu 25300 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 373,
+        "sortie": "Catégorie de risque : Modéré"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 344,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 109,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 193,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0057",
+    "decisionId": "DEC-0057",
+    "clientId": "CL-2024-0052",
+    "horodatage": "2025-12-28 04:16:00",
+    "dureeTotaleMs": 1591,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 364,
+        "sortie": "Profil chargé : Privilège, score 61"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 291,
+        "sortie": "Revenu 25300 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 334,
+        "sortie": "Catégorie de risque : Modéré"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 164,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 206,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 232,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0058",
+    "decisionId": "DEC-0058",
+    "clientId": "CL-2024-0052",
+    "horodatage": "2026-01-18 11:37:00",
+    "dureeTotaleMs": 1250,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 321,
+        "sortie": "Profil chargé : Privilège, score 61"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 53,
+        "sortie": "Revenu 25300 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 276,
+        "sortie": "Catégorie de risque : Modéré"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 147,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 264,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 189,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0059",
+    "decisionId": "DEC-0059",
+    "clientId": "CL-2024-0052",
+    "horodatage": "2025-06-21 21:08:00",
+    "dureeTotaleMs": 1297,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 295,
+        "sortie": "Profil chargé : Privilège, score 61"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 111,
+        "sortie": "Revenu 25300 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 364,
+        "sortie": "Catégorie de risque : Modéré"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 195,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 163,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 169,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0060",
+    "decisionId": "DEC-0060",
+    "clientId": "CL-2024-0052",
+    "horodatage": "2025-07-08 19:15:00",
+    "dureeTotaleMs": 1767,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 338,
+        "sortie": "Profil chargé : Privilège, score 61"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 245,
+        "sortie": "Revenu 25300 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 313,
+        "sortie": "Catégorie de risque : Modéré"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 299,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 254,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 318,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0061",
+    "decisionId": "DEC-0061",
+    "clientId": "CL-2024-0052",
+    "horodatage": "2026-05-23 12:16:00",
+    "dureeTotaleMs": 1322,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 83,
+        "sortie": "Profil chargé : Privilège, score 61"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 95,
+        "sortie": "Revenu 25300 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 167,
+        "sortie": "Catégorie de risque : Modéré"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 376,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 380,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 221,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0062",
+    "decisionId": "DEC-0062",
+    "clientId": "CL-2024-0059",
+    "horodatage": "2025-07-14 04:58:00",
+    "dureeTotaleMs": 855,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 94,
+        "sortie": "Profil chargé : Premium, score 74"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 45,
+        "sortie": "Revenu 17600 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 90,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 172,
+        "sortie": "Décision : APPROUVE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 153,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 301,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0063",
+    "decisionId": "DEC-0063",
+    "clientId": "CL-2024-0059",
+    "horodatage": "2025-09-18 06:23:00",
+    "dureeTotaleMs": 1487,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 240,
+        "sortie": "Profil chargé : Premium, score 74"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 277,
+        "sortie": "Revenu 17600 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 341,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 296,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 117,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 216,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0064",
+    "decisionId": "DEC-0064",
+    "clientId": "CL-2024-0059",
+    "horodatage": "2026-05-29 08:54:00",
+    "dureeTotaleMs": 1444,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 215,
+        "sortie": "Profil chargé : Premium, score 74"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 273,
+        "sortie": "Revenu 17600 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 145,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 306,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 287,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 218,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0065",
+    "decisionId": "DEC-0065",
+    "clientId": "CL-2024-0059",
+    "horodatage": "2025-10-10 20:32:00",
+    "dureeTotaleMs": 990,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 193,
+        "sortie": "Profil chargé : Premium, score 74"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 62,
+        "sortie": "Revenu 17600 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 98,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 51,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 215,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 371,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0066",
+    "decisionId": "DEC-0066",
+    "clientId": "CL-2024-0059",
+    "horodatage": "2026-04-16 02:09:00",
+    "dureeTotaleMs": 1312,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 276,
+        "sortie": "Profil chargé : Premium, score 74"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 158,
+        "sortie": "Revenu 17600 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 247,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 362,
+        "sortie": "Décision : APPROUVE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 134,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 135,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0067",
+    "decisionId": "DEC-0067",
+    "clientId": "CL-2024-0059",
+    "horodatage": "2025-07-18 02:33:00",
+    "dureeTotaleMs": 925,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 42,
+        "sortie": "Profil chargé : Premium, score 74"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 149,
+        "sortie": "Revenu 17600 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 145,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 182,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 72,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 335,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0068",
+    "decisionId": "DEC-0068",
+    "clientId": "CL-2024-0059",
+    "horodatage": "2026-04-19 06:49:00",
+    "dureeTotaleMs": 1742,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 367,
+        "sortie": "Profil chargé : Premium, score 74"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 200,
+        "sortie": "Revenu 17600 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 345,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 238,
+        "sortie": "Décision : APPROUVE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 352,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 240,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0069",
+    "decisionId": "DEC-0069",
+    "clientId": "CL-2024-0059",
+    "horodatage": "2025-08-14 20:38:00",
+    "dureeTotaleMs": 1279,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 192,
+        "sortie": "Profil chargé : Premium, score 74"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 354,
+        "sortie": "Revenu 17600 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 342,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 83,
+        "sortie": "Décision : APPROUVE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 108,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 200,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0070",
+    "decisionId": "DEC-0070",
+    "clientId": "CL-2024-0059",
+    "horodatage": "2026-04-11 16:41:00",
+    "dureeTotaleMs": 1615,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 334,
+        "sortie": "Profil chargé : Premium, score 74"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 236,
+        "sortie": "Revenu 17600 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 256,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 135,
+        "sortie": "Décision : APPROUVE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 289,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 365,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0071",
+    "decisionId": "DEC-0071",
+    "clientId": "CL-2024-0059",
+    "horodatage": "2025-09-08 01:02:00",
+    "dureeTotaleMs": 1194,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 290,
+        "sortie": "Profil chargé : Premium, score 74"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 187,
+        "sortie": "Revenu 17600 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 111,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 135,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 201,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 270,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0072",
+    "decisionId": "DEC-0072",
+    "clientId": "CL-2024-0066",
+    "horodatage": "2025-12-09 23:29:00",
+    "dureeTotaleMs": 1307,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 291,
+        "sortie": "Profil chargé : Premium, score 81"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 252,
+        "sortie": "Revenu 6900 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 267,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 290,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 125,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 82,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0073",
+    "decisionId": "DEC-0073",
+    "clientId": "CL-2024-0066",
+    "horodatage": "2025-08-25 23:10:00",
+    "dureeTotaleMs": 1386,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 155,
+        "sortie": "Profil chargé : Premium, score 81"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 315,
+        "sortie": "Revenu 6900 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 187,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 126,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 274,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 329,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0074",
+    "decisionId": "DEC-0074",
+    "clientId": "CL-2024-0066",
+    "horodatage": "2025-09-30 06:28:00",
+    "dureeTotaleMs": 1145,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 61,
+        "sortie": "Profil chargé : Premium, score 81"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 265,
+        "sortie": "Revenu 6900 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 319,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 151,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 257,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 92,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0075",
+    "decisionId": "DEC-0075",
+    "clientId": "CL-2024-0066",
+    "horodatage": "2025-07-11 16:41:00",
+    "dureeTotaleMs": 974,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 218,
+        "sortie": "Profil chargé : Premium, score 81"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 84,
+        "sortie": "Revenu 6900 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 264,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 100,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 161,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 147,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0076",
+    "decisionId": "DEC-0076",
+    "clientId": "CL-2024-0066",
+    "horodatage": "2025-08-13 01:38:00",
+    "dureeTotaleMs": 950,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 124,
+        "sortie": "Profil chargé : Premium, score 81"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 355,
+        "sortie": "Revenu 6900 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 111,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 145,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 145,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 70,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0077",
+    "decisionId": "DEC-0077",
+    "clientId": "CL-2024-0066",
+    "horodatage": "2025-08-23 12:26:00",
+    "dureeTotaleMs": 1197,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 188,
+        "sortie": "Profil chargé : Premium, score 81"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 333,
+        "sortie": "Revenu 6900 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 176,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 303,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 88,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 109,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0078",
+    "decisionId": "DEC-0078",
+    "clientId": "CL-2024-0066",
+    "horodatage": "2025-11-12 22:43:00",
+    "dureeTotaleMs": 1182,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 167,
+        "sortie": "Profil chargé : Premium, score 81"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 114,
+        "sortie": "Revenu 6900 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 204,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 166,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 241,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 290,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0079",
+    "decisionId": "DEC-0079",
+    "clientId": "CL-2024-0066",
+    "horodatage": "2026-03-30 05:20:00",
+    "dureeTotaleMs": 1318,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 87,
+        "sortie": "Profil chargé : Premium, score 81"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 246,
+        "sortie": "Revenu 6900 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 303,
+        "sortie": "Catégorie de risque : Faible"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 182,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 228,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 272,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0080",
+    "decisionId": "DEC-0080",
+    "clientId": "CL-2024-0073",
+    "horodatage": "2025-12-25 06:00:00",
+    "dureeTotaleMs": 1627,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 274,
+        "sortie": "Profil chargé : Standard, score 43"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 365,
+        "sortie": "Revenu 23200 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 380,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 223,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 72,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 313,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0081",
+    "decisionId": "DEC-0081",
+    "clientId": "CL-2024-0073",
+    "horodatage": "2025-11-19 17:33:00",
+    "dureeTotaleMs": 1487,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 185,
+        "sortie": "Profil chargé : Standard, score 43"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 212,
+        "sortie": "Revenu 23200 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 320,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 335,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 106,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 329,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0082",
+    "decisionId": "DEC-0082",
+    "clientId": "CL-2024-0073",
+    "horodatage": "2025-10-05 13:03:00",
+    "dureeTotaleMs": 1171,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 360,
+        "sortie": "Profil chargé : Standard, score 43"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 275,
+        "sortie": "Revenu 23200 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 48,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 103,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 120,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 265,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0083",
+    "decisionId": "DEC-0083",
+    "clientId": "CL-2024-0073",
+    "horodatage": "2025-10-20 23:33:00",
+    "dureeTotaleMs": 1166,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 87,
+        "sortie": "Profil chargé : Standard, score 43"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 375,
+        "sortie": "Revenu 23200 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 224,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 168,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 82,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 230,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0084",
+    "decisionId": "DEC-0084",
+    "clientId": "CL-2024-0073",
+    "horodatage": "2025-07-05 03:50:00",
+    "dureeTotaleMs": 747,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 88,
+        "sortie": "Profil chargé : Standard, score 43"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 40,
+        "sortie": "Revenu 23200 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 149,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 284,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 79,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 107,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0085",
+    "decisionId": "DEC-0085",
+    "clientId": "CL-2024-0073",
+    "horodatage": "2025-08-11 16:27:00",
+    "dureeTotaleMs": 1039,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 215,
+        "sortie": "Profil chargé : Standard, score 43"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 101,
+        "sortie": "Revenu 23200 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 256,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 107,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 284,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 76,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0086",
+    "decisionId": "DEC-0086",
+    "clientId": "CL-2024-0073",
+    "horodatage": "2026-02-13 11:55:00",
+    "dureeTotaleMs": 1242,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 228,
+        "sortie": "Profil chargé : Standard, score 43"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 193,
+        "sortie": "Revenu 23200 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 110,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 235,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 108,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 368,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0087",
+    "decisionId": "DEC-0087",
+    "clientId": "CL-2024-0073",
+    "horodatage": "2025-06-29 19:56:00",
+    "dureeTotaleMs": 1500,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 361,
+        "sortie": "Profil chargé : Standard, score 43"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 117,
+        "sortie": "Revenu 23200 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 250,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 355,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 266,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 151,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0088",
+    "decisionId": "DEC-0088",
+    "clientId": "CL-2024-0073",
+    "horodatage": "2026-04-27 20:52:00",
+    "dureeTotaleMs": 1137,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 219,
+        "sortie": "Profil chargé : Standard, score 43"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 259,
+        "sortie": "Revenu 23200 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 201,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 111,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 166,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 181,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0089",
+    "decisionId": "DEC-0089",
+    "clientId": "CL-2024-0073",
+    "horodatage": "2025-07-15 21:45:00",
+    "dureeTotaleMs": 1424,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 53,
+        "sortie": "Profil chargé : Standard, score 43"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 377,
+        "sortie": "Revenu 23200 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 194,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 145,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 305,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 350,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0090",
+    "decisionId": "DEC-0090",
+    "clientId": "CL-2024-0073",
+    "horodatage": "2025-09-23 17:13:00",
+    "dureeTotaleMs": 1341,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 97,
+        "sortie": "Profil chargé : Standard, score 43"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 163,
+        "sortie": "Revenu 23200 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 295,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 366,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 344,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 76,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0091",
+    "decisionId": "DEC-0091",
+    "clientId": "CL-2024-0073",
+    "horodatage": "2025-09-13 23:37:00",
+    "dureeTotaleMs": 1287,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 255,
+        "sortie": "Profil chargé : Standard, score 43"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 227,
+        "sortie": "Revenu 23200 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 319,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 128,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 281,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 77,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0092",
+    "decisionId": "DEC-0092",
+    "clientId": "CL-2024-0073",
+    "horodatage": "2026-06-02 05:56:00",
+    "dureeTotaleMs": 1596,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 186,
+        "sortie": "Profil chargé : Standard, score 43"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 361,
+        "sortie": "Revenu 23200 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 296,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 252,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 256,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 245,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0093",
+    "decisionId": "DEC-0093",
+    "clientId": "CL-2024-0073",
+    "horodatage": "2026-04-29 03:26:00",
+    "dureeTotaleMs": 1584,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 119,
+        "sortie": "Profil chargé : Standard, score 43"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 314,
+        "sortie": "Revenu 23200 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 207,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 240,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 340,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 364,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0094",
+    "decisionId": "DEC-0094",
+    "clientId": "CL-2024-0073",
+    "horodatage": "2025-07-13 02:19:00",
+    "dureeTotaleMs": 1235,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 165,
+        "sortie": "Profil chargé : Standard, score 43"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 84,
+        "sortie": "Revenu 23200 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 262,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 99,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 272,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 353,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0095",
+    "decisionId": "DEC-0095",
+    "clientId": "CL-2024-0080",
+    "horodatage": "2026-01-03 02:13:00",
+    "dureeTotaleMs": 1096,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 110,
+        "sortie": "Profil chargé : Privilège, score 59"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 45,
+        "sortie": "Revenu 16000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 123,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 294,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 217,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 307,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0096",
+    "decisionId": "DEC-0096",
+    "clientId": "CL-2024-0080",
+    "horodatage": "2025-09-19 00:44:00",
+    "dureeTotaleMs": 1084,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 55,
+        "sortie": "Profil chargé : Privilège, score 59"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 211,
+        "sortie": "Revenu 16000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 259,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 179,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 308,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 72,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0097",
+    "decisionId": "DEC-0097",
+    "clientId": "CL-2024-0080",
+    "horodatage": "2026-01-27 01:24:00",
+    "dureeTotaleMs": 1270,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 224,
+        "sortie": "Profil chargé : Privilège, score 59"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 68,
+        "sortie": "Revenu 16000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 295,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 330,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 125,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 228,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0098",
+    "decisionId": "DEC-0098",
+    "clientId": "CL-2024-0080",
+    "horodatage": "2026-03-22 15:11:00",
+    "dureeTotaleMs": 677,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 300,
+        "sortie": "Profil chargé : Privilège, score 59"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 41,
+        "sortie": "Revenu 16000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 62,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 46,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 165,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 63,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0099",
+    "decisionId": "DEC-0099",
+    "clientId": "CL-2024-0080",
+    "horodatage": "2025-10-12 12:36:00",
+    "dureeTotaleMs": 1477,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 323,
+        "sortie": "Profil chargé : Privilège, score 59"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 375,
+        "sortie": "Revenu 16000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 254,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 154,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 204,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 167,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0100",
+    "decisionId": "DEC-0100",
+    "clientId": "CL-2024-0080",
+    "horodatage": "2025-11-09 00:40:00",
+    "dureeTotaleMs": 972,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 131,
+        "sortie": "Profil chargé : Privilège, score 59"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 154,
+        "sortie": "Revenu 16000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 304,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 63,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 245,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 75,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0101",
+    "decisionId": "DEC-0101",
+    "clientId": "CL-2024-0080",
+    "horodatage": "2025-10-15 14:11:00",
+    "dureeTotaleMs": 1204,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 273,
+        "sortie": "Profil chargé : Privilège, score 59"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 44,
+        "sortie": "Revenu 16000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 228,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 142,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 189,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 328,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0102",
+    "decisionId": "DEC-0102",
+    "clientId": "CL-2024-0080",
+    "horodatage": "2026-01-06 00:21:00",
+    "dureeTotaleMs": 945,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 319,
+        "sortie": "Profil chargé : Privilège, score 59"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 165,
+        "sortie": "Revenu 16000 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 117,
+        "sortie": "Catégorie de risque : Élevé"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 43,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 249,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 52,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0103",
+    "decisionId": "DEC-0103",
+    "clientId": "CL-2024-0087",
+    "horodatage": "2025-09-06 12:20:00",
+    "dureeTotaleMs": 1083,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 40,
+        "sortie": "Profil chargé : Privilège, score 70"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 376,
+        "sortie": "Revenu 6100 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 232,
+        "sortie": "Catégorie de risque : Modéré"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 197,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 93,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 145,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0104",
+    "decisionId": "DEC-0104",
+    "clientId": "CL-2024-0087",
+    "horodatage": "2025-09-12 16:34:00",
+    "dureeTotaleMs": 1481,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 306,
+        "sortie": "Profil chargé : Privilège, score 70"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 251,
+        "sortie": "Revenu 6100 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 230,
+        "sortie": "Catégorie de risque : Modéré"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 274,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 83,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 337,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0105",
+    "decisionId": "DEC-0105",
+    "clientId": "CL-2024-0087",
+    "horodatage": "2026-04-23 07:52:00",
+    "dureeTotaleMs": 1270,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 262,
+        "sortie": "Profil chargé : Privilège, score 70"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 379,
+        "sortie": "Revenu 6100 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 106,
+        "sortie": "Catégorie de risque : Modéré"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 161,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 189,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 173,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0106",
+    "decisionId": "DEC-0106",
+    "clientId": "CL-2024-0087",
+    "horodatage": "2025-12-31 11:16:00",
+    "dureeTotaleMs": 1007,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 179,
+        "sortie": "Profil chargé : Privilège, score 70"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 159,
+        "sortie": "Revenu 6100 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 78,
+        "sortie": "Catégorie de risque : Modéré"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 143,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 109,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 339,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0107",
+    "decisionId": "DEC-0107",
+    "clientId": "CL-2024-0087",
+    "horodatage": "2026-04-16 19:54:00",
+    "dureeTotaleMs": 1167,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 146,
+        "sortie": "Profil chargé : Privilège, score 70"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 271,
+        "sortie": "Revenu 6100 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 197,
+        "sortie": "Catégorie de risque : Modéré"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 277,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 175,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 101,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0108",
+    "decisionId": "DEC-0108",
+    "clientId": "CL-2024-0087",
+    "horodatage": "2026-04-25 18:09:00",
+    "dureeTotaleMs": 947,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 150,
+        "sortie": "Profil chargé : Privilège, score 70"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 207,
+        "sortie": "Revenu 6100 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 115,
+        "sortie": "Catégorie de risque : Modéré"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 86,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 167,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 222,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0109",
+    "decisionId": "DEC-0109",
+    "clientId": "CL-2024-0087",
+    "horodatage": "2025-11-20 07:57:00",
+    "dureeTotaleMs": 1385,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 55,
+        "sortie": "Profil chargé : Privilège, score 70"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 247,
+        "sortie": "Revenu 6100 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 271,
+        "sortie": "Catégorie de risque : Modéré"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 324,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 321,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 167,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0110",
+    "decisionId": "DEC-0110",
+    "clientId": "CL-2024-0087",
+    "horodatage": "2026-04-23 09:54:00",
+    "dureeTotaleMs": 946,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 71,
+        "sortie": "Profil chargé : Privilège, score 70"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 153,
+        "sortie": "Revenu 6100 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 106,
+        "sortie": "Catégorie de risque : Modéré"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 141,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 245,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 230,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0111",
+    "decisionId": "DEC-0111",
+    "clientId": "CL-2024-0087",
+    "horodatage": "2025-06-24 03:19:00",
+    "dureeTotaleMs": 1043,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 73,
+        "sortie": "Profil chargé : Privilège, score 70"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 141,
+        "sortie": "Revenu 6100 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 370,
+        "sortie": "Catégorie de risque : Modéré"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 267,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 105,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 87,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0112",
+    "decisionId": "DEC-0112",
+    "clientId": "CL-2024-0087",
+    "horodatage": "2025-12-23 20:58:00",
+    "dureeTotaleMs": 1212,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 242,
+        "sortie": "Profil chargé : Privilège, score 70"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 294,
+        "sortie": "Revenu 6100 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 55,
+        "sortie": "Catégorie de risque : Modéré"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 235,
+        "sortie": "Décision : EXECUTE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 258,
+        "sortie": "Opération enregistrée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 128,
+        "sortie": "Explication générée"
+      }
+    ]
+  },
+  {
+    "runId": "RUN-0113",
+    "decisionId": "DEC-0113",
+    "clientId": "CL-2024-0087",
+    "horodatage": "2025-12-11 17:02:00",
+    "dureeTotaleMs": 1593,
+    "statutGlobal": "terminé",
+    "etapes": [
+      {
+        "agentId": "AG-CRM",
+        "agent": "Agent CRM",
+        "statut": "succès",
+        "dureeMs": 165,
+        "sortie": "Profil chargé : Privilège, score 70"
+      },
+      {
+        "agentId": "AG-FIN",
+        "agent": "Agent Analyse Financière",
+        "statut": "succès",
+        "dureeMs": 371,
+        "sortie": "Revenu 6100 MAD, charges crédits évaluées"
+      },
+      {
+        "agentId": "AG-RISK",
+        "agent": "Agent Risque",
+        "statut": "succès",
+        "dureeMs": 191,
+        "sortie": "Catégorie de risque : Modéré"
+      },
+      {
+        "agentId": "AG-DEC",
+        "agent": "Agent Décision",
+        "statut": "succès",
+        "dureeMs": 295,
+        "sortie": "Décision : REFUSE"
+      },
+      {
+        "agentId": "AG-EXEC",
+        "agent": "Agent Exécution",
+        "statut": "succès",
+        "dureeMs": 250,
+        "sortie": "Opération non exécutée"
+      },
+      {
+        "agentId": "AG-XAI",
+        "agent": "Agent Explicabilité",
+        "statut": "succès",
+        "dureeMs": 321,
+        "sortie": "Explication générée"
+      }
+    ]
+  }
+]

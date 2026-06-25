@@ -1,0 +1,2106 @@
+{
+  "CL-2024-0042": [
+    {
+      "id": "VIR-22B304",
+      "date": "2026-06-12",
+      "libelle": "Virement émis — Karim",
+      "montant": -5000.0
+    },
+    {
+      "id": "TX-0042-022",
+      "date": "2026-07-07",
+      "libelle": "Station-service Afriquia",
+      "montant": -520.07,
+      "categorie": "Transport",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0042-025",
+      "date": "2026-07-07",
+      "libelle": "Pharmacie",
+      "montant": -371.92,
+      "categorie": "Santé",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0042-026",
+      "date": "2026-06-28",
+      "libelle": "Paiement carte — Carrefour",
+      "montant": -783.36,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0042-027",
+      "date": "2026-06-28",
+      "libelle": "Facture Lydec — Électricité/Eau",
+      "montant": -553.32,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0042-021",
+      "date": "2026-06-25",
+      "libelle": "Paiement carte — Carrefour",
+      "montant": -581.82,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0042-024",
+      "date": "2026-06-20",
+      "libelle": "Paiement restaurant",
+      "montant": -496.69,
+      "categorie": "Loisirs",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0042-023",
+      "date": "2026-06-18",
+      "libelle": "Facture Maroc Telecom",
+      "montant": -262.01,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0042-028",
+      "date": "2026-06-17",
+      "libelle": "Prélèvement — Crédit auto",
+      "montant": -1100,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0042-020",
+      "date": "2026-06-14",
+      "libelle": "Virement émis — Loyer",
+      "montant": -4500,
+      "categorie": "Logement",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0042-019",
+      "date": "2026-06-12",
+      "libelle": "Virement reçu — Salaire Capgemini Maroc",
+      "montant": 18000,
+      "categorie": "Salaire",
+      "type": "credit"
+    },
+    {
+      "id": "TX-0042-012",
+      "date": "2026-06-09",
+      "libelle": "Facture Lydec — Électricité/Eau",
+      "montant": -282.34,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0042-016",
+      "date": "2026-06-01",
+      "libelle": "Facture Lydec — Électricité/Eau",
+      "montant": -535.23,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0042-014",
+      "date": "2026-05-31",
+      "libelle": "Paiement carte — Marjane",
+      "montant": -947.01,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0042-013",
+      "date": "2026-05-25",
+      "libelle": "Facture Maroc Telecom",
+      "montant": -231.25,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0042-015",
+      "date": "2026-05-20",
+      "libelle": "Retrait GAB",
+      "montant": -1450.52,
+      "categorie": "Retrait",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0042-017",
+      "date": "2026-05-18",
+      "libelle": "Paiement restaurant",
+      "montant": -286.48,
+      "categorie": "Loisirs",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0042-018",
+      "date": "2026-05-18",
+      "libelle": "Prélèvement — Crédit auto",
+      "montant": -1100,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0042-011",
+      "date": "2026-05-15",
+      "libelle": "Virement émis — Loyer",
+      "montant": -3600,
+      "categorie": "Logement",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0042-010",
+      "date": "2026-05-13",
+      "libelle": "Virement reçu — Salaire Capgemini Maroc",
+      "montant": 18000,
+      "categorie": "Salaire",
+      "type": "credit"
+    },
+    {
+      "id": "TX-0042-003",
+      "date": "2026-05-07",
+      "libelle": "Pharmacie",
+      "montant": -198.41,
+      "categorie": "Santé",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0042-007",
+      "date": "2026-05-02",
+      "libelle": "Pharmacie",
+      "montant": -283.5,
+      "categorie": "Santé",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0042-004",
+      "date": "2026-04-29",
+      "libelle": "Pharmacie",
+      "montant": -145.61,
+      "categorie": "Santé",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0042-006",
+      "date": "2026-04-25",
+      "libelle": "Paiement carte — Carrefour",
+      "montant": -658.66,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0042-008",
+      "date": "2026-04-23",
+      "libelle": "Paiement carte — Marjane",
+      "montant": -595.26,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0042-005",
+      "date": "2026-04-19",
+      "libelle": "Achat en ligne — Jumia",
+      "montant": -788.57,
+      "categorie": "Shopping",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0042-009",
+      "date": "2026-04-18",
+      "libelle": "Prélèvement — Crédit auto",
+      "montant": -1100,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0042-002",
+      "date": "2026-04-15",
+      "libelle": "Virement émis — Loyer",
+      "montant": -5100,
+      "categorie": "Logement",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0042-001",
+      "date": "2026-04-13",
+      "libelle": "Virement reçu — Salaire Capgemini Maroc",
+      "montant": 18000,
+      "categorie": "Salaire",
+      "type": "credit"
+    }
+  ],
+  "CL-2024-0043": [
+    {
+      "id": "TX-0043-023",
+      "date": "2026-07-04",
+      "libelle": "Paiement carte — Carrefour",
+      "montant": -595.56,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0043-019",
+      "date": "2026-07-03",
+      "libelle": "Facture Maroc Telecom",
+      "montant": -122.47,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0043-024",
+      "date": "2026-06-29",
+      "libelle": "Station-service Afriquia",
+      "montant": -490.16,
+      "categorie": "Transport",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0043-020",
+      "date": "2026-06-17",
+      "libelle": "Achat en ligne — Jumia",
+      "montant": -724.25,
+      "categorie": "Shopping",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0043-022",
+      "date": "2026-06-17",
+      "libelle": "Facture Maroc Telecom",
+      "montant": -357.87,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0043-025",
+      "date": "2026-06-17",
+      "libelle": "Prélèvement — Crédit auto",
+      "montant": -1200,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0043-021",
+      "date": "2026-06-16",
+      "libelle": "Pharmacie",
+      "montant": -69.91,
+      "categorie": "Santé",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0043-018",
+      "date": "2026-06-14",
+      "libelle": "Virement émis — Loyer",
+      "montant": -2200,
+      "categorie": "Logement",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0043-017",
+      "date": "2026-06-12",
+      "libelle": "Virement reçu — Salaire Cosumar",
+      "montant": 8500,
+      "categorie": "Salaire",
+      "type": "credit"
+    },
+    {
+      "id": "TX-0043-012",
+      "date": "2026-06-09",
+      "libelle": "Retrait GAB",
+      "montant": -2069.87,
+      "categorie": "Retrait",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0043-013",
+      "date": "2026-06-09",
+      "libelle": "Pharmacie",
+      "montant": -247.31,
+      "categorie": "Santé",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0043-014",
+      "date": "2026-06-06",
+      "libelle": "Pharmacie",
+      "montant": -373.45,
+      "categorie": "Santé",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0043-015",
+      "date": "2026-06-05",
+      "libelle": "Paiement restaurant",
+      "montant": -244.39,
+      "categorie": "Loisirs",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0043-016",
+      "date": "2026-05-18",
+      "libelle": "Prélèvement — Crédit auto",
+      "montant": -1200,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0043-011",
+      "date": "2026-05-15",
+      "libelle": "Virement émis — Loyer",
+      "montant": -2500,
+      "categorie": "Logement",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0043-010",
+      "date": "2026-05-13",
+      "libelle": "Virement reçu — Salaire Cosumar",
+      "montant": 8500,
+      "categorie": "Salaire",
+      "type": "credit"
+    },
+    {
+      "id": "TX-0043-005",
+      "date": "2026-05-02",
+      "libelle": "Paiement carte — Carrefour",
+      "montant": -532.46,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0043-006",
+      "date": "2026-04-27",
+      "libelle": "Paiement restaurant",
+      "montant": -458.24,
+      "categorie": "Loisirs",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0043-003",
+      "date": "2026-04-23",
+      "libelle": "Paiement restaurant",
+      "montant": -253.2,
+      "categorie": "Loisirs",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0043-007",
+      "date": "2026-04-23",
+      "libelle": "Retrait GAB",
+      "montant": -757.01,
+      "categorie": "Retrait",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0043-008",
+      "date": "2026-04-22",
+      "libelle": "Facture Maroc Telecom",
+      "montant": -169.4,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0043-004",
+      "date": "2026-04-18",
+      "libelle": "Retrait GAB",
+      "montant": -1776.21,
+      "categorie": "Retrait",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0043-009",
+      "date": "2026-04-18",
+      "libelle": "Prélèvement — Crédit auto",
+      "montant": -1200,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0043-002",
+      "date": "2026-04-15",
+      "libelle": "Virement émis — Loyer",
+      "montant": -2100,
+      "categorie": "Logement",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0043-001",
+      "date": "2026-04-13",
+      "libelle": "Virement reçu — Salaire Cosumar",
+      "montant": 8500,
+      "categorie": "Salaire",
+      "type": "credit"
+    }
+  ],
+  "CL-2024-0044": [
+    {
+      "id": "VIR-A78725",
+      "date": "2026-06-23",
+      "libelle": "Virement émis — Abdessalam",
+      "montant": -7000.0
+    },
+    {
+      "id": "TX-0044-019",
+      "date": "2026-06-26",
+      "libelle": "Retrait GAB",
+      "montant": -1275.58,
+      "categorie": "Retrait",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0044-021",
+      "date": "2026-06-24",
+      "libelle": "Paiement carte — Carrefour",
+      "montant": -569.19,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0044-020",
+      "date": "2026-06-19",
+      "libelle": "Station-service Afriquia",
+      "montant": -497.52,
+      "categorie": "Transport",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0044-022",
+      "date": "2026-06-19",
+      "libelle": "Paiement restaurant",
+      "montant": -428.46,
+      "categorie": "Loisirs",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0044-018",
+      "date": "2026-06-17",
+      "libelle": "Paiement restaurant",
+      "montant": -383.02,
+      "categorie": "Loisirs",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0044-023",
+      "date": "2026-06-17",
+      "libelle": "Prélèvement — Crédit immobilier",
+      "montant": -1500,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0044-017",
+      "date": "2026-06-12",
+      "libelle": "Virement reçu — Salaire CHU Ibn Rochd",
+      "montant": 25000,
+      "categorie": "Salaire",
+      "type": "credit"
+    },
+    {
+      "id": "TX-0044-015",
+      "date": "2026-06-08",
+      "libelle": "Facture Maroc Telecom",
+      "montant": -440.63,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0044-012",
+      "date": "2026-06-06",
+      "libelle": "Paiement restaurant",
+      "montant": -390.9,
+      "categorie": "Loisirs",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0044-014",
+      "date": "2026-06-06",
+      "libelle": "Achat en ligne — Jumia",
+      "montant": -865.14,
+      "categorie": "Shopping",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0044-009",
+      "date": "2026-06-01",
+      "libelle": "Pharmacie",
+      "montant": -232.96,
+      "categorie": "Santé",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0044-011",
+      "date": "2026-05-28",
+      "libelle": "Facture Maroc Telecom",
+      "montant": -263.51,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0044-010",
+      "date": "2026-05-27",
+      "libelle": "Retrait GAB",
+      "montant": -1432.13,
+      "categorie": "Retrait",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0044-013",
+      "date": "2026-05-18",
+      "libelle": "Paiement restaurant",
+      "montant": -251.44,
+      "categorie": "Loisirs",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0044-016",
+      "date": "2026-05-18",
+      "libelle": "Prélèvement — Crédit immobilier",
+      "montant": -1500,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0044-008",
+      "date": "2026-05-15",
+      "libelle": "Virement émis — Loyer",
+      "montant": -5100,
+      "categorie": "Logement",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0044-007",
+      "date": "2026-05-13",
+      "libelle": "Virement reçu — Salaire CHU Ibn Rochd",
+      "montant": 25000,
+      "categorie": "Salaire",
+      "type": "credit"
+    },
+    {
+      "id": "TX-0044-005",
+      "date": "2026-05-08",
+      "libelle": "Paiement restaurant",
+      "montant": -123.85,
+      "categorie": "Loisirs",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0044-003",
+      "date": "2026-05-05",
+      "libelle": "Paiement restaurant",
+      "montant": -327.33,
+      "categorie": "Loisirs",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0044-002",
+      "date": "2026-05-04",
+      "libelle": "Pharmacie",
+      "montant": -278.14,
+      "categorie": "Santé",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0044-006",
+      "date": "2026-04-18",
+      "libelle": "Prélèvement — Crédit immobilier",
+      "montant": -1500,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0044-004",
+      "date": "2026-04-17",
+      "libelle": "Retrait GAB",
+      "montant": -1626.31,
+      "categorie": "Retrait",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0044-001",
+      "date": "2026-04-13",
+      "libelle": "Virement reçu — Salaire CHU Ibn Rochd",
+      "montant": 25000,
+      "categorie": "Salaire",
+      "type": "credit"
+    }
+  ],
+  "CL-2024-0045": [
+    {
+      "id": "TX-0045-019",
+      "date": "2026-06-30",
+      "libelle": "Facture Maroc Telecom",
+      "montant": -461.59,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0045-017",
+      "date": "2026-06-29",
+      "libelle": "Facture Lydec — Électricité/Eau",
+      "montant": -566.36,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0045-020",
+      "date": "2026-06-26",
+      "libelle": "Facture Lydec — Électricité/Eau",
+      "montant": -606.98,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0045-018",
+      "date": "2026-06-22",
+      "libelle": "Pharmacie",
+      "montant": -236.9,
+      "categorie": "Santé",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0045-021",
+      "date": "2026-06-17",
+      "libelle": "Prélèvement — Crédit immobilier",
+      "montant": -1288.21,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0045-016",
+      "date": "2026-06-16",
+      "libelle": "Pharmacie",
+      "montant": -193.8,
+      "categorie": "Santé",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0045-015",
+      "date": "2026-06-14",
+      "libelle": "Virement émis — Loyer",
+      "montant": -4900,
+      "categorie": "Logement",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0045-014",
+      "date": "2026-06-12",
+      "libelle": "Virement reçu — Salaire Clinique Al Madina",
+      "montant": 16500,
+      "categorie": "Salaire",
+      "type": "credit"
+    },
+    {
+      "id": "TX-0045-009",
+      "date": "2026-06-09",
+      "libelle": "Achat en ligne — Jumia",
+      "montant": -1148.58,
+      "categorie": "Shopping",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0045-011",
+      "date": "2026-06-04",
+      "libelle": "Retrait GAB",
+      "montant": -1441.8,
+      "categorie": "Retrait",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0045-012",
+      "date": "2026-05-21",
+      "libelle": "Retrait GAB",
+      "montant": -2578.36,
+      "categorie": "Retrait",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0045-013",
+      "date": "2026-05-18",
+      "libelle": "Prélèvement — Crédit immobilier",
+      "montant": -1288.21,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0045-010",
+      "date": "2026-05-17",
+      "libelle": "Achat en ligne — Jumia",
+      "montant": -1374.57,
+      "categorie": "Shopping",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0045-008",
+      "date": "2026-05-15",
+      "libelle": "Virement émis — Loyer",
+      "montant": -3500,
+      "categorie": "Logement",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0045-007",
+      "date": "2026-05-13",
+      "libelle": "Virement reçu — Salaire Clinique Al Madina",
+      "montant": 16500,
+      "categorie": "Salaire",
+      "type": "credit"
+    },
+    {
+      "id": "TX-0045-002",
+      "date": "2026-05-02",
+      "libelle": "Station-service Afriquia",
+      "montant": -380.91,
+      "categorie": "Transport",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0045-004",
+      "date": "2026-04-26",
+      "libelle": "Facture Lydec — Électricité/Eau",
+      "montant": -768.6,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0045-003",
+      "date": "2026-04-25",
+      "libelle": "Paiement restaurant",
+      "montant": -173.74,
+      "categorie": "Loisirs",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0045-005",
+      "date": "2026-04-22",
+      "libelle": "Pharmacie",
+      "montant": -129.29,
+      "categorie": "Santé",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0045-006",
+      "date": "2026-04-18",
+      "libelle": "Prélèvement — Crédit immobilier",
+      "montant": -1288.21,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0045-001",
+      "date": "2026-04-13",
+      "libelle": "Virement reçu — Salaire Clinique Al Madina",
+      "montant": 16500,
+      "categorie": "Salaire",
+      "type": "credit"
+    }
+  ],
+  "CL-2024-0052": [
+    {
+      "id": "TX-0052-023",
+      "date": "2026-07-07",
+      "libelle": "Pharmacie",
+      "montant": -340.89,
+      "categorie": "Santé",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0052-026",
+      "date": "2026-07-02",
+      "libelle": "Retrait GAB",
+      "montant": -2850.56,
+      "categorie": "Retrait",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0052-024",
+      "date": "2026-06-29",
+      "libelle": "Pharmacie",
+      "montant": -265.37,
+      "categorie": "Santé",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0052-027",
+      "date": "2026-06-28",
+      "libelle": "Achat en ligne — Jumia",
+      "montant": -355.7,
+      "categorie": "Shopping",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0052-022",
+      "date": "2026-06-19",
+      "libelle": "Retrait GAB",
+      "montant": -595.76,
+      "categorie": "Retrait",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0052-028",
+      "date": "2026-06-17",
+      "libelle": "Prélèvement — Crédit personnel",
+      "montant": -3051.62,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0052-029",
+      "date": "2026-06-17",
+      "libelle": "Prélèvement — Crédit personnel",
+      "montant": -1468.87,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0052-025",
+      "date": "2026-06-15",
+      "libelle": "Paiement carte — Carrefour",
+      "montant": -341.94,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0052-021",
+      "date": "2026-06-14",
+      "libelle": "Virement émis — Loyer",
+      "montant": -5400,
+      "categorie": "Logement",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0052-020",
+      "date": "2026-06-12",
+      "libelle": "Virement reçu — Salaire TGCC",
+      "montant": 25300,
+      "categorie": "Salaire",
+      "type": "credit"
+    },
+    {
+      "id": "TX-0052-014",
+      "date": "2026-05-30",
+      "libelle": "Facture Lydec — Électricité/Eau",
+      "montant": -730.78,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0052-015",
+      "date": "2026-05-29",
+      "libelle": "Paiement carte — Marjane",
+      "montant": -253.26,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0052-016",
+      "date": "2026-05-27",
+      "libelle": "Achat en ligne — Jumia",
+      "montant": -586.19,
+      "categorie": "Shopping",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0052-017",
+      "date": "2026-05-27",
+      "libelle": "Paiement carte — Carrefour",
+      "montant": -318.4,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0052-013",
+      "date": "2026-05-18",
+      "libelle": "Station-service Afriquia",
+      "montant": -673.21,
+      "categorie": "Transport",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0052-018",
+      "date": "2026-05-18",
+      "libelle": "Prélèvement — Crédit personnel",
+      "montant": -3051.62,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0052-019",
+      "date": "2026-05-18",
+      "libelle": "Prélèvement — Crédit personnel",
+      "montant": -1468.87,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0052-012",
+      "date": "2026-05-15",
+      "libelle": "Virement émis — Loyer",
+      "montant": -6400,
+      "categorie": "Logement",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0052-011",
+      "date": "2026-05-13",
+      "libelle": "Virement reçu — Salaire TGCC",
+      "montant": 25300,
+      "categorie": "Salaire",
+      "type": "credit"
+    },
+    {
+      "id": "TX-0052-007",
+      "date": "2026-05-08",
+      "libelle": "Paiement carte — Carrefour",
+      "montant": -784.42,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0052-003",
+      "date": "2026-05-02",
+      "libelle": "Station-service Afriquia",
+      "montant": -463.73,
+      "categorie": "Transport",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0052-006",
+      "date": "2026-04-27",
+      "libelle": "Pharmacie",
+      "montant": -244.09,
+      "categorie": "Santé",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0052-008",
+      "date": "2026-04-25",
+      "libelle": "Paiement carte — Carrefour",
+      "montant": -212.91,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0052-005",
+      "date": "2026-04-24",
+      "libelle": "Retrait GAB",
+      "montant": -630.45,
+      "categorie": "Retrait",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0052-004",
+      "date": "2026-04-22",
+      "libelle": "Retrait GAB",
+      "montant": -2503.15,
+      "categorie": "Retrait",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0052-009",
+      "date": "2026-04-18",
+      "libelle": "Prélèvement — Crédit personnel",
+      "montant": -3051.62,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0052-010",
+      "date": "2026-04-18",
+      "libelle": "Prélèvement — Crédit personnel",
+      "montant": -1468.87,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0052-002",
+      "date": "2026-04-15",
+      "libelle": "Virement émis — Loyer",
+      "montant": -6400,
+      "categorie": "Logement",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0052-001",
+      "date": "2026-04-13",
+      "libelle": "Virement reçu — Salaire TGCC",
+      "montant": 25300,
+      "categorie": "Salaire",
+      "type": "credit"
+    }
+  ],
+  "CL-2024-0059": [
+    {
+      "id": "TX-0059-017",
+      "date": "2026-07-09",
+      "libelle": "Paiement carte — Carrefour",
+      "montant": -586.43,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0059-020",
+      "date": "2026-07-09",
+      "libelle": "Retrait GAB",
+      "montant": -2211.71,
+      "categorie": "Retrait",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0059-021",
+      "date": "2026-07-05",
+      "libelle": "Pharmacie",
+      "montant": -113.8,
+      "categorie": "Santé",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0059-019",
+      "date": "2026-06-25",
+      "libelle": "Achat en ligne — Jumia",
+      "montant": -1654.99,
+      "categorie": "Shopping",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0059-018",
+      "date": "2026-06-19",
+      "libelle": "Paiement restaurant",
+      "montant": -103.05,
+      "categorie": "Loisirs",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0059-016",
+      "date": "2026-06-14",
+      "libelle": "Virement émis — Loyer",
+      "montant": -3700,
+      "categorie": "Logement",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0059-015",
+      "date": "2026-06-12",
+      "libelle": "Virement reçu — Salaire Cabinet privé",
+      "montant": 17600,
+      "categorie": "Salaire",
+      "type": "credit"
+    },
+    {
+      "id": "TX-0059-009",
+      "date": "2026-06-03",
+      "libelle": "Facture Lydec — Électricité/Eau",
+      "montant": -449.94,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0059-012",
+      "date": "2026-06-02",
+      "libelle": "Achat en ligne — Jumia",
+      "montant": -187.62,
+      "categorie": "Shopping",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0059-010",
+      "date": "2026-06-01",
+      "libelle": "Paiement carte — Carrefour",
+      "montant": -880.99,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0059-011",
+      "date": "2026-06-01",
+      "libelle": "Paiement carte — Carrefour",
+      "montant": -558.06,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0059-014",
+      "date": "2026-05-24",
+      "libelle": "Paiement restaurant",
+      "montant": -468.6,
+      "categorie": "Loisirs",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0059-013",
+      "date": "2026-05-17",
+      "libelle": "Pharmacie",
+      "montant": -272.48,
+      "categorie": "Santé",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0059-008",
+      "date": "2026-05-15",
+      "libelle": "Virement émis — Loyer",
+      "montant": -4400,
+      "categorie": "Logement",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0059-007",
+      "date": "2026-05-13",
+      "libelle": "Virement reçu — Salaire Cabinet privé",
+      "montant": 17600,
+      "categorie": "Salaire",
+      "type": "credit"
+    },
+    {
+      "id": "TX-0059-005",
+      "date": "2026-05-05",
+      "libelle": "Pharmacie",
+      "montant": -237.62,
+      "categorie": "Santé",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0059-006",
+      "date": "2026-05-04",
+      "libelle": "Achat en ligne — Jumia",
+      "montant": -597.59,
+      "categorie": "Shopping",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0059-003",
+      "date": "2026-04-29",
+      "libelle": "Facture Lydec — Électricité/Eau",
+      "montant": -583.37,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0059-004",
+      "date": "2026-04-18",
+      "libelle": "Pharmacie",
+      "montant": -88.8,
+      "categorie": "Santé",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0059-002",
+      "date": "2026-04-15",
+      "libelle": "Virement émis — Loyer",
+      "montant": -4200,
+      "categorie": "Logement",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0059-001",
+      "date": "2026-04-13",
+      "libelle": "Virement reçu — Salaire Cabinet privé",
+      "montant": 17600,
+      "categorie": "Salaire",
+      "type": "credit"
+    }
+  ],
+  "CL-2024-0066": [
+    {
+      "id": "TX-0066-025",
+      "date": "2026-07-05",
+      "libelle": "Facture Maroc Telecom",
+      "montant": -492.01,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0066-024",
+      "date": "2026-07-04",
+      "libelle": "Paiement restaurant",
+      "montant": -599.04,
+      "categorie": "Loisirs",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0066-023",
+      "date": "2026-06-29",
+      "libelle": "Paiement restaurant",
+      "montant": -102.02,
+      "categorie": "Loisirs",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0066-027",
+      "date": "2026-06-26",
+      "libelle": "Station-service Afriquia",
+      "montant": -456.54,
+      "categorie": "Transport",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0066-026",
+      "date": "2026-06-17",
+      "libelle": "Paiement carte — Marjane",
+      "montant": -871.18,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0066-030",
+      "date": "2026-06-17",
+      "libelle": "Prélèvement — Crédit consommation",
+      "montant": -1961.44,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0066-029",
+      "date": "2026-06-16",
+      "libelle": "Pharmacie",
+      "montant": -94.18,
+      "categorie": "Santé",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0066-028",
+      "date": "2026-06-15",
+      "libelle": "Retrait GAB",
+      "montant": -856.95,
+      "categorie": "Retrait",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0066-022",
+      "date": "2026-06-14",
+      "libelle": "Virement émis — Loyer",
+      "montant": -1500,
+      "categorie": "Logement",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0066-021",
+      "date": "2026-06-12",
+      "libelle": "Virement reçu — Salaire Université Mohammed V",
+      "montant": 6900,
+      "categorie": "Salaire",
+      "type": "credit"
+    },
+    {
+      "id": "TX-0066-017",
+      "date": "2026-06-02",
+      "libelle": "Retrait GAB",
+      "montant": -1234.42,
+      "categorie": "Retrait",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0066-014",
+      "date": "2026-05-27",
+      "libelle": "Pharmacie",
+      "montant": -373.51,
+      "categorie": "Santé",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0066-019",
+      "date": "2026-05-25",
+      "libelle": "Facture Maroc Telecom",
+      "montant": -278.37,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0066-015",
+      "date": "2026-05-24",
+      "libelle": "Achat en ligne — Jumia",
+      "montant": -1632.12,
+      "categorie": "Shopping",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0066-013",
+      "date": "2026-05-21",
+      "libelle": "Paiement restaurant",
+      "montant": -338.03,
+      "categorie": "Loisirs",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0066-016",
+      "date": "2026-05-18",
+      "libelle": "Station-service Afriquia",
+      "montant": -415.3,
+      "categorie": "Transport",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0066-018",
+      "date": "2026-05-18",
+      "libelle": "Paiement carte — Carrefour",
+      "montant": -395.94,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0066-020",
+      "date": "2026-05-18",
+      "libelle": "Prélèvement — Crédit consommation",
+      "montant": -1961.44,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0066-012",
+      "date": "2026-05-15",
+      "libelle": "Virement émis — Loyer",
+      "montant": -1700,
+      "categorie": "Logement",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0066-011",
+      "date": "2026-05-13",
+      "libelle": "Virement reçu — Salaire Université Mohammed V",
+      "montant": 6900,
+      "categorie": "Salaire",
+      "type": "credit"
+    },
+    {
+      "id": "TX-0066-008",
+      "date": "2026-05-06",
+      "libelle": "Paiement carte — Marjane",
+      "montant": -531.92,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0066-005",
+      "date": "2026-05-02",
+      "libelle": "Facture Maroc Telecom",
+      "montant": -259.29,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0066-006",
+      "date": "2026-05-01",
+      "libelle": "Achat en ligne — Jumia",
+      "montant": -618.63,
+      "categorie": "Shopping",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0066-009",
+      "date": "2026-04-27",
+      "libelle": "Paiement carte — Carrefour",
+      "montant": -477.71,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0066-003",
+      "date": "2026-04-25",
+      "libelle": "Paiement carte — Marjane",
+      "montant": -401.59,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0066-007",
+      "date": "2026-04-25",
+      "libelle": "Facture Lydec — Électricité/Eau",
+      "montant": -414.18,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0066-010",
+      "date": "2026-04-18",
+      "libelle": "Prélèvement — Crédit consommation",
+      "montant": -1961.44,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0066-004",
+      "date": "2026-04-17",
+      "libelle": "Facture Lydec — Électricité/Eau",
+      "montant": -389.36,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0066-002",
+      "date": "2026-04-15",
+      "libelle": "Virement émis — Loyer",
+      "montant": -2000,
+      "categorie": "Logement",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0066-001",
+      "date": "2026-04-13",
+      "libelle": "Virement reçu — Salaire Université Mohammed V",
+      "montant": 6900,
+      "categorie": "Salaire",
+      "type": "credit"
+    }
+  ],
+  "CL-2024-0073": [
+    {
+      "id": "TX-0073-022",
+      "date": "2026-07-07",
+      "libelle": "Retrait GAB",
+      "montant": -2273.91,
+      "categorie": "Retrait",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0073-026",
+      "date": "2026-07-03",
+      "libelle": "Achat en ligne — Jumia",
+      "montant": -832.49,
+      "categorie": "Shopping",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0073-025",
+      "date": "2026-06-30",
+      "libelle": "Facture Lydec — Électricité/Eau",
+      "montant": -215.77,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0073-023",
+      "date": "2026-06-26",
+      "libelle": "Retrait GAB",
+      "montant": -1771.89,
+      "categorie": "Retrait",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0073-024",
+      "date": "2026-06-21",
+      "libelle": "Paiement carte — Carrefour",
+      "montant": -744.05,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0073-027",
+      "date": "2026-06-19",
+      "libelle": "Achat en ligne — Jumia",
+      "montant": -1282.1,
+      "categorie": "Shopping",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0073-028",
+      "date": "2026-06-17",
+      "libelle": "Prélèvement — Crédit consommation",
+      "montant": -1233.71,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0073-021",
+      "date": "2026-06-14",
+      "libelle": "Virement émis — Loyer",
+      "montant": -6100,
+      "categorie": "Logement",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0073-020",
+      "date": "2026-06-12",
+      "libelle": "Virement reçu — Salaire CHU Ibn Rochd",
+      "montant": 23200,
+      "categorie": "Salaire",
+      "type": "credit"
+    },
+    {
+      "id": "TX-0073-013",
+      "date": "2026-06-07",
+      "libelle": "Facture Maroc Telecom",
+      "montant": -278.51,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0073-014",
+      "date": "2026-06-07",
+      "libelle": "Facture Maroc Telecom",
+      "montant": -466.59,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0073-018",
+      "date": "2026-06-06",
+      "libelle": "Paiement restaurant",
+      "montant": -260.66,
+      "categorie": "Loisirs",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0073-016",
+      "date": "2026-05-30",
+      "libelle": "Paiement carte — Carrefour",
+      "montant": -279.49,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0073-015",
+      "date": "2026-05-22",
+      "libelle": "Pharmacie",
+      "montant": -92.92,
+      "categorie": "Santé",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0073-012",
+      "date": "2026-05-19",
+      "libelle": "Achat en ligne — Jumia",
+      "montant": -634.29,
+      "categorie": "Shopping",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0073-017",
+      "date": "2026-05-18",
+      "libelle": "Pharmacie",
+      "montant": -333.68,
+      "categorie": "Santé",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0073-019",
+      "date": "2026-05-18",
+      "libelle": "Prélèvement — Crédit consommation",
+      "montant": -1233.71,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0073-011",
+      "date": "2026-05-15",
+      "libelle": "Virement émis — Loyer",
+      "montant": -5200,
+      "categorie": "Logement",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0073-010",
+      "date": "2026-05-13",
+      "libelle": "Virement reçu — Salaire CHU Ibn Rochd",
+      "montant": 23200,
+      "categorie": "Salaire",
+      "type": "credit"
+    },
+    {
+      "id": "TX-0073-004",
+      "date": "2026-05-07",
+      "libelle": "Retrait GAB",
+      "montant": -1624.81,
+      "categorie": "Retrait",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0073-003",
+      "date": "2026-05-04",
+      "libelle": "Station-service Afriquia",
+      "montant": -216.19,
+      "categorie": "Transport",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0073-006",
+      "date": "2026-05-04",
+      "libelle": "Paiement carte — Carrefour",
+      "montant": -253.27,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0073-007",
+      "date": "2026-04-28",
+      "libelle": "Paiement restaurant",
+      "montant": -243.48,
+      "categorie": "Loisirs",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0073-005",
+      "date": "2026-04-27",
+      "libelle": "Paiement restaurant",
+      "montant": -310.85,
+      "categorie": "Loisirs",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0073-008",
+      "date": "2026-04-23",
+      "libelle": "Facture Maroc Telecom",
+      "montant": -484.21,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0073-009",
+      "date": "2026-04-18",
+      "libelle": "Prélèvement — Crédit consommation",
+      "montant": -1233.71,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0073-002",
+      "date": "2026-04-15",
+      "libelle": "Virement émis — Loyer",
+      "montant": -6400,
+      "categorie": "Logement",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0073-001",
+      "date": "2026-04-13",
+      "libelle": "Virement reçu — Salaire CHU Ibn Rochd",
+      "montant": 23200,
+      "categorie": "Salaire",
+      "type": "credit"
+    }
+  ],
+  "CL-2024-0080": [
+    {
+      "id": "TX-0080-022",
+      "date": "2026-07-06",
+      "libelle": "Retrait GAB",
+      "montant": -2061.2,
+      "categorie": "Retrait",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0080-025",
+      "date": "2026-07-05",
+      "libelle": "Facture Maroc Telecom",
+      "montant": -184.32,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0080-026",
+      "date": "2026-07-04",
+      "libelle": "Station-service Afriquia",
+      "montant": -519.5,
+      "categorie": "Transport",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0080-023",
+      "date": "2026-07-03",
+      "libelle": "Paiement restaurant",
+      "montant": -101.42,
+      "categorie": "Loisirs",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0080-024",
+      "date": "2026-06-17",
+      "libelle": "Paiement carte — Marjane",
+      "montant": -245.46,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0080-027",
+      "date": "2026-06-17",
+      "libelle": "Prélèvement — Crédit immobilier",
+      "montant": -722.67,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0080-028",
+      "date": "2026-06-17",
+      "libelle": "Prélèvement — Crédit consommation",
+      "montant": -3031.95,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0080-021",
+      "date": "2026-06-12",
+      "libelle": "Virement reçu — Salaire BMCE Bank",
+      "montant": 16000,
+      "categorie": "Salaire",
+      "type": "credit"
+    },
+    {
+      "id": "TX-0080-018",
+      "date": "2026-06-05",
+      "libelle": "Achat en ligne — Jumia",
+      "montant": -461.98,
+      "categorie": "Shopping",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0080-017",
+      "date": "2026-06-04",
+      "libelle": "Facture Maroc Telecom",
+      "montant": -313.39,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0080-014",
+      "date": "2026-06-01",
+      "libelle": "Paiement restaurant",
+      "montant": -545.36,
+      "categorie": "Loisirs",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0080-015",
+      "date": "2026-05-24",
+      "libelle": "Paiement carte — Carrefour",
+      "montant": -297.23,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0080-016",
+      "date": "2026-05-24",
+      "libelle": "Achat en ligne — Jumia",
+      "montant": -381.57,
+      "categorie": "Shopping",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0080-019",
+      "date": "2026-05-18",
+      "libelle": "Prélèvement — Crédit immobilier",
+      "montant": -722.67,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0080-020",
+      "date": "2026-05-18",
+      "libelle": "Prélèvement — Crédit consommation",
+      "montant": -3031.95,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0080-013",
+      "date": "2026-05-15",
+      "libelle": "Virement émis — Loyer",
+      "montant": -3500,
+      "categorie": "Logement",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0080-012",
+      "date": "2026-05-13",
+      "libelle": "Virement reçu — Salaire BMCE Bank",
+      "montant": 16000,
+      "categorie": "Salaire",
+      "type": "credit"
+    },
+    {
+      "id": "TX-0080-007",
+      "date": "2026-05-06",
+      "libelle": "Achat en ligne — Jumia",
+      "montant": -1237.4,
+      "categorie": "Shopping",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0080-005",
+      "date": "2026-04-30",
+      "libelle": "Paiement carte — Carrefour",
+      "montant": -499.37,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0080-003",
+      "date": "2026-04-29",
+      "libelle": "Achat en ligne — Jumia",
+      "montant": -1572.95,
+      "categorie": "Shopping",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0080-008",
+      "date": "2026-04-29",
+      "libelle": "Retrait GAB",
+      "montant": -1757.16,
+      "categorie": "Retrait",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0080-006",
+      "date": "2026-04-27",
+      "libelle": "Achat en ligne — Jumia",
+      "montant": -387.42,
+      "categorie": "Shopping",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0080-004",
+      "date": "2026-04-20",
+      "libelle": "Paiement carte — Carrefour",
+      "montant": -879.28,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0080-009",
+      "date": "2026-04-19",
+      "libelle": "Paiement carte — Marjane",
+      "montant": -718.1,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0080-010",
+      "date": "2026-04-18",
+      "libelle": "Prélèvement — Crédit immobilier",
+      "montant": -722.67,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0080-011",
+      "date": "2026-04-18",
+      "libelle": "Prélèvement — Crédit consommation",
+      "montant": -3031.95,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0080-002",
+      "date": "2026-04-15",
+      "libelle": "Virement émis — Loyer",
+      "montant": -3800,
+      "categorie": "Logement",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0080-001",
+      "date": "2026-04-13",
+      "libelle": "Virement reçu — Salaire BMCE Bank",
+      "montant": 16000,
+      "categorie": "Salaire",
+      "type": "credit"
+    }
+  ],
+  "CL-2024-0087": [
+    {
+      "id": "TX-0087-021",
+      "date": "2026-07-01",
+      "libelle": "Pharmacie",
+      "montant": -213.39,
+      "categorie": "Santé",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0087-023",
+      "date": "2026-07-01",
+      "libelle": "Station-service Afriquia",
+      "montant": -428.62,
+      "categorie": "Transport",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0087-022",
+      "date": "2026-06-30",
+      "libelle": "Facture Maroc Telecom",
+      "montant": -109.27,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0087-024",
+      "date": "2026-06-21",
+      "libelle": "Facture Lydec — Électricité/Eau",
+      "montant": -550.01,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0087-026",
+      "date": "2026-06-17",
+      "libelle": "Prélèvement — Crédit auto",
+      "montant": -2033.49,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0087-025",
+      "date": "2026-06-16",
+      "libelle": "Paiement carte — Marjane",
+      "montant": -481.36,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0087-020",
+      "date": "2026-06-14",
+      "libelle": "Virement émis — Loyer",
+      "montant": -1400,
+      "categorie": "Logement",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0087-019",
+      "date": "2026-06-12",
+      "libelle": "Virement reçu — Salaire Groupe Scolaire OSUI",
+      "montant": 6100,
+      "categorie": "Salaire",
+      "type": "credit"
+    },
+    {
+      "id": "TX-0087-012",
+      "date": "2026-06-02",
+      "libelle": "Achat en ligne — Jumia",
+      "montant": -346.44,
+      "categorie": "Shopping",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0087-013",
+      "date": "2026-05-30",
+      "libelle": "Facture Lydec — Électricité/Eau",
+      "montant": -273.51,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0087-017",
+      "date": "2026-05-26",
+      "libelle": "Retrait GAB",
+      "montant": -2834.38,
+      "categorie": "Retrait",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0087-015",
+      "date": "2026-05-25",
+      "libelle": "Paiement carte — Marjane",
+      "montant": -1145.38,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0087-014",
+      "date": "2026-05-23",
+      "libelle": "Pharmacie",
+      "montant": -99.31,
+      "categorie": "Santé",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0087-016",
+      "date": "2026-05-23",
+      "libelle": "Station-service Afriquia",
+      "montant": -681.34,
+      "categorie": "Transport",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0087-018",
+      "date": "2026-05-18",
+      "libelle": "Prélèvement — Crédit auto",
+      "montant": -2033.49,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0087-011",
+      "date": "2026-05-15",
+      "libelle": "Virement émis — Loyer",
+      "montant": -1500,
+      "categorie": "Logement",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0087-010",
+      "date": "2026-05-13",
+      "libelle": "Virement reçu — Salaire Groupe Scolaire OSUI",
+      "montant": 6100,
+      "categorie": "Salaire",
+      "type": "credit"
+    },
+    {
+      "id": "TX-0087-008",
+      "date": "2026-05-09",
+      "libelle": "Paiement restaurant",
+      "montant": -593.77,
+      "categorie": "Loisirs",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0087-003",
+      "date": "2026-05-01",
+      "libelle": "Facture Maroc Telecom",
+      "montant": -197.95,
+      "categorie": "Factures",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0087-006",
+      "date": "2026-04-30",
+      "libelle": "Pharmacie",
+      "montant": -121.41,
+      "categorie": "Santé",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0087-007",
+      "date": "2026-04-26",
+      "libelle": "Retrait GAB",
+      "montant": -2653.71,
+      "categorie": "Retrait",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0087-004",
+      "date": "2026-04-25",
+      "libelle": "Station-service Afriquia",
+      "montant": -426.77,
+      "categorie": "Transport",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0087-005",
+      "date": "2026-04-21",
+      "libelle": "Paiement carte — Marjane",
+      "montant": -639.61,
+      "categorie": "Courses",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0087-009",
+      "date": "2026-04-18",
+      "libelle": "Prélèvement — Crédit auto",
+      "montant": -2033.49,
+      "categorie": "Crédit",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0087-002",
+      "date": "2026-04-15",
+      "libelle": "Virement émis — Loyer",
+      "montant": -1700,
+      "categorie": "Logement",
+      "type": "debit"
+    },
+    {
+      "id": "TX-0087-001",
+      "date": "2026-04-13",
+      "libelle": "Virement reçu — Salaire Groupe Scolaire OSUI",
+      "montant": 6100,
+      "categorie": "Salaire",
+      "type": "credit"
+    }
+  ]
+}

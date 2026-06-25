@@ -1,0 +1,62 @@
+[
+  {
+    "id": "DOC-001",
+    "titre": "Politique de crédit immobilier 2026",
+    "type": "Politique",
+    "categorie": "Crédit",
+    "nombreFragments": 79,
+    "dateIndexation": "2026-05-30",
+    "statut": "Indexé",
+    "extrait": "Conditions d'octroi : apport minimum 20 %, durée max 25 ans, taux d'endettement plafonné à 40 %, LTV ≤ 80 %."
+  },
+  {
+    "id": "DOC-002",
+    "titre": "Circulaire Bank Al-Maghrib 1/G/2020",
+    "type": "Réglementation",
+    "categorie": "Conformité",
+    "nombreFragments": 29,
+    "dateIndexation": "2026-05-16",
+    "statut": "Indexé",
+    "extrait": "Cadre prudentiel des établissements de crédit : consultation du fichier central des incidents, lutte anti-blanchiment."
+  },
+  {
+    "id": "DOC-003",
+    "titre": "Conditions générales du crédit à la consommation",
+    "type": "Politique",
+    "categorie": "Crédit",
+    "nombreFragments": 67,
+    "dateIndexation": "2026-05-25",
+    "statut": "Indexé",
+    "extrait": "Montants de 10 000 à 300 000 MAD, durée de 12 à 84 mois, taux selon le profil de risque."
+  },
+  {
+    "id": "DOC-004",
+    "titre": "Barème des crédits automobiles",
+    "type": "Politique",
+    "categorie": "Crédit",
+    "nombreFragments": 71,
+    "dateIndexation": "2026-05-21",
+    "statut": "Indexé",
+    "extrait": "Financement jusqu'à 80 % de la valeur du véhicule, durée maximale 60 mois."
+  },
+  {
+    "id": "DOC-005",
+    "titre": "Plafonds et conditions des virements",
+    "type": "Procédure",
+    "categorie": "Virement",
+    "nombreFragments": 49,
+    "dateIndexation": "2026-04-23",
+    "statut": "Indexé",
+    "extrait": "Plafonds journaliers selon segment, vérification du bénéficiaire, signature OTP au-delà des seuils."
+  },
+  {
+    "id": "DOC-006",
+    "titre": "Procédure de lutte anti-fraude",
+    "type": "Sécurité",
+    "categorie": "Virement",
+    "nombreFragments": 20,
+    "dateIndexation": "2026-05-09",
+    "statut": "Indexé",
+    "extrait": "Détection des anomalies, double validation au-delà de 50 000 MAD, alertes temps réel."
+  }
+]

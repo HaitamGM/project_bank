@@ -1,0 +1,6167 @@
+[
+  {
+    "decisionId": "D-1A2AE2",
+    "clientId": "CL-2024-0044",
+    "scoreFinal": 86,
+    "statut": "approuve",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "28%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "positif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "60 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 28 %",
+        "impact": 11
+      },
+      {
+        "label": "Revenu 25 000 DH",
+        "impact": 11
+      },
+      {
+        "label": "Ancienneté 60 mois",
+        "impact": 8
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": null,
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": true
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Score minimum de 60/100",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "politiques_bancaires_dsti_ltv",
+        "pertinence": 0.95
+      },
+      {
+        "document": "circulaire_bam_1_G_10",
+        "pertinence": 0.95
+      },
+      {
+        "document": "loi_31_08_protection_consommateur",
+        "pertinence": 0.95
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0002",
+    "clientId": "CL-2024-0042",
+    "scoreFinal": 22,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "87%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "36 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 87 %",
+        "impact": -45
+      },
+      {
+        "label": "Revenu 18 000 DH",
+        "impact": 7
+      },
+      {
+        "label": "Ancienneté 36 mois",
+        "impact": 4
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 139 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Barème crédit automobile",
+        "pertinence": 0.87
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.88
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0004",
+    "clientId": "CL-2024-0042",
+    "scoreFinal": 78,
+    "statut": "approuve",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "29%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "positif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "36 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 29 %",
+        "impact": 11
+      },
+      {
+        "label": "Revenu 18 000 DH",
+        "impact": 7
+      },
+      {
+        "label": "Ancienneté 36 mois",
+        "impact": 4
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": null,
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": true
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Conditions générales crédit consommation",
+        "pertinence": 0.9
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0006",
+    "clientId": "CL-2024-0042",
+    "scoreFinal": 77,
+    "statut": "approuve",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "30%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "positif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "36 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 30 %",
+        "impact": 10
+      },
+      {
+        "label": "Revenu 18 000 DH",
+        "impact": 7
+      },
+      {
+        "label": "Ancienneté 36 mois",
+        "impact": 4
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": null,
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": true
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Politique crédit immobilier 2026",
+        "pertinence": 0.96
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.93
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0008",
+    "clientId": "CL-2024-0042",
+    "scoreFinal": 91,
+    "statut": "approuve",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "15%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "positif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "36 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 15 %",
+        "impact": 24
+      },
+      {
+        "label": "Revenu 18 000 DH",
+        "impact": 7
+      },
+      {
+        "label": "Ancienneté 36 mois",
+        "impact": 4
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": null,
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": true
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Conditions générales crédit consommation",
+        "pertinence": 0.88
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0009",
+    "clientId": "CL-2024-0042",
+    "scoreFinal": 22,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "104%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "36 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 104 %",
+        "impact": -45
+      },
+      {
+        "label": "Revenu 18 000 DH",
+        "impact": 7
+      },
+      {
+        "label": "Ancienneté 36 mois",
+        "impact": 4
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 266 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Conditions générales crédit consommation",
+        "pertinence": 0.87
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0012",
+    "clientId": "CL-2024-0042",
+    "scoreFinal": 22,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "101%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "36 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 101 %",
+        "impact": -45
+      },
+      {
+        "label": "Revenu 18 000 DH",
+        "impact": 7
+      },
+      {
+        "label": "Ancienneté 36 mois",
+        "impact": 4
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 266 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Politique crédit immobilier 2026",
+        "pertinence": 0.9
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.92
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0014",
+    "clientId": "CL-2024-0042",
+    "scoreFinal": 22,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "194%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "36 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 194 %",
+        "impact": -45
+      },
+      {
+        "label": "Revenu 18 000 DH",
+        "impact": 7
+      },
+      {
+        "label": "Ancienneté 36 mois",
+        "impact": 4
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 139 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Conditions générales crédit consommation",
+        "pertinence": 0.97
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.81
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0015",
+    "clientId": "CL-2024-0042",
+    "scoreFinal": 80,
+    "statut": "approuve",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "27%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "positif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "36 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 27 %",
+        "impact": 13
+      },
+      {
+        "label": "Revenu 18 000 DH",
+        "impact": 7
+      },
+      {
+        "label": "Ancienneté 36 mois",
+        "impact": 4
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": null,
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": true
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Politique crédit immobilier 2026",
+        "pertinence": 0.88
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.92
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0017",
+    "clientId": "CL-2024-0043",
+    "scoreFinal": 0,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "47%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Oui",
+        "poids": 0.25,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 2,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "14 mois",
+        "poids": 0.1,
+        "impact": "neutre"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Indépendant",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 47 %",
+        "impact": -15
+      },
+      {
+        "label": "Revenu 8 500 DH",
+        "impact": 0
+      },
+      {
+        "label": "Ancienneté 14 mois",
+        "impact": 0
+      },
+      {
+        "label": "2 incident(s) de paiement",
+        "impact": -18
+      },
+      {
+        "label": "Fiché Bank Al-Maghrib",
+        "impact": -35
+      }
+    ],
+    "contrefactuel": "La régularisation auprès de Bank Al-Maghrib est requise avant toute nouvelle demande.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": false
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": false
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Conditions générales crédit consommation",
+        "pertinence": 0.83
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.93
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0020",
+    "clientId": "CL-2024-0043",
+    "scoreFinal": 0,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "145%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Oui",
+        "poids": 0.25,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 2,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "14 mois",
+        "poids": 0.1,
+        "impact": "neutre"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Indépendant",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 145 %",
+        "impact": -45
+      },
+      {
+        "label": "Revenu 8 500 DH",
+        "impact": 0
+      },
+      {
+        "label": "Ancienneté 14 mois",
+        "impact": 0
+      },
+      {
+        "label": "2 incident(s) de paiement",
+        "impact": -18
+      },
+      {
+        "label": "Fiché Bank Al-Maghrib",
+        "impact": -35
+      }
+    ],
+    "contrefactuel": "La régularisation auprès de Bank Al-Maghrib est requise avant toute nouvelle demande.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": false
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": false
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Barème crédit automobile",
+        "pertinence": 0.89
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.83
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0021",
+    "clientId": "CL-2024-0043",
+    "scoreFinal": 10,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "26%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "positif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Oui",
+        "poids": 0.25,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 2,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "14 mois",
+        "poids": 0.1,
+        "impact": "neutre"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Indépendant",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 26 %",
+        "impact": 13
+      },
+      {
+        "label": "Revenu 8 500 DH",
+        "impact": 0
+      },
+      {
+        "label": "Ancienneté 14 mois",
+        "impact": 0
+      },
+      {
+        "label": "2 incident(s) de paiement",
+        "impact": -18
+      },
+      {
+        "label": "Fiché Bank Al-Maghrib",
+        "impact": -35
+      }
+    ],
+    "contrefactuel": "La régularisation auprès de Bank Al-Maghrib est requise avant toute nouvelle demande.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": true
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": false
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": false
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Barème crédit automobile",
+        "pertinence": 0.95
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.84
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0022",
+    "clientId": "CL-2024-0043",
+    "scoreFinal": 0,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "150%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Oui",
+        "poids": 0.25,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 2,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "14 mois",
+        "poids": 0.1,
+        "impact": "neutre"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Indépendant",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 150 %",
+        "impact": -45
+      },
+      {
+        "label": "Revenu 8 500 DH",
+        "impact": 0
+      },
+      {
+        "label": "Ancienneté 14 mois",
+        "impact": 0
+      },
+      {
+        "label": "2 incident(s) de paiement",
+        "impact": -18
+      },
+      {
+        "label": "Fiché Bank Al-Maghrib",
+        "impact": -35
+      }
+    ],
+    "contrefactuel": "La régularisation auprès de Bank Al-Maghrib est requise avant toute nouvelle demande.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": false
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": false
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Politique crédit immobilier 2026",
+        "pertinence": 0.93
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0023",
+    "clientId": "CL-2024-0043",
+    "scoreFinal": 0,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "59%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Oui",
+        "poids": 0.25,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 2,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "14 mois",
+        "poids": 0.1,
+        "impact": "neutre"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Indépendant",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 59 %",
+        "impact": -43
+      },
+      {
+        "label": "Revenu 8 500 DH",
+        "impact": 0
+      },
+      {
+        "label": "Ancienneté 14 mois",
+        "impact": 0
+      },
+      {
+        "label": "2 incident(s) de paiement",
+        "impact": -18
+      },
+      {
+        "label": "Fiché Bank Al-Maghrib",
+        "impact": -35
+      }
+    ],
+    "contrefactuel": "La régularisation auprès de Bank Al-Maghrib est requise avant toute nouvelle demande.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": false
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": false
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Politique crédit immobilier 2026",
+        "pertinence": 0.88
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0024",
+    "clientId": "CL-2024-0043",
+    "scoreFinal": 0,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "59%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Oui",
+        "poids": 0.25,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 2,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "14 mois",
+        "poids": 0.1,
+        "impact": "neutre"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Indépendant",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 59 %",
+        "impact": -42
+      },
+      {
+        "label": "Revenu 8 500 DH",
+        "impact": 0
+      },
+      {
+        "label": "Ancienneté 14 mois",
+        "impact": 0
+      },
+      {
+        "label": "2 incident(s) de paiement",
+        "impact": -18
+      },
+      {
+        "label": "Fiché Bank Al-Maghrib",
+        "impact": -35
+      }
+    ],
+    "contrefactuel": "La régularisation auprès de Bank Al-Maghrib est requise avant toute nouvelle demande.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": false
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": false
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Conditions générales crédit consommation",
+        "pertinence": 0.8
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.88
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0025",
+    "clientId": "CL-2024-0043",
+    "scoreFinal": 17,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "19%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "positif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Oui",
+        "poids": 0.25,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 2,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "14 mois",
+        "poids": 0.1,
+        "impact": "neutre"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Indépendant",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 19 %",
+        "impact": 20
+      },
+      {
+        "label": "Revenu 8 500 DH",
+        "impact": 0
+      },
+      {
+        "label": "Ancienneté 14 mois",
+        "impact": 0
+      },
+      {
+        "label": "2 incident(s) de paiement",
+        "impact": -18
+      },
+      {
+        "label": "Fiché Bank Al-Maghrib",
+        "impact": -35
+      }
+    ],
+    "contrefactuel": "La régularisation auprès de Bank Al-Maghrib est requise avant toute nouvelle demande.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": true
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": false
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": false
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Barème crédit automobile",
+        "pertinence": 0.83
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.78
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0028",
+    "clientId": "CL-2024-0043",
+    "scoreFinal": 0,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "56%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Oui",
+        "poids": 0.25,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 2,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "14 mois",
+        "poids": 0.1,
+        "impact": "neutre"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Indépendant",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 56 %",
+        "impact": -36
+      },
+      {
+        "label": "Revenu 8 500 DH",
+        "impact": 0
+      },
+      {
+        "label": "Ancienneté 14 mois",
+        "impact": 0
+      },
+      {
+        "label": "2 incident(s) de paiement",
+        "impact": -18
+      },
+      {
+        "label": "Fiché Bank Al-Maghrib",
+        "impact": -35
+      }
+    ],
+    "contrefactuel": "La régularisation auprès de Bank Al-Maghrib est requise avant toute nouvelle demande.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": false
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": false
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Conditions générales crédit consommation",
+        "pertinence": 0.8
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.97
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0029",
+    "clientId": "CL-2024-0043",
+    "scoreFinal": 0,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "57%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Oui",
+        "poids": 0.25,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 2,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "14 mois",
+        "poids": 0.1,
+        "impact": "neutre"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Indépendant",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 57 %",
+        "impact": -38
+      },
+      {
+        "label": "Revenu 8 500 DH",
+        "impact": 0
+      },
+      {
+        "label": "Ancienneté 14 mois",
+        "impact": 0
+      },
+      {
+        "label": "2 incident(s) de paiement",
+        "impact": -18
+      },
+      {
+        "label": "Fiché Bank Al-Maghrib",
+        "impact": -35
+      }
+    ],
+    "contrefactuel": "La régularisation auprès de Bank Al-Maghrib est requise avant toute nouvelle demande.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": false
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": false
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Conditions générales crédit consommation",
+        "pertinence": 0.82
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0030",
+    "clientId": "CL-2024-0043",
+    "scoreFinal": 0,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "123%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Oui",
+        "poids": 0.25,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 2,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "14 mois",
+        "poids": 0.1,
+        "impact": "neutre"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Indépendant",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 123 %",
+        "impact": -45
+      },
+      {
+        "label": "Revenu 8 500 DH",
+        "impact": 0
+      },
+      {
+        "label": "Ancienneté 14 mois",
+        "impact": 0
+      },
+      {
+        "label": "2 incident(s) de paiement",
+        "impact": -18
+      },
+      {
+        "label": "Fiché Bank Al-Maghrib",
+        "impact": -35
+      }
+    ],
+    "contrefactuel": "La régularisation auprès de Bank Al-Maghrib est requise avant toute nouvelle demande.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": false
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": false
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Politique crédit immobilier 2026",
+        "pertinence": 0.91
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.79
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0031",
+    "clientId": "CL-2024-0044",
+    "scoreFinal": 53,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "50%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "60 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 50 %",
+        "impact": -22
+      },
+      {
+        "label": "Revenu 25 000 DH",
+        "impact": 11
+      },
+      {
+        "label": "Ancienneté 60 mois",
+        "impact": 8
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 370 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Politique crédit immobilier 2026",
+        "pertinence": 0.93
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0032",
+    "clientId": "CL-2024-0044",
+    "scoreFinal": 79,
+    "statut": "approuve",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "36%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "positif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "60 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 36 %",
+        "impact": 4
+      },
+      {
+        "label": "Revenu 25 000 DH",
+        "impact": 11
+      },
+      {
+        "label": "Ancienneté 60 mois",
+        "impact": 8
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": null,
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": true
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Politique crédit immobilier 2026",
+        "pertinence": 0.95
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0034",
+    "clientId": "CL-2024-0044",
+    "scoreFinal": 98,
+    "statut": "approuve",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "16%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "positif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "60 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 16 %",
+        "impact": 23
+      },
+      {
+        "label": "Revenu 25 000 DH",
+        "impact": 11
+      },
+      {
+        "label": "Ancienneté 60 mois",
+        "impact": 8
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": null,
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": true
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Conditions générales crédit consommation",
+        "pertinence": 0.79
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.86
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0036",
+    "clientId": "CL-2024-0044",
+    "scoreFinal": 30,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "84%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "60 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 84 %",
+        "impact": -45
+      },
+      {
+        "label": "Revenu 25 000 DH",
+        "impact": 11
+      },
+      {
+        "label": "Ancienneté 60 mois",
+        "impact": 8
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 284 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Politique crédit immobilier 2026",
+        "pertinence": 0.89
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.91
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0037",
+    "clientId": "CL-2024-0044",
+    "scoreFinal": 30,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "74%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "60 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 74 %",
+        "impact": -45
+      },
+      {
+        "label": "Revenu 25 000 DH",
+        "impact": 11
+      },
+      {
+        "label": "Ancienneté 60 mois",
+        "impact": 8
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 284 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Conditions générales crédit consommation",
+        "pertinence": 0.91
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0038",
+    "clientId": "CL-2024-0044",
+    "scoreFinal": 63,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "46%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "60 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 45 %",
+        "impact": -12
+      },
+      {
+        "label": "Revenu 25 000 DH",
+        "impact": 11
+      },
+      {
+        "label": "Ancienneté 60 mois",
+        "impact": 8
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 370 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Barème crédit automobile",
+        "pertinence": 0.87
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.8
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0039",
+    "clientId": "CL-2024-0045",
+    "scoreFinal": 33,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "56%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "46 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 56 %",
+        "impact": -35
+      },
+      {
+        "label": "Revenu 16 500 DH",
+        "impact": 6
+      },
+      {
+        "label": "Ancienneté 46 mois",
+        "impact": 6
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 504 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Barème crédit automobile",
+        "pertinence": 0.89
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.86
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0041",
+    "clientId": "CL-2024-0045",
+    "scoreFinal": 27,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "58%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "46 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 58 %",
+        "impact": -41
+      },
+      {
+        "label": "Revenu 16 500 DH",
+        "impact": 6
+      },
+      {
+        "label": "Ancienneté 46 mois",
+        "impact": 6
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 504 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Conditions générales crédit consommation",
+        "pertinence": 0.96
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.88
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0042",
+    "clientId": "CL-2024-0045",
+    "scoreFinal": 75,
+    "statut": "approuve",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "33%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "positif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "46 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 33 %",
+        "impact": 7
+      },
+      {
+        "label": "Revenu 16 500 DH",
+        "impact": 6
+      },
+      {
+        "label": "Ancienneté 46 mois",
+        "impact": 6
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": null,
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": true
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Conditions générales crédit consommation",
+        "pertinence": 0.79
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.9
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0043",
+    "clientId": "CL-2024-0045",
+    "scoreFinal": 87,
+    "statut": "approuve",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "20%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "positif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "46 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 20 %",
+        "impact": 19
+      },
+      {
+        "label": "Revenu 16 500 DH",
+        "impact": 6
+      },
+      {
+        "label": "Ancienneté 46 mois",
+        "impact": 6
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": null,
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": true
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Politique crédit immobilier 2026",
+        "pertinence": 0.97
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0044",
+    "clientId": "CL-2024-0045",
+    "scoreFinal": 23,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "100%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "46 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 100 %",
+        "impact": -45
+      },
+      {
+        "label": "Revenu 16 500 DH",
+        "impact": 6
+      },
+      {
+        "label": "Ancienneté 46 mois",
+        "impact": 6
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 231 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Politique crédit immobilier 2026",
+        "pertinence": 0.83
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0045",
+    "clientId": "CL-2024-0045",
+    "scoreFinal": 56,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "46%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "46 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 45 %",
+        "impact": -12
+      },
+      {
+        "label": "Revenu 16 500 DH",
+        "impact": 6
+      },
+      {
+        "label": "Ancienneté 46 mois",
+        "impact": 6
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 678 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Politique crédit immobilier 2026",
+        "pertinence": 0.9
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.79
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0046",
+    "clientId": "CL-2024-0045",
+    "scoreFinal": 85,
+    "statut": "approuve",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "22%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "positif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "46 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 22 %",
+        "impact": 17
+      },
+      {
+        "label": "Revenu 16 500 DH",
+        "impact": 6
+      },
+      {
+        "label": "Ancienneté 46 mois",
+        "impact": 6
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": null,
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": true
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Conditions générales crédit consommation",
+        "pertinence": 0.93
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0047",
+    "clientId": "CL-2024-0052",
+    "scoreFinal": 73,
+    "statut": "approuve",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "33%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "positif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 1,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "121 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Libéral",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 33 %",
+        "impact": 6
+      },
+      {
+        "label": "Revenu 28 300 DH",
+        "impact": 12
+      },
+      {
+        "label": "Ancienneté 121 mois",
+        "impact": 8
+      },
+      {
+        "label": "1 incident(s) de paiement",
+        "impact": -9
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": null,
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": true
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Barème crédit automobile",
+        "pertinence": 0.79
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.96
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0048",
+    "clientId": "CL-2024-0052",
+    "scoreFinal": 75,
+    "statut": "approuve",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "32%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "positif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 1,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "121 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Libéral",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 32 %",
+        "impact": 8
+      },
+      {
+        "label": "Revenu 28 300 DH",
+        "impact": 12
+      },
+      {
+        "label": "Ancienneté 121 mois",
+        "impact": 8
+      },
+      {
+        "label": "1 incident(s) de paiement",
+        "impact": -9
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": null,
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": true
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Politique crédit immobilier 2026",
+        "pertinence": 0.91
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0049",
+    "clientId": "CL-2024-0052",
+    "scoreFinal": 30,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "56%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 1,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "121 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Libéral",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 57 %",
+        "impact": -37
+      },
+      {
+        "label": "Revenu 28 300 DH",
+        "impact": 12
+      },
+      {
+        "label": "Ancienneté 121 mois",
+        "impact": 8
+      },
+      {
+        "label": "1 incident(s) de paiement",
+        "impact": -9
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 296 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Politique crédit immobilier 2026",
+        "pertinence": 0.9
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.89
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0051",
+    "clientId": "CL-2024-0052",
+    "scoreFinal": 34,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "55%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 1,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "121 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Libéral",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 55 %",
+        "impact": -33
+      },
+      {
+        "label": "Revenu 28 300 DH",
+        "impact": 12
+      },
+      {
+        "label": "Ancienneté 121 mois",
+        "impact": 8
+      },
+      {
+        "label": "1 incident(s) de paiement",
+        "impact": -9
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 362 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Conditions générales crédit consommation",
+        "pertinence": 0.9
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.92
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0052",
+    "clientId": "CL-2024-0052",
+    "scoreFinal": 58,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "44%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 1,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "121 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Libéral",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 44 %",
+        "impact": -9
+      },
+      {
+        "label": "Revenu 28 300 DH",
+        "impact": 12
+      },
+      {
+        "label": "Ancienneté 121 mois",
+        "impact": 8
+      },
+      {
+        "label": "1 incident(s) de paiement",
+        "impact": -9
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 155 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Conditions générales crédit consommation",
+        "pertinence": 0.87
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.89
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0055",
+    "clientId": "CL-2024-0052",
+    "scoreFinal": 72,
+    "statut": "approuve",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "35%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "positif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 1,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "121 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Libéral",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 35 %",
+        "impact": 5
+      },
+      {
+        "label": "Revenu 28 300 DH",
+        "impact": 12
+      },
+      {
+        "label": "Ancienneté 121 mois",
+        "impact": 8
+      },
+      {
+        "label": "1 incident(s) de paiement",
+        "impact": -9
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": null,
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": true
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Politique crédit immobilier 2026",
+        "pertinence": 0.83
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.9
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0056",
+    "clientId": "CL-2024-0052",
+    "scoreFinal": 24,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "59%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 1,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "121 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Libéral",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 59 %",
+        "impact": -43
+      },
+      {
+        "label": "Revenu 28 300 DH",
+        "impact": 12
+      },
+      {
+        "label": "Ancienneté 121 mois",
+        "impact": 8
+      },
+      {
+        "label": "1 incident(s) de paiement",
+        "impact": -9
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 362 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Politique crédit immobilier 2026",
+        "pertinence": 0.84
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0057",
+    "clientId": "CL-2024-0052",
+    "scoreFinal": 22,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "98%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 1,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "121 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Libéral",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 98 %",
+        "impact": -45
+      },
+      {
+        "label": "Revenu 28 300 DH",
+        "impact": 12
+      },
+      {
+        "label": "Ancienneté 121 mois",
+        "impact": 8
+      },
+      {
+        "label": "1 incident(s) de paiement",
+        "impact": -9
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 227 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Barème crédit automobile",
+        "pertinence": 0.96
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.84
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0058",
+    "clientId": "CL-2024-0052",
+    "scoreFinal": 22,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "68%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 1,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "121 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Libéral",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 68 %",
+        "impact": -45
+      },
+      {
+        "label": "Revenu 28 300 DH",
+        "impact": 12
+      },
+      {
+        "label": "Ancienneté 121 mois",
+        "impact": 8
+      },
+      {
+        "label": "1 incident(s) de paiement",
+        "impact": -9
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 227 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Politique crédit immobilier 2026",
+        "pertinence": 0.88
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0060",
+    "clientId": "CL-2024-0052",
+    "scoreFinal": 22,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "75%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 1,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "121 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Libéral",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 75 %",
+        "impact": -45
+      },
+      {
+        "label": "Revenu 28 300 DH",
+        "impact": 12
+      },
+      {
+        "label": "Ancienneté 121 mois",
+        "impact": 8
+      },
+      {
+        "label": "1 incident(s) de paiement",
+        "impact": -9
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 155 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Conditions générales crédit consommation",
+        "pertinence": 0.89
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0062",
+    "clientId": "CL-2024-0059",
+    "scoreFinal": 98,
+    "statut": "approuve",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "11%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "positif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "159 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Libéral",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 11 %",
+        "impact": 28
+      },
+      {
+        "label": "Revenu 17 600 DH",
+        "impact": 6
+      },
+      {
+        "label": "Ancienneté 159 mois",
+        "impact": 8
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": null,
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": true
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Conditions générales crédit consommation",
+        "pertinence": 0.93
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0064",
+    "clientId": "CL-2024-0059",
+    "scoreFinal": 25,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "167%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "159 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Libéral",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 167 %",
+        "impact": -45
+      },
+      {
+        "label": "Revenu 17 600 DH",
+        "impact": 6
+      },
+      {
+        "label": "Ancienneté 159 mois",
+        "impact": 8
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 161 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Politique crédit immobilier 2026",
+        "pertinence": 0.92
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.85
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0066",
+    "clientId": "CL-2024-0059",
+    "scoreFinal": 98,
+    "statut": "approuve",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "10%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "positif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "159 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Libéral",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 10 %",
+        "impact": 28
+      },
+      {
+        "label": "Revenu 17 600 DH",
+        "impact": 6
+      },
+      {
+        "label": "Ancienneté 159 mois",
+        "impact": 8
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": null,
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": true
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Conditions générales crédit consommation",
+        "pertinence": 0.81
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.89
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0067",
+    "clientId": "CL-2024-0059",
+    "scoreFinal": 25,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "65%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "159 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Libéral",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 65 %",
+        "impact": -45
+      },
+      {
+        "label": "Revenu 17 600 DH",
+        "impact": 6
+      },
+      {
+        "label": "Ancienneté 159 mois",
+        "impact": 8
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 235 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Politique crédit immobilier 2026",
+        "pertinence": 0.86
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0068",
+    "clientId": "CL-2024-0059",
+    "scoreFinal": 95,
+    "statut": "approuve",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "14%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "positif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "159 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Libéral",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 14 %",
+        "impact": 25
+      },
+      {
+        "label": "Revenu 17 600 DH",
+        "impact": 6
+      },
+      {
+        "label": "Ancienneté 159 mois",
+        "impact": 8
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": null,
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": true
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Conditions générales crédit consommation",
+        "pertinence": 0.91
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.87
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0069",
+    "clientId": "CL-2024-0059",
+    "scoreFinal": 98,
+    "statut": "approuve",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "10%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "positif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "159 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Libéral",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 10 %",
+        "impact": 28
+      },
+      {
+        "label": "Revenu 17 600 DH",
+        "impact": 6
+      },
+      {
+        "label": "Ancienneté 159 mois",
+        "impact": 8
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": null,
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": true
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Conditions générales crédit consommation",
+        "pertinence": 0.91
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0070",
+    "clientId": "CL-2024-0059",
+    "scoreFinal": 100,
+    "statut": "approuve",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "7%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "positif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "159 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Libéral",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 7 %",
+        "impact": 32
+      },
+      {
+        "label": "Revenu 17 600 DH",
+        "impact": 6
+      },
+      {
+        "label": "Ancienneté 159 mois",
+        "impact": 8
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": null,
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": true
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Barème crédit automobile",
+        "pertinence": 0.85
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.89
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0072",
+    "clientId": "CL-2024-0066",
+    "scoreFinal": 18,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "93%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "152 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 93 %",
+        "impact": -45
+      },
+      {
+        "label": "Revenu 6 900 DH",
+        "impact": -1
+      },
+      {
+        "label": "Ancienneté 152 mois",
+        "impact": 8
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 76 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Conditions générales crédit consommation",
+        "pertinence": 0.87
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0074",
+    "clientId": "CL-2024-0066",
+    "scoreFinal": 18,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "238%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "152 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 238 %",
+        "impact": -45
+      },
+      {
+        "label": "Revenu 6 900 DH",
+        "impact": -1
+      },
+      {
+        "label": "Ancienneté 152 mois",
+        "impact": 8
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 35 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Politique crédit immobilier 2026",
+        "pertinence": 0.94
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.85
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0077",
+    "clientId": "CL-2024-0066",
+    "scoreFinal": 18,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "152%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "152 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 152 %",
+        "impact": -45
+      },
+      {
+        "label": "Revenu 6 900 DH",
+        "impact": -1
+      },
+      {
+        "label": "Ancienneté 152 mois",
+        "impact": 8
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 27 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Politique crédit immobilier 2026",
+        "pertinence": 0.91
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0079",
+    "clientId": "CL-2024-0066",
+    "scoreFinal": 18,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "133%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "152 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 133 %",
+        "impact": -45
+      },
+      {
+        "label": "Revenu 6 900 DH",
+        "impact": -1
+      },
+      {
+        "label": "Ancienneté 152 mois",
+        "impact": 8
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 42 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Conditions générales crédit consommation",
+        "pertinence": 0.9
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0083",
+    "clientId": "CL-2024-0073",
+    "scoreFinal": 75,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "13%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "positif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 3,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "82 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Libéral",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 13 %",
+        "impact": 26
+      },
+      {
+        "label": "Revenu 26 200 DH",
+        "impact": 12
+      },
+      {
+        "label": "Ancienneté 82 mois",
+        "impact": 8
+      },
+      {
+        "label": "3 incident(s) de paiement",
+        "impact": -27
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Une réduction des incidents de paiement améliorerait l'éligibilité.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": true
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": false
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Conditions générales crédit consommation",
+        "pertinence": 0.95
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.95
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0084",
+    "clientId": "CL-2024-0073",
+    "scoreFinal": 66,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "22%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "positif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 3,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "82 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Libéral",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 22 %",
+        "impact": 17
+      },
+      {
+        "label": "Revenu 26 200 DH",
+        "impact": 12
+      },
+      {
+        "label": "Ancienneté 82 mois",
+        "impact": 8
+      },
+      {
+        "label": "3 incident(s) de paiement",
+        "impact": -27
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Une réduction des incidents de paiement améliorerait l'éligibilité.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": true
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": false
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Barème crédit automobile",
+        "pertinence": 0.82
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.9
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0087",
+    "clientId": "CL-2024-0073",
+    "scoreFinal": 62,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "26%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "positif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 3,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "82 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Libéral",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 26 %",
+        "impact": 13
+      },
+      {
+        "label": "Revenu 26 200 DH",
+        "impact": 12
+      },
+      {
+        "label": "Ancienneté 82 mois",
+        "impact": 8
+      },
+      {
+        "label": "3 incident(s) de paiement",
+        "impact": -27
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Une réduction des incidents de paiement améliorerait l'éligibilité.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": true
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": false
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Politique crédit immobilier 2026",
+        "pertinence": 0.86
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.92
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0089",
+    "clientId": "CL-2024-0073",
+    "scoreFinal": 68,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "20%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "positif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 3,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "82 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Libéral",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 20 %",
+        "impact": 19
+      },
+      {
+        "label": "Revenu 26 200 DH",
+        "impact": 12
+      },
+      {
+        "label": "Ancienneté 82 mois",
+        "impact": 8
+      },
+      {
+        "label": "3 incident(s) de paiement",
+        "impact": -27
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Une réduction des incidents de paiement améliorerait l'éligibilité.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": true
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": false
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Politique crédit immobilier 2026",
+        "pertinence": 0.93
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0090",
+    "clientId": "CL-2024-0073",
+    "scoreFinal": 65,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "23%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "positif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 3,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "82 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Libéral",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 23 %",
+        "impact": 16
+      },
+      {
+        "label": "Revenu 26 200 DH",
+        "impact": 12
+      },
+      {
+        "label": "Ancienneté 82 mois",
+        "impact": 8
+      },
+      {
+        "label": "3 incident(s) de paiement",
+        "impact": -27
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Une réduction des incidents de paiement améliorerait l'éligibilité.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": true
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": false
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Politique crédit immobilier 2026",
+        "pertinence": 0.96
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.87
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0092",
+    "clientId": "CL-2024-0073",
+    "scoreFinal": 4,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "129%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 3,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "82 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Libéral",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 129 %",
+        "impact": -45
+      },
+      {
+        "label": "Revenu 26 200 DH",
+        "impact": 12
+      },
+      {
+        "label": "Ancienneté 82 mois",
+        "impact": 8
+      },
+      {
+        "label": "3 incident(s) de paiement",
+        "impact": -27
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 211 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": false
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Conditions générales crédit consommation",
+        "pertinence": 0.96
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.86
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0093",
+    "clientId": "CL-2024-0073",
+    "scoreFinal": 74,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "14%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "positif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 3,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "82 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Libéral",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 14 %",
+        "impact": 25
+      },
+      {
+        "label": "Revenu 26 200 DH",
+        "impact": 12
+      },
+      {
+        "label": "Ancienneté 82 mois",
+        "impact": 8
+      },
+      {
+        "label": "3 incident(s) de paiement",
+        "impact": -27
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Une réduction des incidents de paiement améliorerait l'éligibilité.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": true
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": false
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Conditions générales crédit consommation",
+        "pertinence": 0.8
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.95
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0094",
+    "clientId": "CL-2024-0073",
+    "scoreFinal": 61,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "28%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "positif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 3,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "82 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "Libéral",
+        "poids": 0.1,
+        "impact": "neutre"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 28 %",
+        "impact": 12
+      },
+      {
+        "label": "Revenu 26 200 DH",
+        "impact": 12
+      },
+      {
+        "label": "Ancienneté 82 mois",
+        "impact": 8
+      },
+      {
+        "label": "3 incident(s) de paiement",
+        "impact": -27
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Une réduction des incidents de paiement améliorerait l'éligibilité.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": true
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": false
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Conditions générales crédit consommation",
+        "pertinence": 0.83
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0096",
+    "clientId": "CL-2024-0080",
+    "scoreFinal": 21,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "50%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 3,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "131 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 50 %",
+        "impact": -22
+      },
+      {
+        "label": "Revenu 17 500 DH",
+        "impact": 6
+      },
+      {
+        "label": "Ancienneté 131 mois",
+        "impact": 8
+      },
+      {
+        "label": "3 incident(s) de paiement",
+        "impact": -27
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 414 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": false
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Conditions générales crédit consommation",
+        "pertinence": 0.83
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.95
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0098",
+    "clientId": "CL-2024-0080",
+    "scoreFinal": 25,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "48%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 3,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "131 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 48 %",
+        "impact": -18
+      },
+      {
+        "label": "Revenu 17 500 DH",
+        "impact": 6
+      },
+      {
+        "label": "Ancienneté 131 mois",
+        "impact": 8
+      },
+      {
+        "label": "3 incident(s) de paiement",
+        "impact": -27
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 414 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": false
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Politique crédit immobilier 2026",
+        "pertinence": 0.82
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0100",
+    "clientId": "CL-2024-0080",
+    "scoreFinal": 41,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "41%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 3,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "131 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 41 %",
+        "impact": -2
+      },
+      {
+        "label": "Revenu 17 500 DH",
+        "impact": 6
+      },
+      {
+        "label": "Ancienneté 131 mois",
+        "impact": 8
+      },
+      {
+        "label": "3 incident(s) de paiement",
+        "impact": -27
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 308 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": false
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Politique crédit immobilier 2026",
+        "pertinence": 0.88
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.95
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0102",
+    "clientId": "CL-2024-0080",
+    "scoreFinal": 0,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "68%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 3,
+        "poids": 0.2,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "131 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 68 %",
+        "impact": -45
+      },
+      {
+        "label": "Revenu 17 500 DH",
+        "impact": 6
+      },
+      {
+        "label": "Ancienneté 131 mois",
+        "impact": 8
+      },
+      {
+        "label": "3 incident(s) de paiement",
+        "impact": -27
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 308 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": false
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Barème crédit automobile",
+        "pertinence": 0.97
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.93
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0104",
+    "clientId": "CL-2024-0087",
+    "scoreFinal": 18,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "318%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "68 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 318 %",
+        "impact": -45
+      },
+      {
+        "label": "Revenu 6 100 DH",
+        "impact": -1
+      },
+      {
+        "label": "Ancienneté 68 mois",
+        "impact": 8
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 14 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Politique crédit immobilier 2026",
+        "pertinence": 0.8
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.96
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0107",
+    "clientId": "CL-2024-0087",
+    "scoreFinal": 18,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "165%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "68 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 165 %",
+        "impact": -45
+      },
+      {
+        "label": "Revenu 6 100 DH",
+        "impact": -1
+      },
+      {
+        "label": "Ancienneté 68 mois",
+        "impact": 8
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 18 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Conditions générales crédit consommation",
+        "pertinence": 0.88
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0111",
+    "clientId": "CL-2024-0087",
+    "scoreFinal": 18,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "311%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "68 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 311 %",
+        "impact": -45
+      },
+      {
+        "label": "Revenu 6 100 DH",
+        "impact": -1
+      },
+      {
+        "label": "Ancienneté 68 mois",
+        "impact": 8
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 18 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Politique crédit immobilier 2026",
+        "pertinence": 0.79
+      }
+    ]
+  },
+  {
+    "decisionId": "DEC-0113",
+    "clientId": "CL-2024-0087",
+    "scoreFinal": 18,
+    "statut": "refuse",
+    "scoreBase": 50,
+    "seuil": 60,
+    "facteurs": [
+      {
+        "nom": "Taux d'endettement après crédit",
+        "valeur": "253%",
+        "seuil": "40%",
+        "poids": 0.35,
+        "impact": "négatif"
+      },
+      {
+        "nom": "Fichage Bank Al-Maghrib",
+        "valeur": "Non",
+        "poids": 0.25,
+        "impact": "positif"
+      },
+      {
+        "nom": "Incidents de paiement (12 mois)",
+        "valeur": 0,
+        "poids": 0.2,
+        "impact": "positif"
+      },
+      {
+        "nom": "Ancienneté professionnelle",
+        "valeur": "68 mois",
+        "poids": 0.1,
+        "impact": "positif"
+      },
+      {
+        "nom": "Type de contrat",
+        "valeur": "CDI",
+        "poids": 0.1,
+        "impact": "positif"
+      }
+    ],
+    "contributions": [
+      {
+        "label": "Score de base",
+        "impact": 50,
+        "kind": "base"
+      },
+      {
+        "label": "Taux d'endettement 252 %",
+        "impact": -45
+      },
+      {
+        "label": "Revenu 6 100 DH",
+        "impact": -1
+      },
+      {
+        "label": "Ancienneté 68 mois",
+        "impact": 8
+      },
+      {
+        "label": "Historique BAM sain",
+        "impact": 6
+      }
+    ],
+    "contrefactuel": "Un montant réduit à environ 22 000 MAD respecterait le seuil de 40 %.",
+    "reglesActivees": [
+      {
+        "regle": "Taux d'endettement <= 40%",
+        "respectee": false
+      },
+      {
+        "regle": "Absence de fichage BAM",
+        "respectee": true
+      },
+      {
+        "regle": "Incidents de paiement <= 1",
+        "respectee": true
+      }
+    ],
+    "sourcesRag": [
+      {
+        "document": "Barème crédit automobile",
+        "pertinence": 0.79
+      },
+      {
+        "document": "Circulaire BAM 1/G/2020",
+        "pertinence": 0.9
+      }
+    ]
+  }
+]

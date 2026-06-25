@@ -34,21 +34,8 @@
 
 ## 3. Lancer le projet
 
-Vous pouvez lancer simultanément le backend et le frontend en utilisant l'un des scripts de démarrage rapide à la racine du projet :
-
-```powershell
-# Option A : Double-cliquer sur 'run.bat' ou le lancer depuis un terminal
-.\run.bat
-
-# Option B : Lancer le script PowerShell
-.\run.ps1
-```
-
-*(Ces scripts détectent automatiquement votre environnement virtuel `.mivenv` ou `.venv` et ouvrent deux fenêtres de terminal distinctes).*
-
-### Lancement manuel classique :
 ```bash
-# Backend (venv dans backend/.mivenv ou .venv)
+# Backend (venv dans backend/.venv)
 cd backend
 python -m venv .venv
 .venv\Scripts\activate          # Windows  | source .venv/bin/activate  (macOS/Linux)

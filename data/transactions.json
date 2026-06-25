@@ -435,12 +435,6 @@
   ],
   "CL-2024-0044": [
     {
-      "id": "VIR-A78725",
-      "date": "2026-06-23",
-      "libelle": "Virement émis — Abdessalam",
-      "montant": -7000.0
-    },
-    {
       "id": "TX-0044-019",
       "date": "2026-06-26",
       "libelle": "Retrait GAB",

@@ -545,30 +545,6 @@
   ],
   "CL-2024-0044": [
     {
-      "id": "D-1A2AE2",
-      "clientId": "CL-2024-0044",
-      "date": "2026-06-23 09:58",
-      "intent": "Crédit immobilier (vocal)",
-      "type": "credit_immobilier",
-      "montant": 700000.0,
-      "dureeMois": 180,
-      "statut": "approuve",
-      "score": 86,
-      "explication": "Demande de crédit immobilier de 700 000 DH sur 180 mois pour Sara Amrani. Décision favorable : score 86/100 au-dessus du seuil de 60, taux d'endettement de 28 % sous le plafond réglementaire de 40 %, historique sain.",
-      "canal": "vocal"
-    },
-    {
-      "id": "D-90E322",
-      "clientId": "CL-2024-0044",
-      "date": "2026-06-23 09:53",
-      "intent": "Virement (vocal)",
-      "type": "virement",
-      "montant": 7000.0,
-      "statut": "execute",
-      "explication": "Virement de 7000 DH vers Abdessalam signé par OTP (vocal) et exécuté.",
-      "canal": "vocal"
-    },
-    {
       "id": "DEC-0031",
       "clientId": "CL-2024-0044",
       "clientNom": "Sara Amrani",

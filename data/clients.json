@@ -320,7 +320,7 @@
           "iban": "MA64 2308 1502 6064 7468 7234",
           "type": "courant",
           "intitule": "Compte courant principal",
-          "solde": 61330.45,
+          "solde": 68330.45,
           "devise": "MAD",
           "dateOuverture": "2015-06-15"
         },
@@ -363,11 +363,6 @@
           "nom": "Karim Tazi",
           "rib": "230 815 5107991183842513 57",
           "banque": "CFG Bank"
-        },
-        {
-          "nom": "Abdessalam",
-          "banque": "BCC (Banque Centrale Populaire)",
-          "rib": "888888888888888888888888"
         }
       ],
       "creditsEnCours": [

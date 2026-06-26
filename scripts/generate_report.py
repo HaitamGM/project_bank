@@ -1,6 +1,6 @@
 import os
 from docx import Document
-from docx.shared import Pt, Inches
+from docx.shared import Pt, Inches, RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 
 def create_report(output_path='docs/Rapport_Avancement_BankIA.docx'):
@@ -55,7 +55,7 @@ def create_report(output_path='docs/Rapport_Avancement_BankIA.docx'):
     r = p.add_run()
     r.add_text("[ Insérez ici la capture d'écran du Diagramme des Cas d'Utilisation ]")
     r.font.italic = True
-    r.font.color.rgb = docx.shared.RGBColor(128, 128, 128) if 'docx' in globals() else None
+    r.font.color.rgb = RGBColor(128, 128, 128)
 
     doc.add_heading('2.2 Diagramme de Séquence (Processus : Demande de Crédit)', level=2)
     doc.add_paragraph(
